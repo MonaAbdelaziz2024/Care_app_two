@@ -2,6 +2,7 @@
 import 'package:care_app_two/helper/constant.dart';
 import 'package:care_app_two/helper/styles.dart';
 import 'package:care_app_two/screens/signin/sign_in.dart';
+import 'package:care_app_two/screens/signin/sign_in_two.dart';
 import 'package:care_app_two/screens/widgets/custom_button.dart';
 import 'package:care_app_two/screens/widgets/custom_dropdown_dateofbirth.dart';
 import 'package:care_app_two/screens/widgets/custom_dropdown_list.dart';
@@ -129,7 +130,7 @@ class SignupInfoTwo extends StatelessWidget {
             text: 'Next',
             onTap: () {
               Navigator.of(context).push(MaterialPageRoute(builder: (context) {
-                return const SIGNIN();
+                return const SigninTwo();
               }));
             },
           ),
