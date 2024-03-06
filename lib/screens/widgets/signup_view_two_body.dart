@@ -13,7 +13,7 @@ class SignupViewTwoBody extends StatelessWidget {
       children: [ Stack(
         
         children:[
-        CustomBackground(image: kBackgroundSigninTwo,),
+        const CustomBackground(image: kBackgroundSigninTwo,),
       CustomAppBarItems(
         backIcon: true,
         onPressed: () {

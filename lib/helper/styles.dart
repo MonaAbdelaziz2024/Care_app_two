@@ -17,6 +17,20 @@ class Styles {
     fontSize: 14,
     fontWeight: FontWeight.w500,
   );
+  
+  static const Style36 = TextStyle(
+    color: kTextColor,
+    fontFamily: 'Ciaro',
+    fontSize: 36,
+    fontWeight: FontWeight.w500,
+  );
+  
+  static const Style15 = TextStyle(
+    color: kTextColor,
+    fontFamily: 'Ciaro',
+    fontSize: 15,
+    fontWeight: FontWeight.w500,
+  );
 
   static const Style20 = TextStyle(
     color: Colors.white,

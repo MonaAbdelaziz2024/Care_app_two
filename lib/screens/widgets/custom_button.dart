@@ -3,7 +3,7 @@ import 'package:care_app_two/helper/styles.dart';
 import 'package:flutter/material.dart';
 
 class CustomButton extends StatelessWidget {
-  const CustomButton({this.text, this.onTap,required  this.nextIcon});
+  const CustomButton({super.key, this.text, this.onTap,required  this.nextIcon});
   final String? text;
   final bool nextIcon;
   final void Function()? onTap;
@@ -25,7 +25,7 @@ class CustomButton extends StatelessWidget {
               text!,
               style: Styles.Style20
             ),
-            SizedBox(
+            const SizedBox(
               width: 120,
             ),
             Padding(

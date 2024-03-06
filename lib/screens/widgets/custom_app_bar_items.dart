@@ -14,14 +14,16 @@ class CustomAppBarItems extends StatelessWidget {
       children: [
         backIcon
             ? Padding(
-                padding: const EdgeInsets.only(top: 21),
-                child: IconButton(
+                padding: const EdgeInsets.only(top: 8),
+                child:Row(
+                  children: [
+                  IconButton(
                   onPressed: onPressed,
                   icon: Container(
                     width: 40,
                     height: 40,
                     decoration: BoxDecoration(
-                      color: Color(0xff7E869E).withOpacity(.25),
+                      color: const Color(0xff7E869E).withOpacity(.25),
                       borderRadius: BorderRadius.circular(32),
                     ),
                     child: const Icon(
@@ -30,18 +32,30 @@ class CustomAppBarItems extends StatelessWidget {
                       size: 18,
                     ),
                   ),
-                ),
-              )
-            : const SizedBox(
-                width: 80,
-              ),
-        //SizedBox(width: 80,),
-        Padding(
-          padding: const EdgeInsets.only(top: 21, left: 100),
+                    ),
+             
+              
+     
+    Padding(
+          padding: const EdgeInsets.only(top: 8, left: 120, bottom: 8),
           child: Image.asset(
             kLogo,
           ),
-        ),
+          )
+          ] 
+          ))
+          
+          
+   
+        
+            :  Padding(
+                      padding:  const EdgeInsets.only(top: 21, left: 180),
+                      child: Image.asset(
+                        kLogo,
+                      ),
+                    ),
+        //SizedBox(width: 80,),
+        
 
         // SvgPicture.asset('assets/images/image4.svg')
       ],

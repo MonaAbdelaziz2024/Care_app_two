@@ -1,5 +1,4 @@
 import 'package:care_app_two/helper/constant.dart';
-import 'package:care_app_two/helper/styles.dart';
 import 'package:flutter/material.dart';
 
 // ignore: must_be_immutable
@@ -27,7 +26,7 @@ class _CustomRadioButtonState extends State<CustomRadioButton> {
     return GestureDetector(
       onTap: widget.onTap,
       child: Container(
-        padding: EdgeInsets.only(left: 48),
+        padding: const EdgeInsets.only(left: 48),
         width: widget.width,
         height: widget.height,
         decoration: BoxDecoration(

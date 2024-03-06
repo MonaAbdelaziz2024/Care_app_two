@@ -1,7 +1,6 @@
 
 import 'package:care_app_two/helper/constant.dart';
 import 'package:care_app_two/helper/styles.dart';
-import 'package:care_app_two/screens/signin/sign_in.dart';
 import 'package:care_app_two/screens/signin/sign_in_two.dart';
 import 'package:care_app_two/screens/widgets/custom_button.dart';
 import 'package:care_app_two/screens/widgets/custom_dropdown_dateofbirth.dart';
@@ -48,7 +47,7 @@ class SignupInfoTwo extends StatelessWidget {
               top: 17,
               bottom: 3,
             ),
-            child: const Text("Gender", style: Styles.Style14),
+            child: Text("Gender", style: Styles.Style14),
           ),
           const SizedBox(
             height: 15,
@@ -74,11 +73,11 @@ class SignupInfoTwo extends StatelessWidget {
             ),
             child: Row(
               children: [
-                const Text("Height", style: Styles.Style14),
+                Text("Height", style: Styles.Style14),
                 SizedBox(
                   width: 130,
                 ),
-                const Text("Weight", style: Styles.Style14),
+                Text("Weight", style: Styles.Style14),
               ],
             ),
           ),

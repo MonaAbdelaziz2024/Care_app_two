@@ -1,3 +1,5 @@
+// ignore_for_file: avoid_print
+
 import 'package:care_app_two/helper/styles.dart';
 import 'package:datepicker_dropdown/datepicker_dropdown.dart';
 import 'package:datepicker_dropdown/order_format.dart';

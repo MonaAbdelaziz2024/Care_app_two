@@ -1,4 +1,6 @@
 
+// ignore_for_file: file_names
+
 import 'package:care_app_two/helper/styles.dart';
 import 'package:flutter/material.dart';
 
@@ -14,28 +16,28 @@ class CustomLine extends StatelessWidget {
           child: Padding(
             padding: const EdgeInsets.only(left: 25),
             child: Container(
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 color: Color(0xff022B3A),
               ),
               height: 1,
             ),
           ),
         ),
-        SizedBox(
+        const SizedBox(
           width: 10,
         ),
-        Text(
+        const Text(
           'or',
           style: Styles.Style11,
         ),
-        SizedBox(
+        const SizedBox(
           width: 10,
         ),
         Expanded(
           child: Padding(
             padding: const EdgeInsets.only(right: 25),
             child: Container(
-              decoration: BoxDecoration(
+              decoration: const BoxDecoration(
                 color: Color(0xff022B3A),
               ),
               height: 1,
