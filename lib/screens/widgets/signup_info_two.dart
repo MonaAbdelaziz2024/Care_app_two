@@ -1,4 +1,3 @@
-
 import 'package:care_app_two/helper/constant.dart';
 import 'package:care_app_two/helper/styles.dart';
 import 'package:care_app_two/screens/signin/sign_in_two.dart';
@@ -7,6 +6,7 @@ import 'package:care_app_two/screens/widgets/custom_dropdown_dateofbirth.dart';
 import 'package:care_app_two/screens/widgets/custom_dropdown_list.dart';
 import 'package:care_app_two/screens/widgets/custom_radio_button.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class SignupInfoTwo extends StatelessWidget {
   const SignupInfoTwo({super.key});
@@ -14,115 +14,112 @@ class SignupInfoTwo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(
-        top: 110,
-        left: 28,
-        right: 30
-      ),
+      padding: const EdgeInsets.only(top: 110, left: 28, right: 29).r,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Center(
-            child:  Text(
+            child: Text(
               "SIGN UP",
               style: Styles.Style42.copyWith(color: kTextButtonColor),
               // textAlign: TextAlign.left,
             ),
           ),
-          const Padding(
-            padding: EdgeInsets.only(
+          Padding(
+            padding: const EdgeInsets.only(
               left: 28,
               top: 46,
               bottom: 3,
-            ),
+            ).r,
             child: Text("Date of birth", style: Styles.Style14),
           ),
-          const SizedBox(
-            height: 15,
+          SizedBox(
+            height: 15.h,
           ),
           const CustomDateOfBirth(),
-          const Padding(
-            padding: EdgeInsets.only(
+          Padding(
+            padding: const EdgeInsets.only(
               left: 28,
               top: 17,
               bottom: 3,
-            ),
+            ).r,
             child: Text("Gender", style: Styles.Style14),
           ),
-          const SizedBox(
-            height: 15,
+          SizedBox(
+            height: 15.h,
           ),
           Row(
             children: [
-              CustomRadioButton(text: 'Male', value: 0, width: 140, height: 40),
+              CustomRadioButton(
+                  text: 'Male', value: 0, width: 130.w, height: 40.h),
               const SizedBox(
                 width: 45,
               ),
               CustomRadioButton(
-                  text: 'Female', value: 0, width: 160, height: 40),
+                  text: 'Female', value: 0, width: 130.w, height: 40.h),
             ],
           ),
-          const SizedBox(
-            height: 21,
+          SizedBox(
+            height: 21.h,
           ),
-          const Padding(
-            padding: EdgeInsets.only(
+          Padding(
+            padding: const EdgeInsets.only(
               left: 28,
               top: 21,
               bottom: 3,
-            ),
+            ).r,
             child: Row(
               children: [
                 Text("Height", style: Styles.Style14),
                 SizedBox(
-                  width: 130,
+                  width: 130.w,
                 ),
                 Text("Weight", style: Styles.Style14),
               ],
             ),
           ),
-          const SizedBox(
-            height: 12,
+          SizedBox(
+            height: 12.h,
           ),
-          const Row(
+          Row(
             children: [
               CustomDropDownList(
-                  items: ['item1', 'item2'], width: 140, height: 40),
-              SizedBox(
+                  items: const ['item1', 'item2'], width: 130.w, height: 40.h),
+              const SizedBox(
                 width: 45,
               ),
               CustomDropDownList(
-                  items: ['item1', 'item2'], width: 160, height: 40),
+                  items: const ['item1', 'item2'], width: 130.w, height: 40.h),
             ],
           ),
           //  SizedBox(height: 20,),
-          const Padding(
-            padding: EdgeInsets.only(
+          Padding(
+            padding: const EdgeInsets.only(
               left: 28,
               top: 20,
               bottom: 11,
-            ),
+            ).r,
             child: Text(
               'The Disease',
               style: Styles.Style14,
             ),
           ),
-          const CustomDropDownList(
-              items: ['item1', 'item2'], width: 400, height: 40),
-          const Padding(
-            padding: EdgeInsets.only(
+          CustomDropDownList(
+              items: const ['item1', 'item2'], width: 303.w, height: 37.h),
+          Padding(
+            padding: const EdgeInsets.only(
               left: 28,
               top: 13,
               bottom: 13,
-            ),
+            ).r,
             child: Text(
               'Date of illness',
               style: Styles.Style14,
             ),
           ),
           const CustomDateOfBirth(),
-          const SizedBox(
-            height: 40,
+          SizedBox(
+            height: 40.h,
           ),
           CustomButton(
             nextIcon: true,
@@ -133,23 +130,23 @@ class SignupInfoTwo extends StatelessWidget {
               }));
             },
           ),
-          const SizedBox(
-            height: 27,
+          SizedBox(
+            height: 27.h,
           ),
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
               Padding(
-                padding: const EdgeInsets.only(right: 24),
+                padding: const EdgeInsets.only(right: 24).r,
                 child: Image.asset('assets/images/Ellipse 68.png'),
               ),
               Padding(
-                padding: const EdgeInsets.only(right: 24),
+                padding: const EdgeInsets.only(right: 24).r,
                 child: Image.asset('assets/images/Ellipse 69.png'),
               ),
-              
             ],
           ),
+          SizedBox(height: 16.h,)
           //const SizedBox(height: 40,),
           //CustomRadioButton(text: 'Male', value: 1, width: 140, height: 40),
           // const SizedBox(height: 40,),

@@ -1,6 +1,7 @@
 
 import 'package:care_app_two/helper/styles.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 // ignore: must_be_immutable
 class CustomTextField extends StatelessWidget {
@@ -30,14 +31,14 @@ class CustomTextField extends StatelessWidget {
         hintText: hintText,
         hintStyle: Styles.Style14,
         enabledBorder: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(17),
+          borderRadius: BorderRadius.circular(17).r,
           borderSide: const BorderSide(
             color: Color(0xffC2C2C2),
             style: BorderStyle.solid,
           ),
         ),
         border: OutlineInputBorder(
-          borderRadius: BorderRadius.circular(17),
+          borderRadius: BorderRadius.circular(17).r,
           borderSide: const BorderSide(
             color: Color(0xffC2C2C2),
             style: BorderStyle.solid,
