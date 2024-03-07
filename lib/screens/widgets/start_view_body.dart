@@ -15,7 +15,7 @@ class StartViewBody extends StatelessWidget {
             image: AssetImage(kBackgroundStart), fit: BoxFit.fill),
       ),
       child: ListView(
-        padding: EdgeInsets.symmetric(horizontal: 38),
+        padding: const EdgeInsets.symmetric(horizontal: 38),
         children: [
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -26,7 +26,7 @@ class StartViewBody extends StatelessWidget {
                   fontFamily: 'Cairo',
                   fontSize: 155.07691955566406.sp,
                   fontWeight: FontWeight.w700,
-                  color: Color(0xff0075FE),
+                  color: const Color(0xff0075FE),
                 ),
               ),
               Padding(
@@ -48,7 +48,7 @@ class StartViewBody extends StatelessWidget {
                 fontFamily: 'Cairo',
                 fontSize: 36.sp,
                 fontWeight: FontWeight.w700,
-                color: Color(0xff0075FE),
+                color: const Color(0xff0075FE),
               ),
             ),
           ),
@@ -88,7 +88,7 @@ class StartViewBody extends StatelessWidget {
                       fontFamily: 'Cairo',
                       fontSize: 20.sp,
                       fontWeight: FontWeight.w700,
-                      color: Color(0xffFF9500),
+                      color: const Color(0xffFF9500),
                     ),
                   ),
                 ),

@@ -42,25 +42,25 @@ class _CustomSignupItemsState extends State<CustomSignupItems> {
             ),
           ),
           Padding(
-            padding: EdgeInsets.only(
+            padding: const EdgeInsets.only(
               left: 28,
               top: 46,
               bottom: 3,
             ).r,
             child: Text("Username", style: Styles.Style16),
           ),
-          SizedBox(width: 350.w, height: 52.h, child: CustomTextField()),
+          SizedBox(width: 350.w, height: 52.h, child: const CustomTextField()),
           Padding(
-            padding: EdgeInsets.only(
+            padding: const EdgeInsets.only(
               left: 28,
               top: 46,
               bottom: 3,
             ).r,
             child: Text("Email", style: Styles.Style14),
           ),
-          SizedBox(width: 350.w, height: 52.h, child: CustomTextField()),
+          SizedBox(width: 350.w, height: 52.h, child: const CustomTextField()),
           Padding(
-            padding: EdgeInsets.only(
+            padding: const EdgeInsets.only(
               left: 28,
               top: 46,
               bottom: 3,
@@ -70,7 +70,7 @@ class _CustomSignupItemsState extends State<CustomSignupItems> {
           SizedBox(
               width: 350.w,
               height: 52.h,
-              child: CustomTextField(
+              child: const CustomTextField(
                 obscureText: true,
               )),
           Padding(
@@ -137,8 +137,8 @@ class _CustomSignupItemsState extends State<CustomSignupItems> {
             text: "Next",
           ),
           Padding(
-            padding: EdgeInsets.only(top: 16, bottom: 20).r,
-            child: CustomLine(),
+            padding: const EdgeInsets.only(top: 16, bottom: 20).r,
+            child: const CustomLine(),
           ),
           const SignupWithGoogle(),
           SizedBox(

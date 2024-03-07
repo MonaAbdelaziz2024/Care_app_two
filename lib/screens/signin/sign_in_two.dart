@@ -57,7 +57,7 @@ class SigninTwo extends StatelessWidget {
                       height: 15.h,
                     ),
                      Padding(
-                      padding: EdgeInsets.only(left: 28).r,
+                      padding: const EdgeInsets.only(left: 28).r,
                       child: Align(
                         alignment: Alignment.centerLeft,
                         child: Text(
@@ -108,7 +108,7 @@ class SigninTwo extends StatelessWidget {
                             fontFamily: 'Kadwa',
                             fontSize: 11.sp,
                             fontWeight: FontWeight.w400,
-                            color: Color(0xff0062D6),
+                            color: const Color(0xff0062D6),
                           ),
                         ),
                       ),

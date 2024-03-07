@@ -26,7 +26,7 @@ class SignupInfoTwo extends StatelessWidget {
             ),
           ),
           Padding(
-            padding: EdgeInsets.only(
+            padding: const EdgeInsets.only(
               left: 28,
               top: 46,
               bottom: 3,
@@ -38,7 +38,7 @@ class SignupInfoTwo extends StatelessWidget {
           ),
           const CustomDateOfBirth(),
           Padding(
-            padding: EdgeInsets.only(
+            padding: const EdgeInsets.only(
               left: 28,
               top: 17,
               bottom: 3,
@@ -63,7 +63,7 @@ class SignupInfoTwo extends StatelessWidget {
             height: 21.h,
           ),
           Padding(
-            padding: EdgeInsets.only(
+            padding: const EdgeInsets.only(
               left: 28,
               top: 21,
               bottom: 3,
@@ -84,17 +84,17 @@ class SignupInfoTwo extends StatelessWidget {
           Row(
             children: [
               CustomDropDownList(
-                  items: ['item1', 'item2'], width: 130.w, height: 40.h),
-              SizedBox(
+                  items: const ['item1', 'item2'], width: 130.w, height: 40.h),
+              const SizedBox(
                 width: 45,
               ),
               CustomDropDownList(
-                  items: ['item1', 'item2'], width: 130.w, height: 40.h),
+                  items: const ['item1', 'item2'], width: 130.w, height: 40.h),
             ],
           ),
           //  SizedBox(height: 20,),
           Padding(
-            padding: EdgeInsets.only(
+            padding: const EdgeInsets.only(
               left: 28,
               top: 20,
               bottom: 11,
@@ -105,9 +105,9 @@ class SignupInfoTwo extends StatelessWidget {
             ),
           ),
           CustomDropDownList(
-              items: ['item1', 'item2'], width: 303.w, height: 37.h),
+              items: const ['item1', 'item2'], width: 303.w, height: 37.h),
           Padding(
-            padding: EdgeInsets.only(
+            padding: const EdgeInsets.only(
               left: 28,
               top: 13,
               bottom: 13,
