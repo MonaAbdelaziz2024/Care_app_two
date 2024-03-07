@@ -24,40 +24,40 @@ class StartViewBody extends StatelessWidget {
                 "car",
                 style: TextStyle(
                   fontFamily: 'Cairo',
-                  fontSize: 155.07691955566406.sp,
+                  fontSize: 155.07691955566406,
                   fontWeight: FontWeight.w700,
                   color: const Color(0xff0075FE),
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(top: 50).r,
+                padding: const EdgeInsets.only(top: 50),
                 child: Image.asset(
                   kLogo,
-                  scale: 0.6.r,
+                  scale: 0.7,
                 ),
               ),
             ],
           ),
           SizedBox(
-            height: 20.h,
+            height: 20,
           ),
           Center(
             child: Text(
               'Welcome  ',
               style: TextStyle(
                 fontFamily: 'Cairo',
-                fontSize: 36.sp,
+                fontSize: 36,
                 fontWeight: FontWeight.w700,
                 color: const Color(0xff0075FE),
               ),
             ),
           ),
           SizedBox(
-            height: 94.h,
+            height: 94,
           ),
           Container(
-            width: 283.w,
-            height: 61.h,
+            width: 283,
+            height: 61,
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(10).w, color: Colors.white),
             child: GestureDetector(
@@ -71,22 +71,22 @@ class StartViewBody extends StatelessWidget {
                 );
               },
               child: Container(
-                height: 61.h,
+                height: 61,
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10).w,
+                  borderRadius: BorderRadius.circular(10),
                   shape: BoxShape.rectangle,
                   color: Colors.white,
                   border: Border.all(
                     color: const Color(0xffFF9500),
-                    width: 2.w,
+                    width: 2,
                   ),
                 ),
-                child:  Center(
+                child: Center(
                   child: Text(
                     'START NOW',
                     style: TextStyle(
                       fontFamily: 'Cairo',
-                      fontSize: 20.sp,
+                      fontSize: 20,
                       fontWeight: FontWeight.w700,
                       color: const Color(0xffFF9500),
                     ),
@@ -95,8 +95,8 @@ class StartViewBody extends StatelessWidget {
               ),
             ),
           ),
-           SizedBox(
-            height: 26.h,
+          SizedBox(
+            height: 26,
           ),
           GestureDetector(
             onTap: () {
@@ -109,22 +109,22 @@ class StartViewBody extends StatelessWidget {
               );
             },
             child: Container(
-              height: 61.h,
+              height: 61,
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10).w,
+                borderRadius: BorderRadius.circular(10),
                 shape: BoxShape.rectangle,
                 color: kButtonColor,
                 border: Border.all(
                   color: kButtonColor,
-                  width: 2.w,
+                  width: 2,
                 ),
               ),
-              child:  Center(
+              child: Center(
                 child: Text(
                   'SIGN IN',
                   style: TextStyle(
                     fontFamily: 'Cairo',
-                    fontSize: 20.sp,
+                    fontSize: 20,
                     fontWeight: FontWeight.w700,
                     color: Colors.white,
                   ),

@@ -6,13 +6,14 @@ import 'package:care_app_two/helper/styles.dart';
 import 'package:care_app_two/screens/signin/sign_in_two.dart';
 import 'package:care_app_two/screens/signup/signup_screen.dart';
 import 'package:care_app_two/screens/widgets/Custom_line.dart';
-import 'package:care_app_two/screens/widgets/custom_app_bar_items.dart';
+//import 'package:care_app_two/screens/widgets/custom_app_bar_items.dart';
 import 'package:care_app_two/screens/widgets/custom_button.dart';
+import 'package:care_app_two/screens/widgets/custom_logo.dart';
 import 'package:care_app_two/screens/widgets/custom_text_feild.dart';
 import 'package:care_app_two/screens/widgets/signin_with_google.dart';
 //import 'package:care_app_two/screens/widgets/signup_with_google.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+//import 'package:flutter_screenutil/flutter_screenutil.dart';
 //import 'package:flutter/widgets.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -33,68 +34,64 @@ class _SIGNINState extends State<SIGNIN> {
           image: DecorationImage(
               image: AssetImage(kBackgroundSigninOne), fit: BoxFit.fill),
         ),
-        child: ListView(
+        child: Column(
           children: [
             // padding: EdgeInsets.symmetric(horizontal: 29),
+            /*SizedBox(
+              height: 8,
+            ),*/
+            CustomLogo(),
             SizedBox(
-              height: 8.h,
-            ),
-            CustomAppBarItems(),
-            SizedBox(
-              height: 32.h,
+              height: 20,
             ),
             Center(
               child: Text('SIGN IN',
                   style: Styles.Style42.copyWith(color: Color(0xff0075FE))),
             ),
             SizedBox(
-              height: 15.h,
+              height: 15,
             ),
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: 30).r,
+              padding: EdgeInsets.symmetric(horizontal: 30),
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Padding(
-                    padding: const EdgeInsets.only(left: 15).r,
+                    padding: const EdgeInsets.only(left: 15),
                     child: Text(
                       'Email',
                       style: Styles.Style15,
                     ),
                   ),
                   SizedBox(
-                    height: 10.h,
+                    height: 10,
                   ),
                   CustomTextField(
                     backgroundColor: Color(0xffb7cfff),
                   ),
                   SizedBox(
-                    height: 40.h,
+                    height: 30,
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(left: 15).r,
+                    padding: const EdgeInsets.only(left: 15),
                     child: Text(
                       'Password',
                       style: Styles.Style15,
                     ),
                   ),
                   SizedBox(
-                    height: 10.h,
+                    height: 10,
                   ),
                   CustomTextField(),
                   SizedBox(
-                    height: 10.h,
+                    height: 10,
                   ),
                   Row(
                     children: [
                       IconButton(
-                        
-                       
                         onPressed: () {
                           color = Colors.blue;
-                          setState(() {
-                            
-                          });
+                          setState(() {});
                         },
                         icon: Icon(
                           FontAwesomeIcons.solidCircleCheck,
@@ -109,7 +106,7 @@ class _SIGNINState extends State<SIGNIN> {
                     ],
                   ),
                   SizedBox(
-                    height: 10.h,
+                    height: 10,
                   ),
                   CustomButton(
                     nextIcon: false,
@@ -125,7 +122,7 @@ class _SIGNINState extends State<SIGNIN> {
                     text: 'Sign In',
                   ),
                   SizedBox(
-                    height: 9.h,
+                    height: 9,
                   ),
                   Center(
                     child: GestureDetector(
@@ -139,7 +136,7 @@ class _SIGNINState extends State<SIGNIN> {
                         );
                       },
                       child: Padding(
-                        padding: const EdgeInsets.only(top: 8).r,
+                        padding: const EdgeInsets.only(top: 8),
                         child: Text(
                           'Forgot Password?',
                           style: Styles.Style12,
@@ -148,17 +145,17 @@ class _SIGNINState extends State<SIGNIN> {
                     ),
                   ),
                   SizedBox(
-                    height: 10.h,
+                    height: 10,
                   ),
                   CustomLine(),
                   SizedBox(
-                    height: 10.h,
+                    height: 10,
                   ),
                   SignWithGoogle(
                     text: "Sign In with Google",
                   ),
                   SizedBox(
-                    height: 12.h,
+                    height: 10,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -168,7 +165,7 @@ class _SIGNINState extends State<SIGNIN> {
                         style: Styles.Style12,
                       ),
                       SizedBox(
-                        width: 10.w,
+                        width: 10,
                       ),
                       GestureDetector(
                         onTap: () {
@@ -185,7 +182,7 @@ class _SIGNINState extends State<SIGNIN> {
                           style: TextStyle(
                             color: Color(0xff0062D6),
                             fontFamily: 'Cairo',
-                            fontSize: 12.sp,
+                            fontSize: 12,
                             fontWeight: FontWeight.w500,
                           ),
                         ),
