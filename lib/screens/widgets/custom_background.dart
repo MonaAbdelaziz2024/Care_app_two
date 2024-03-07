@@ -1,10 +1,11 @@
-
 //import 'package:care_app_project_one/screens/widgets/custom_app_bar_items.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomBackground extends StatelessWidget {
   const CustomBackground({
-    super.key, required this.image,
+    super.key,
+    required this.image,
   });
   final String image;
   @override
@@ -12,9 +13,9 @@ class CustomBackground extends StatelessWidget {
     return Stack(
       children: [
         Container(
-          width: 1143,
-          height: 880,
-          decoration:  BoxDecoration(
+          width: 1.sw,
+          height: 1.sh,
+          decoration: BoxDecoration(
             image: DecorationImage(
               image: AssetImage(image),
               fit: BoxFit.cover,

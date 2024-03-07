@@ -2,6 +2,7 @@ import 'package:care_app_two/helper/constant.dart';
 import 'package:care_app_two/screens/signin/sign_in.dart';
 import 'package:care_app_two/screens/signup/signup_screen.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class StartViewBody extends StatelessWidget {
   const StartViewBody({super.key});
@@ -14,51 +15,51 @@ class StartViewBody extends StatelessWidget {
             image: AssetImage(kBackgroundStart), fit: BoxFit.fill),
       ),
       child: ListView(
-        padding:const EdgeInsets.symmetric(horizontal: 38),
+        padding: EdgeInsets.symmetric(horizontal: 38),
         children: [
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
             children: [
-           const   Text(
+              Text(
                 "car",
                 style: TextStyle(
                   fontFamily: 'Cairo',
-                  fontSize: 155.07691955566406,
+                  fontSize: 155.07691955566406.sp,
                   fontWeight: FontWeight.w700,
                   color: Color(0xff0075FE),
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(top: 50),
+                padding: const EdgeInsets.only(top: 50).r,
                 child: Image.asset(
                   kLogo,
-                  scale: 0.8,
+                  scale: 0.6.r,
                 ),
               ),
             ],
           ),
-         const SizedBox(
-            height: 20,
+          SizedBox(
+            height: 20.h,
           ),
-         const Center(
+          Center(
             child: Text(
               'Welcome  ',
               style: TextStyle(
                 fontFamily: 'Cairo',
-                fontSize: 36,
+                fontSize: 36.sp,
                 fontWeight: FontWeight.w700,
                 color: Color(0xff0075FE),
               ),
             ),
           ),
-         const SizedBox(
-            height: 94,
+          SizedBox(
+            height: 94.h,
           ),
           Container(
-            width: 283,
-            height: 61,
+            width: 283.w,
+            height: 61.h,
             decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10), color: Colors.white),
+                borderRadius: BorderRadius.circular(10).w, color: Colors.white),
             child: GestureDetector(
               onTap: () {
                 Navigator.of(context).push(
@@ -70,22 +71,22 @@ class StartViewBody extends StatelessWidget {
                 );
               },
               child: Container(
-                height: 61,
+                height: 61.h,
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
+                  borderRadius: BorderRadius.circular(10).w,
                   shape: BoxShape.rectangle,
                   color: Colors.white,
                   border: Border.all(
                     color: const Color(0xffFF9500),
-                    width: 2,
+                    width: 2.w,
                   ),
                 ),
-                child:const Center(
+                child:  Center(
                   child: Text(
                     'START NOW',
                     style: TextStyle(
                       fontFamily: 'Cairo',
-                      fontSize: 20,
+                      fontSize: 20.sp,
                       fontWeight: FontWeight.w700,
                       color: Color(0xffFF9500),
                     ),
@@ -94,42 +95,42 @@ class StartViewBody extends StatelessWidget {
               ),
             ),
           ),
-        const  SizedBox(
-            height: 26,
+           SizedBox(
+            height: 26.h,
           ),
           GestureDetector(
             onTap: () {
-               Navigator.of(context).push(
-                  MaterialPageRoute(
-                    builder: (context) {
-                      return const SIGNIN();
-                    },
-                  ),
-                );
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) {
+                    return const SIGNIN();
+                  },
+                ),
+              );
             },
             child: Container(
-                  height: 61,
-                  decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(10),
-                    shape: BoxShape.rectangle,
-                    color: kButtonColor,
-                    border: Border.all(
-                      color: kButtonColor,
-                      width: 2,
-                    ),
-                  ),
-                  child:const Center(
-                    child: Text(
-                      'SIGN IN',
-                      style: TextStyle(
-                        fontFamily: 'Cairo',
-                        fontSize: 20,
-                        fontWeight: FontWeight.w700,
-                        color: Colors.white,
-                      ),
-                    ),
+              height: 61.h,
+              decoration: BoxDecoration(
+                borderRadius: BorderRadius.circular(10).w,
+                shape: BoxShape.rectangle,
+                color: kButtonColor,
+                border: Border.all(
+                  color: kButtonColor,
+                  width: 2.w,
+                ),
+              ),
+              child:  Center(
+                child: Text(
+                  'SIGN IN',
+                  style: TextStyle(
+                    fontFamily: 'Cairo',
+                    fontSize: 20.sp,
+                    fontWeight: FontWeight.w700,
+                    color: Colors.white,
                   ),
                 ),
+              ),
+            ),
           ),
           // CustomButton(
           //   nextIcon: false,

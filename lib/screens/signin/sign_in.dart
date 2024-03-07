@@ -12,76 +12,93 @@ import 'package:care_app_two/screens/widgets/custom_text_feild.dart';
 import 'package:care_app_two/screens/widgets/signin_with_google.dart';
 //import 'package:care_app_two/screens/widgets/signup_with_google.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 //import 'package:flutter/widgets.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
-class SIGNIN extends StatelessWidget {
+class SIGNIN extends StatefulWidget {
   const SIGNIN({super.key});
 
   @override
+  State<SIGNIN> createState() => _SIGNINState();
+}
+
+class _SIGNINState extends State<SIGNIN> {
+  Color color = Colors.grey;
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.white,
       body: Container(
         decoration: const BoxDecoration(
           image: DecorationImage(
-              image: AssetImage(kBackgroundSigninOne),
-              fit: BoxFit.fill),
+              image: AssetImage(kBackgroundSigninOne), fit: BoxFit.fill),
         ),
-        child: Column(
+        child: ListView(
           children: [
             // padding: EdgeInsets.symmetric(horizontal: 29),
             SizedBox(
-              height: 8,
+              height: 8.h,
             ),
             CustomAppBarItems(),
-            Text('SIGN IN', style: Styles.Style42.copyWith(color: Color(0xff0075FE))),
             SizedBox(
-              height: 15,
+              height: 32.h,
+            ),
+            Center(
+              child: Text('SIGN IN',
+                  style: Styles.Style42.copyWith(color: Color(0xff0075FE))),
+            ),
+            SizedBox(
+              height: 15.h,
             ),
             Padding(
-              padding: EdgeInsets.symmetric(horizontal: 30),
+              padding: EdgeInsets.symmetric(horizontal: 30).r,
               child: Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Padding(
-                    padding: const EdgeInsets.only(left: 15),
+                    padding: const EdgeInsets.only(left: 15).r,
                     child: Text(
                       'Email',
                       style: Styles.Style15,
                     ),
                   ),
                   SizedBox(
-                    height: 10,
+                    height: 10.h,
                   ),
                   CustomTextField(
                     backgroundColor: Color(0xffb7cfff),
                   ),
                   SizedBox(
-                    height: 40,
+                    height: 40.h,
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(left: 15),
+                    padding: const EdgeInsets.only(left: 15).r,
                     child: Text(
                       'Password',
                       style: Styles.Style15,
                     ),
                   ),
                   SizedBox(
-                    height: 10,
+                    height: 10.h,
                   ),
                   CustomTextField(),
                   SizedBox(
-                    height: 10,
+                    height: 10.h,
                   ),
                   Row(
                     children: [
                       IconButton(
-                        color: Colors.blue,
-                        onPressed: () {},
+                        
+                       
+                        onPressed: () {
+                          color = Colors.blue;
+                          setState(() {
+                            
+                          });
+                        },
                         icon: Icon(
                           FontAwesomeIcons.solidCircleCheck,
-                          color: Colors.blue,
+                          color: color,
                           size: 24,
                         ),
                       ),
@@ -92,7 +109,7 @@ class SIGNIN extends StatelessWidget {
                     ],
                   ),
                   SizedBox(
-                    height: 10,
+                    height: 10.h,
                   ),
                   CustomButton(
                     nextIcon: false,
@@ -108,7 +125,7 @@ class SIGNIN extends StatelessWidget {
                     text: 'Sign In',
                   ),
                   SizedBox(
-                    height: 9,
+                    height: 9.h,
                   ),
                   Center(
                     child: GestureDetector(
@@ -121,24 +138,27 @@ class SIGNIN extends StatelessWidget {
                           ),
                         );
                       },
-                      child: Text(
-                        'Forgot Password?',
-                        style: Styles.Style12,
+                      child: Padding(
+                        padding: const EdgeInsets.only(top: 8).r,
+                        child: Text(
+                          'Forgot Password?',
+                          style: Styles.Style12,
+                        ),
                       ),
                     ),
                   ),
                   SizedBox(
-                    height: 8,
+                    height: 10.h,
                   ),
                   CustomLine(),
                   SizedBox(
-                    height: 8,
+                    height: 10.h,
                   ),
                   SignWithGoogle(
                     text: "Sign In with Google",
                   ),
                   SizedBox(
-                    height: 5,
+                    height: 12.h,
                   ),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.center,
@@ -148,7 +168,7 @@ class SIGNIN extends StatelessWidget {
                         style: Styles.Style12,
                       ),
                       SizedBox(
-                        width: 10,
+                        width: 10.w,
                       ),
                       GestureDetector(
                         onTap: () {
@@ -165,7 +185,7 @@ class SIGNIN extends StatelessWidget {
                           style: TextStyle(
                             color: Color(0xff0062D6),
                             fontFamily: 'Cairo',
-                            fontSize: 12,
+                            fontSize: 12.sp,
                             fontWeight: FontWeight.w500,
                           ),
                         ),

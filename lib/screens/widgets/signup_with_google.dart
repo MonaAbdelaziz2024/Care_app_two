@@ -1,6 +1,7 @@
 import 'package:care_app_two/helper/constant.dart';
 import 'package:care_app_two/helper/styles.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class SignupWithGoogle extends StatelessWidget {
   const SignupWithGoogle({super.key});
@@ -8,15 +9,15 @@ class SignupWithGoogle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        width: 400,
-        height: 53,
+        width: 400.w,
+        height: 53.h,
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(17),
+          borderRadius: BorderRadius.circular(17).r,
           shape: BoxShape.rectangle,
           color: Colors.white,
           border: Border.all(
             color: kLogoColor,
-            width: 2,
+            width: 2.w,
           ),
         ),
         child: Row(
@@ -24,11 +25,11 @@ class SignupWithGoogle extends StatelessWidget {
           children: [
             Image.asset(
               kGoogleImage,
-              width: 21,
-              height: 21,
+              width: 21.w,
+              height: 21.h,
             ),
-            const SizedBox(
-              width: 10,
+             SizedBox(
+              width: 10.w,
             ),
              Center(
               child: Text(

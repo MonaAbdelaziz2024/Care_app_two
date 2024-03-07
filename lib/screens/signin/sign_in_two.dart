@@ -11,6 +11,7 @@ import 'package:care_app_two/screens/widgets/custom_background.dart';
 import 'package:care_app_two/screens/widgets/custom_button.dart';
 import 'package:care_app_two/screens/widgets/custom_text_feild.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 //import 'package:graduation_project/widgets/custom_logo.dart';
 
@@ -28,35 +29,35 @@ class SigninTwo extends StatelessWidget {
               const CustomAppBarItems(),
         
               Padding(
-                padding: const EdgeInsets.only(top: 130,left: 28,right: 29),
+                padding: const EdgeInsets.only(top: 130,left: 28,right: 29).r,
                 child: Column(
                   //  crossAxisAlignment: CrossAxisAlignment.center,
                   //  mainAxisAlignment: MainAxisAlignment.center,
                   children: [
                     
                     Image.asset('assets/images/Lock_duotone_line.png'),
-                    const SizedBox(
-                      height: 6,
+                     SizedBox(
+                      height: 6.h,
                     ),
                     Text("Trouble logging in?",
                         textAlign: TextAlign.center,
                         style: Styles.Style20.copyWith(color: kTextColor)),
-                    const SizedBox(
-                      height: 10,
+                     SizedBox(
+                      height: 10.h,
                     ),
-                    const Text(
+                     Text(
                       'Enter your email and we\'ll send you',
                       style: Styles.Style14,
                     ),
-                    const Text(
+                     Text(
                       ' a link to reset your password.',
                       style: Styles.Style14,
                     ),
-                    const SizedBox(
-                      height: 15,
+                     SizedBox(
+                      height: 15.h,
                     ),
-                    const Padding(
-                      padding: EdgeInsets.only(left: 28),
+                     Padding(
+                      padding: EdgeInsets.only(left: 28).r,
                       child: Align(
                         alignment: Alignment.centerLeft,
                         child: Text(
@@ -65,33 +66,33 @@ class SigninTwo extends StatelessWidget {
                         ),
                       ),
                     ),
-                    const SizedBox(
-                      height: 10,
+                     SizedBox(
+                      height: 10.h,
                     ),
                     const CustomTextField(
                       backgroundColor: Color(0xffD4D6EE),
                     ),
-                    const SizedBox(
-                      height: 66,
+                     SizedBox(
+                      height: 66.h,
                     ),
                     const CustomButton(
                       nextIcon: false,
                       text: 'Send Login link',
                     ),
-                    const SizedBox(
-                      height: 17,
+                     SizedBox(
+                      height: 17.h,
                     ),
-                    const Center(
+                     Center(
                         child: Text(
                       'Can’t reset your password?',
                       style: Styles.Style11,
                     )),
-                    const SizedBox(
-                      height: 30,
+                     SizedBox(
+                      height: 30.h,
                     ),
                     const CustomLine(),
-                    const SizedBox(
-                      height: 26,
+                     SizedBox(
+                      height: 26.h
                     ),
                     Center(
                       child: GestureDetector(
@@ -101,11 +102,11 @@ class SigninTwo extends StatelessWidget {
                             return const SignUpView();
                           }));
                         },
-                        child: const Text(
+                        child:  Text(
                           'Create new account',
                           style: TextStyle(
                             fontFamily: 'Kadwa',
-                            fontSize: 11,
+                            fontSize: 11.sp,
                             fontWeight: FontWeight.w400,
                             color: Color(0xff0062D6),
                           ),
@@ -113,17 +114,17 @@ class SigninTwo extends StatelessWidget {
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(left: 0, top: 50),
+                      padding: const EdgeInsets.only(left: 0, top: 50).r,
                       child: Container(
                         decoration: const BoxDecoration(
                           color: Color(0xff022B3A),
                         ),
-                        height: 1.2,
-                        width: 305,
+                        height: 1.2.h,
+                        width: 305.w,
                       ),
                     ),
                     Padding(
-                      padding: const EdgeInsets.only(top: 12),
+                      padding: const EdgeInsets.only(top: 12).r,
                       child: GestureDetector(
                         onTap: () {
                           Navigator.of(context)
@@ -131,12 +132,13 @@ class SigninTwo extends StatelessWidget {
                             return const SIGNIN();
                           }));
                         },
-                        child: const Text(
+                        child:  Text(
                           'Back to Sign in',
                           style: Styles.Style13,
                         ),
                       ),
-                    )
+                    ),
+                    SizedBox(height: 16.h,)
                   ],
                 ),
               ),

@@ -4,6 +4,7 @@ import 'package:care_app_two/helper/styles.dart';
 import 'package:datepicker_dropdown/datepicker_dropdown.dart';
 import 'package:datepicker_dropdown/order_format.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomDateOfBirth extends StatefulWidget {
   const CustomDateOfBirth({super.key});
@@ -15,14 +16,14 @@ class CustomDateOfBirth extends StatefulWidget {
 class _CustomDateOfBirthState extends State<CustomDateOfBirth> {
   @override
   Widget build(BuildContext context) {
-    return 
-    SizedBox(//DropdownDatePicker
-      height: 55,
+    return SizedBox(
+      //DropdownDatePicker
+      height: 55.h,
       child: DropdownDatePicker(
         dateformatorder: OrderFormat.DMY, // default is myd
         inputDecoration: InputDecoration(
           border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(10),
+            borderRadius: BorderRadius.circular(10).r,
             borderSide: const BorderSide(color: Colors.grey),
           ),
           // border: OutlineInputBorder(
@@ -33,7 +34,7 @@ class _CustomDateOfBirthState extends State<CustomDateOfBirth> {
         isFormValidator: true, // optional
         startYear: 1900, // optional
         endYear: 2020, // optional
-        width: 17, isExpanded: true,
+        width: 5.w, isExpanded: true,
         // optional
         selectedDay: 21, // optional
         selectedMonth: 2, // optional
@@ -42,8 +43,8 @@ class _CustomDateOfBirthState extends State<CustomDateOfBirth> {
         onChangedMonth: (value) => print('onChangedMonth: $value'),
         onChangedYear: (value) => print('onChangedYear: $value'),
         boxDecoration: BoxDecoration(
-          color:  Colors.white,
-          borderRadius: BorderRadius.circular(10),
+          color: Colors.white,
+          borderRadius: BorderRadius.circular(10).r,
 
           //border: Border.all(color : Color(0xffd4d5ee), width: 1.0)
         ), // optional
@@ -56,8 +57,8 @@ class _CustomDateOfBirthState extends State<CustomDateOfBirth> {
         hintMonth: 'Month', // optional
         hintYear: 'Year', // optional
         hintTextStyle: Styles.Style14,
-        textStyle: Styles.Style12.copyWith(
-            fontWeight: FontWeight.w600, fontSize: 13), // optional
+        textStyle:
+            Styles.Style13.copyWith(fontWeight: FontWeight.w700), // optional
       ),
     );
   }

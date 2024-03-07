@@ -1,16 +1,17 @@
 import 'package:care_app_two/helper/constant.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 // ignore: must_be_immutable
 class CustomRadioButton extends StatefulWidget {
-  CustomRadioButton({
-    super.key,
-    required this.text,
-    required this.value,
-    this.valueChoose = 1,
-    required this.width,
-    required this.height,this.onTap
-  });
+  CustomRadioButton(
+      {super.key,
+      required this.text,
+      required this.value,
+      this.valueChoose = 1,
+      required this.width,
+      required this.height,
+      this.onTap});
   final String text;
   int? valueChoose;
   final int value;
@@ -26,7 +27,7 @@ class _CustomRadioButtonState extends State<CustomRadioButton> {
     return GestureDetector(
       onTap: widget.onTap,
       child: Container(
-        padding: const EdgeInsets.only(left: 48),
+        padding: const EdgeInsets.only(left: 48).r,
         width: widget.width,
         height: widget.height,
         decoration: BoxDecoration(
@@ -35,13 +36,12 @@ class _CustomRadioButtonState extends State<CustomRadioButton> {
           color: Colors.white,
         ),
         child: Padding(
-          padding:
-              const EdgeInsets.only(right: 16, left: 10, bottom: 10, top: 10),
+          padding: const EdgeInsets.only( bottom: 10, top: 10).r,
           child: Text(
             widget.text,
-            style:const TextStyle(
+            style: const TextStyle(
                 color: kTextColor,
-                fontWeight: FontWeight.w600,
+                fontWeight: FontWeight.w700,
                 fontSize: 15,
                 fontFamily: 'Cairo'),
           ),
