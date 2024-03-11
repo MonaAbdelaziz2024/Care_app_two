@@ -70,4 +70,18 @@ class Styles {
     fontSize: 13,
     fontWeight: FontWeight.w500,
   );
+
+  static TextStyle Style10 = TextStyle(
+    color: kTextColor,
+    fontFamily: 'Ciaro',
+    fontSize: 10,
+    fontWeight: FontWeight.w400,
+  );
+
+  static TextStyle Style9 = TextStyle(
+    color: kTextColor,
+    fontFamily: 'Ciaro',
+    fontSize: 9,
+    fontWeight: FontWeight.w700,
+  );
 }
