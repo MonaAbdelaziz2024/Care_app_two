@@ -14,52 +14,44 @@ class ChatBotMessages extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomChatbotAppbar(context)   ,
-       extendBodyBehindAppBar: true,
-      body: Stack(children: [
-        const CustomBackground(image: kBackgroundStart),
-        Padding(
-          padding: const EdgeInsets.only(
-            top: 80,
-            bottom: 16,
-            left: 16,
-            right: 16,
-          ).r,
-          child: SizedBox(
-            width: 400.w,
-            height: 600.h,
-            child: Image.asset(
-              "assets/images/chatmessages.png",
-              scale: 0.1,
+        appBar: CustomChatbotAppbar(context),
+        extendBodyBehindAppBar: true,
+        body: Stack(children: [
+          const CustomBackground(image: kBackgroundStart),
+          Padding(
+            padding: const EdgeInsets.only(
+              top: 80,
+              bottom: 16,
+              left: 16,
+              right: 16,
+            ).r,
+            child: SizedBox(
+              width: 400.w,
+              height: 600.h,
+              child: Image.asset(
+                "assets/images/chatmessages.png",
+                scale: 0.1,
+              ),
             ),
           ),
-        ),
-      const  Padding(
-          padding:  EdgeInsets.only(top: 200, left:16 , right: 16),
-          child: Column(
-            children: [
-              ChatBubble(),
-              SizedBox(
-                height: 16,
-              ),
-              ChatBubbleFromFrined(),
-            ],
+          Padding(
+            padding: const EdgeInsets.only(top: 160, left: 16, right: 16).r,
+            child: const Column(
+              children: [
+                 ChatBubble(),
+                 ChatBubbleFromFrined(),
+              ],
+            ),
           ),
-        ),
-
-        Padding(
-          padding:
-              const EdgeInsets.only(top: 650, right: 32, left: 32, bottom: 28)
+          Padding(
+              padding: const EdgeInsets.only(
+                      top: 650, right: 32, left: 32, bottom: 28)
                   .r,
-          child:const CustomMessageTextfield() )
+              child: const CustomMessageTextfield())
+        ]),
+        bottomNavigationBar:
+            const CustomBottomNavigationBar() // body: ListView(
 
-       
-      ]),
-
-      
-
-      bottomNavigationBar: const CustomBottomNavigationBar() // body: ListView(
-      
-    );
+        );
   }
 }

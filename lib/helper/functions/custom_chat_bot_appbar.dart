@@ -5,7 +5,7 @@ import 'package:flutter/material.dart';
 AppBar CustomChatbotAppbar(BuildContext context) {
     return AppBar(
       leading: IconButton(
-        icon: Icon(
+        icon: const Icon(
           Icons.arrow_back_ios_new_rounded,
           size: 20,
           color: Colors.black,
