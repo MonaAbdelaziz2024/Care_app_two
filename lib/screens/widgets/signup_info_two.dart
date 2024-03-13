@@ -14,7 +14,7 @@ class SignupInfoTwo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 110, left: 28, right: 29).r,
+      padding: const EdgeInsets.only(top: 80, left: 28, right: 29).r,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -28,7 +28,7 @@ class SignupInfoTwo extends StatelessWidget {
           Padding(
             padding: const EdgeInsets.only(
               left: 28,
-              top: 46,
+              top: 24,
               bottom: 3,
             ).r,
             child: Text("Date of birth", style: Styles.Style14),
@@ -51,12 +51,18 @@ class SignupInfoTwo extends StatelessWidget {
           Row(
             children: [
               CustomRadioButton(
-                  text: 'Male', value: 0, width: 130.w, height: 40.h),
-              const SizedBox(
-                width: 45,
+                  text: 'Male',
+                  value: 0,
+                  width: MediaQuery.of(context).size.width * 0.35,
+                  height: MediaQuery.of(context).size.height * 0.06),
+              SizedBox(
+                width: 10.w,
               ),
               CustomRadioButton(
-                  text: 'Female', value: 0, width: 130.w, height: 40.h),
+                  text: 'Female',
+                  value: 0,
+                  width: MediaQuery.of(context).size.width * 0.35,
+                  height: MediaQuery.of(context).size.height * 0.06),
             ],
           ),
           SizedBox(
@@ -84,12 +90,16 @@ class SignupInfoTwo extends StatelessWidget {
           Row(
             children: [
               CustomDropDownList(
-                  items: const ['item1', 'item2'], width: 130.w, height: 40.h),
-              const SizedBox(
-                width: 45,
+                  items: const ['item1', 'item2'],
+                  width: MediaQuery.of(context).size.width * 0.36,
+                  height: MediaQuery.of(context).size.height * 0.06),
+              SizedBox(
+                width: 40.w,
               ),
               CustomDropDownList(
-                  items: const ['item1', 'item2'], width: 130.w, height: 40.h),
+                  items: const ['item1', 'item2'],
+                  width: MediaQuery.of(context).size.width * 0.36,
+                  height: MediaQuery.of(context).size.height * 0.06),
             ],
           ),
           //  SizedBox(height: 20,),
@@ -105,7 +115,9 @@ class SignupInfoTwo extends StatelessWidget {
             ),
           ),
           CustomDropDownList(
-              items: const ['item1', 'item2'], width: 303.w, height: 37.h),
+              items: const ['item1', 'item2'],
+              width: MediaQuery.of(context).size.width * 0.85,
+              height: MediaQuery.of(context).size.height * 0.06),
           Padding(
             padding: const EdgeInsets.only(
               left: 28,
@@ -146,7 +158,9 @@ class SignupInfoTwo extends StatelessWidget {
               ),
             ],
           ),
-          SizedBox(height: 16.h,)
+          SizedBox(
+            height: 16.h,
+          )
           //const SizedBox(height: 40,),
           //CustomRadioButton(text: 'Male', value: 1, width: 140, height: 40),
           // const SizedBox(height: 40,),

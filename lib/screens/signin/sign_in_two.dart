@@ -12,9 +12,8 @@ import 'package:care_app_two/screens/widgets/Custom_line.dart';
 import 'package:care_app_two/screens/widgets/custom_button.dart';
 import 'package:care_app_two/screens/widgets/custom_logo.dart';
 import 'package:care_app_two/screens/widgets/custom_text_feild.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 //import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 //import 'package:graduation_project/widgets/custom_logo.dart';
@@ -30,7 +29,7 @@ class SigninTwo extends StatelessWidget {
           image: DecorationImage(
               image: AssetImage(kBackgroundSigninTwo), fit: BoxFit.fill),
         ),
-        child: Column(
+        child: ListView(
           children: [
             Stack(
               alignment: Alignment.topCenter,
@@ -40,20 +39,21 @@ class SigninTwo extends StatelessWidget {
                 const CustomLogo(),
 
                 Padding(
-                  padding: const EdgeInsets.only(top: 80, left: 28, right: 29),
+                  padding:
+                      const EdgeInsets.only(top: 90, left: 28, right: 29).r,
                   child: Column(
                     //  crossAxisAlignment: CrossAxisAlignment.center,
                     //  mainAxisAlignment: MainAxisAlignment.center,
                     children: [
                       Image.asset('assets/images/Lock_duotone_line.png'),
                       SizedBox(
-                        height: 6,
+                        height: 10.h,
                       ),
                       Text("Trouble logging in?",
                           textAlign: TextAlign.center,
                           style: Styles.Style20.copyWith(color: kTextColor)),
                       SizedBox(
-                        height: 10,
+                        height: 10.h,
                       ),
                       Text(
                         'Enter your email and we\'ll send you',
@@ -64,10 +64,10 @@ class SigninTwo extends StatelessWidget {
                         style: Styles.Style14,
                       ),
                       SizedBox(
-                        height: 15,
+                        height: 15.h,
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(left: 28),
+                        padding: const EdgeInsets.only(left: 28).r,
                         child: Align(
                           alignment: Alignment.centerLeft,
                           child: Text(
@@ -77,12 +77,12 @@ class SigninTwo extends StatelessWidget {
                         ),
                       ),
                       SizedBox(
-                        height: 10,
+                        height: 10.h,
                       ),
                       const CustomTextField(
                         backgroundColor: Color(0xffD4D6EE),
                       ),
-                      SizedBox(
+                      const SizedBox(
                         height: 30,
                       ),
                       const CustomButton(
@@ -90,7 +90,7 @@ class SigninTwo extends StatelessWidget {
                         text: 'Send Login link',
                       ),
                       SizedBox(
-                        height: 12,
+                        height: 12.h,
                       ),
                       Center(
                           child: Text(
@@ -98,11 +98,11 @@ class SigninTwo extends StatelessWidget {
                         style: Styles.Style11,
                       )),
                       SizedBox(
-                        height: 15,
+                        height: 15.h,
                       ),
                       const CustomLine(),
                       SizedBox(
-                        height: 10,
+                        height: 16.h,
                       ),
                       Center(
                         child: GestureDetector(
@@ -119,25 +119,27 @@ class SigninTwo extends StatelessWidget {
                             'Create new account',
                             style: TextStyle(
                               fontFamily: 'Kadwa',
-                              fontSize: 11,
+                              fontSize: 11.sp,
                               fontWeight: FontWeight.w400,
-                              color: const Color(0xff0062D6),
+                              color: Color(0xff0062D6),
                             ),
                           ),
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(left: 25, top: 10, right: 25),
+                        padding:
+                            const EdgeInsets.only(left: 25, top: 16, right: 25)
+                                .r,
                         child: Container(
                           decoration: const BoxDecoration(
                             color: Color(0xff022B3A),
                           ),
-                          height: 1.2,
+                          height: 1.h,
                           width: double.infinity,
                         ),
                       ),
                       Padding(
-                        padding: const EdgeInsets.only(top: 10),
+                        padding: const EdgeInsets.only(top: 16).r,
                         child: GestureDetector(
                           onTap: () {
                             Navigator.of(context).push(
@@ -154,7 +156,6 @@ class SigninTwo extends StatelessWidget {
                           ),
                         ),
                       ),
-                      /* SizedBox(height: 11)*/
                     ],
                   ),
                 ),
@@ -259,6 +260,7 @@ class SigninTwo extends StatelessWidget {
                 //   ),
               ],
             ),
+            SizedBox(height: 40.h)
           ],
         ),
       ),

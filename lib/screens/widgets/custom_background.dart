@@ -1,5 +1,6 @@
 //import 'package:care_app_project_one/screens/widgets/custom_app_bar_items.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 ///import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -11,23 +12,24 @@ class CustomBackground extends StatelessWidget {
   final String image;
   @override
   Widget build(BuildContext context) {
-    return Container(
-      decoration: BoxDecoration(
-            image: DecorationImage(
-              image: AssetImage(image),
-              fit: BoxFit.cover,
-            ),
-          ),
-    );
-    /*Stack(
+    return 
+    // Container(
+    //   decoration: BoxDecoration(
+    //         image: DecorationImage(
+    //           image: AssetImage(image),
+    //           fit: BoxFit.fill
+    //         ),
+    //       ),
+    // );
+    Stack(
       children: [
         Container(
-         // width: 1.sw,
-          //height: 1.sh,
+         width: MediaQuery.of(context).size.width,
+          height: MediaQuery.of(context).size.height ,
           decoration: BoxDecoration(
             image: DecorationImage(
               image: AssetImage(image),
-              fit: BoxFit.cover,
+              fit: BoxFit.fill,
             ),
           ),
         ),
@@ -42,10 +44,10 @@ class CustomBackground extends StatelessWidget {
         //           Color.fromARGB(255, 107, 115, 228).withOpacity(.3), BlendMode.darken),
         //     ),
         //   ),
-        //   //  child: CustomAppBarItems() ,
+        //   //child: CustomAppBarItems() ,
         // )
       ],
-    );*/
+    );
   }
 }
 

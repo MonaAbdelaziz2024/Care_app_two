@@ -16,20 +16,21 @@ class CustomButton extends StatelessWidget {
       child: Container(
         decoration: BoxDecoration(
           color: kButtonColor,
-          borderRadius: BorderRadius.circular(17),
+          borderRadius: BorderRadius.circular(17).r,
         ),
-        //width: 303,
-        height: 54.331,
+        //width: 303, 54.331.h
+        //width: MediaQuery.of(context).size.width*0.1,
+        height: MediaQuery.of(context).size.height * 0.07,
         child: nextIcon
             ? Row(
                 mainAxisAlignment: MainAxisAlignment.end,
                 children: [
                   Text(text!, style: Styles.Style20),
                   SizedBox(
-                    width: 100.w,
+                    width: MediaQuery.of(context).size.width * 0.27,
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(right: 16),
+                    padding: const EdgeInsets.only(right: 16).r,
                     child: GestureDetector(
                       onTap: () {},
                       child: Image.asset('assets/images/chevron-right.png'),
@@ -44,7 +45,7 @@ class CustomButton extends StatelessWidget {
                   style: TextStyle(
                     color: const Color(0xffEEEEEE),
                     fontFamily: 'Kadwa',
-                    fontSize: 20,
+                    fontSize: 20.sp,
                     fontWeight: FontWeight.w400,
                   ),
                 ),

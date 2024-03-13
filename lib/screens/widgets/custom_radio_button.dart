@@ -27,23 +27,24 @@ class _CustomRadioButtonState extends State<CustomRadioButton> {
     return GestureDetector(
       onTap: widget.onTap,
       child: Container(
-        padding: const EdgeInsets.only(left: 48).r,
-        width: widget.width,
-        height: widget.height,
+        width: widget.width.w,
+        height: widget.height.h,
         decoration: BoxDecoration(
           border: Border.all(color: Colors.grey),
-          borderRadius: BorderRadius.circular(10),
+          borderRadius: BorderRadius.circular(10).r,
           color: Colors.white,
         ),
         child: Padding(
-          padding: const EdgeInsets.only( bottom: 10, top: 10).r,
-          child: Text(
-            widget.text,
-            style: const TextStyle(
-                color: kTextColor,
-                fontWeight: FontWeight.w700,
-                fontSize: 15,
-                fontFamily: 'Cairo'),
+          padding: const EdgeInsets.only(bottom: 10, top: 10).r,
+          child: Center(
+            child: Text(
+              widget.text,
+              style: TextStyle(
+                  color: kTextColor,
+                  fontWeight: FontWeight.w700,
+                  fontSize: 15.sp,
+                  fontFamily: 'Cairo'),
+            ),
           ),
         ),
         // const SizedBox(

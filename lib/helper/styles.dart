@@ -3,71 +3,72 @@
 
 import 'package:care_app_two/helper/constant.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 //import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class Styles {
-  static  TextStyle Style42 = TextStyle(
+  static  TextStyle Style42 =  TextStyle(
     color: kTextColor,
     fontFamily: 'Ciaro',
-    fontSize: 42,
+    fontSize: 42.sp,
     fontWeight: FontWeight.w300,
   );
-  static TextStyle Style14 = TextStyle(
+  static TextStyle Style14 =  TextStyle(
     color: kTextColor,
     fontFamily: 'Ciaro',
-    fontSize: 14,
+    fontSize: 14.sp,
     fontWeight: FontWeight.w500,
   );
   
-  static TextStyle  Style36 = TextStyle(
+  static TextStyle  Style36 =  TextStyle(
     color: kTextColor,
     fontFamily: 'Ciaro',
-    fontSize: 36,
+    fontSize: 36.sp,
     fontWeight: FontWeight.w500,
   );
   
-  static TextStyle Style15 = TextStyle(
+  static TextStyle Style15 =  TextStyle(
     color: kTextColor,
     fontFamily: 'Ciaro',
-    fontSize: 15,
+    fontSize: 15.sp,
     fontWeight: FontWeight.w500,
   );
 
-  static TextStyle Style20 = TextStyle(
+  static TextStyle Style20 =  TextStyle(
     color: Colors.white,
     fontFamily: 'Ciaro',
-    fontSize: 20,
+    fontSize: 20.sp,
     fontWeight: FontWeight.w700,
   );
-  static TextStyle Style11 = TextStyle(
+  static TextStyle Style11 =  TextStyle(
     color: kTextColor,
     fontFamily: 'Ciaro',
-    fontSize: 11,
+    fontSize: 11.sp,
     fontWeight: FontWeight.w500,
   );
 
-  static TextStyle Style12 = TextStyle(
+  static TextStyle Style12 =  TextStyle(
     color: kTextColor,
     fontFamily: 'Ciaro',
-    fontSize: 12,
+    fontSize: 12.sp,
     fontWeight: FontWeight.w500,
   );
-  static TextStyle Style17 = TextStyle(
+  static TextStyle Style17 =  TextStyle(
     color: kTextColor,
     fontFamily: 'Ciaro',
-    fontSize: 17,
+    fontSize: 17.sp,
     fontWeight: FontWeight.w500,
   );
-  static TextStyle Style16 = TextStyle(
+  static TextStyle Style16 =  TextStyle(
     color: kTextColor,
     fontFamily: 'Ciaro',
-    fontSize: 16,
+    fontSize: 16.sp,
     fontWeight: FontWeight.w500,
   );
-  static TextStyle Style13 = TextStyle(
+  static TextStyle Style13 =  TextStyle(
     color: kTextColor,
     fontFamily: 'Ciaro',
-    fontSize: 13,
+    fontSize: 13.sp,
     fontWeight: FontWeight.w500,
   );
 }
