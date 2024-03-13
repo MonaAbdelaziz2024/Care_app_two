@@ -181,7 +181,7 @@ class _HomePageState extends State<HomePage> {
                             Image.asset('assets/images/Subtract.png'),
                             Text(
                               '70 %',
-                              style: Styles.Style166,
+                              style: Styles.Style16,
                             ),
                           ],
                         ),
