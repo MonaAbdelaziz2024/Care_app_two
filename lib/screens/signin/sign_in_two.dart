@@ -44,7 +44,7 @@ class SigninTwo extends StatelessWidget {
 
                 Padding(
                   padding:
-                      const EdgeInsets.only(top: 90, left: 28, right: 29).r,
+                      const EdgeInsets.only(top: 80, left: 28, right: 29).r,
                   child: Column(
                     //  crossAxisAlignment: CrossAxisAlignment.center,
                     //  mainAxisAlignment: MainAxisAlignment.center,

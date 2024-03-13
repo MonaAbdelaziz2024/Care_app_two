@@ -10,18 +10,16 @@ class SignUpViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView(
-      children:const [ Stack(
-        //fit: StackFit.passthrough,
-        children: [ 
-          CustomBackground(image: kBackgroundStart,),
-          CustomAppBarItems(),
-          CustomSignupItems(),
-         
-        
-        ]
-      ),],
-    );
+    return Stack(
+    //fit: StackFit.passthrough,
+    children: [ 
+      CustomBackground(image: kBackgroundStart,),
+     
+      CustomSignupItems(),
+     
+    
+    ]
+          );
 
   }
 }
