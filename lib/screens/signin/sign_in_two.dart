@@ -1,6 +1,8 @@
 //import 'package:flutter/gestures.dart';
 //import 'dart:ffi';
 
+// ignore_for_file: prefer_const_constructors
+
 import 'package:care_app_two/helper/constant.dart';
 import 'package:care_app_two/helper/styles.dart';
 import 'package:care_app_two/screens/signin/sign_in.dart';
@@ -12,9 +14,7 @@ import 'package:care_app_two/screens/widgets/Custom_line.dart';
 import 'package:care_app_two/screens/widgets/custom_button.dart';
 import 'package:care_app_two/screens/widgets/custom_logo.dart';
 import 'package:care_app_two/screens/widgets/custom_text_feild.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 //import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 //import 'package:graduation_project/widgets/custom_logo.dart';

@@ -1,16 +1,16 @@
-// ignore_for_file: unused_local_variable
+// ignore_for_file: unused_local_variable, prefer_const_constructors, prefer_const_literals_to_create_immutables, use_key_in_widget_constructors
 
 import 'package:care_app_two/helper/constant.dart';
 import 'package:care_app_two/helper/styles.dart';
+import 'package:care_app_two/screens/widgets/custom_home_rec.dart';
+//import 'package:care_app_two/screens/widgets/custom_button.dart';
 //import 'package:care_app_two/screens/widgets/custom_text_feild.dart';
 //import 'package:care_app_two/screens/widgets/custom_text_feild.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 //import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class MyPage extends StatelessWidget {
+class HomePage extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // const icon = CupertinoIcons.bell_fill;
@@ -49,8 +49,8 @@ class MyPage extends StatelessWidget {
                 image: AssetImage(kBackgroundStart), fit: BoxFit.fill),
           ),
           child: Padding(
-            padding: const EdgeInsets.symmetric(horizontal: 18),
-            child: Column(
+            padding: const EdgeInsets.symmetric(horizontal: 20).r,
+            child: ListView(
               children: [
                 Row(
                   children: [
@@ -97,7 +97,7 @@ class MyPage extends StatelessWidget {
                     const Icon(Icons.notifications_none),
                   ],
                 ),
-                 SizedBox(
+                SizedBox(
                   height: 13.h,
                 ),
                 Container(
@@ -105,8 +105,12 @@ class MyPage extends StatelessWidget {
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
                     color: const Color(0xfff7f7f7),
+                    boxShadow: [BoxShadow(
+                       color: Color.fromARGB(255, 206, 211, 211),
+                    offset: Offset(1, 2),
+                    )]
                   ),
-                  padding: const EdgeInsets.all(10),
+                  padding: const EdgeInsets.all(10).r,
                   child: const Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
@@ -127,32 +131,33 @@ class MyPage extends StatelessWidget {
                     ],
                   ),
                 ),
-                 SizedBox(
+                SizedBox(
                   height: 20.h,
                 ),
                 Container(
-                  padding: const EdgeInsets.only(top: 25, left: 25),
+                  padding: const EdgeInsets.only(top: 25, left: 25).r,
                   height: 140.h,
                   decoration: BoxDecoration(
                     borderRadius: BorderRadius.circular(20),
                     color: const Color(0xff0074fe),
                   ),
                   child: const Center(
-                      child: Column(
-                    children: [
-                      Text(
-                        'Your Today’s tasks almost done ',
-                        style: TextStyle(
-                          fontSize: 13,
-                          fontWeight: FontWeight.w700,
-                          color: Color(0xffFFFFFF),
+                    child: Column(
+                      children: [
+                        Text(
+                          'Your Today’s tasks almost done ',
+                          style: TextStyle(
+                            fontSize: 13,
+                            fontWeight: FontWeight.w700,
+                            color: Color(0xffFFFFFF),
+                          ),
                         ),
-                      )
-                    ],
-                  )),
+                      ],
+                    ),
+                  ),
                 ),
-                const SizedBox(
-                  height: 20,
+                 SizedBox(
+                  height: 20.h,
                 ),
                 Row(
                   children: [
@@ -162,38 +167,24 @@ class MyPage extends StatelessWidget {
                     ),
                   ],
                 ),
-                const SizedBox(
-                  height: 8,
+                 SizedBox(
+                  height: 8.h,
                 ),
-                Container(
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(25),
-                        color: Colors.blueGrey),
-                    child: Row(
-                      children: [
-                        Container(
-                         // padding: EdgeInsets.only(top: 5,bottom: 5),
-                          width: 178.w,
-                          height: 66.h,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(25),
-                            color: Color(0xfff4f5f5),
-                          ),
-                          child: Row(
-                            children: [
-                              Container(
-                                alignment: Alignment.centerLeft,
-                                width: 70.97142791748047.w,
-                                height: 66.h,
-                                decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(25),
-                                    color: Color(0xff0074fe)),
-                              ),
-                            ],
-                          ),
-                        ),
-                      ],
-                    )),
+                HomeRectangles(
+                  icon: Icons.alarm,
+                  text: 'Panadol',
+                  time: '2:00 AM',
+                ),
+                HomeRectangles(
+                  icon: Icons.monitor_heart_outlined,
+                  text: 'Heart Doctor',
+                  time: '1:00 AM',
+                ),
+                 HomeRectangles(
+                  icon: Icons.local_fire_department_outlined,
+                  text: 'Light exercise',
+                  time: '1:00 - 1:45 AM',
+                ),
               ],
             ),
           ),
