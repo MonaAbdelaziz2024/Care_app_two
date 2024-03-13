@@ -1,6 +1,8 @@
 //import 'package:care_app_project_one/screens/signup_screen.dart';
 //import 'package:care_app_project_one/screens/start.dart';
 import 'package:care_app_two/screens/start_screen/start.dart';
+//import 'package:care_app_two/screens/start_screen/start.dart';
+//import 'package:care_app_two/screens/start_screen/start.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -22,7 +24,7 @@ class MyApp extends StatelessWidget {
           return MaterialApp(
             theme: ThemeData(),
             debugShowCheckedModeBanner: false,
-            home: const Start(),
+            home:  Start(),
           );
         });
   }

@@ -1,4 +1,3 @@
-
 import 'package:care_app_two/helper/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -9,12 +8,14 @@ class CustomTextField extends StatelessWidget {
       {super.key,
       this.onChanged,
       this.hintText,
+      
       this.backgroundColor,
       this.obscureText = false});
   final String? hintText;
   final bool? obscureText;
   final Function(String)? onChanged;
   final Color? backgroundColor;
+  
   @override
   Widget build(BuildContext context) {
     return TextFormField(
@@ -28,6 +29,7 @@ class CustomTextField extends StatelessWidget {
       decoration: InputDecoration(
         filled: true,
         fillColor: Colors.white,
+        
         hintText: hintText,
         hintStyle: Styles.Style14,
         enabledBorder: OutlineInputBorder(

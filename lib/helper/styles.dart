@@ -1,11 +1,11 @@
-// ignore_for_file: constant_identifier_names, non_constant_identifier_names
+// ignore_for_file: constant_identifier_names, non_constant_identifier_names, prefer_const_constructors
 
 
 import 'package:care_app_two/helper/constant.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 //import 'package:flutter_screenutil/flutter_screenutil.dart';
-
+ 
 class Styles {
   static  TextStyle Style42 =  TextStyle(
     color: kTextColor,
@@ -71,4 +71,33 @@ class Styles {
     fontSize: 13.sp,
     fontWeight: FontWeight.w500,
   );
+
+  static TextStyle Style133 = TextStyle(
+    color: kTextColor,
+    fontFamily: 'Ciaro',
+    fontSize: 13,
+    fontWeight: FontWeight.w700,
+  );
+
+  static TextStyle Style10 = TextStyle(
+    color: kTextColor,
+    fontFamily: 'Ciaro',
+    fontSize: 10,
+    fontWeight: FontWeight.w400,
+  );
+
+  static TextStyle Style9 = TextStyle(
+    color: kTextColor,
+    fontFamily: 'Ciaro',
+    fontSize: 9,
+    fontWeight: FontWeight.w700,
+  );
+
+  static TextStyle Style18 = TextStyle(
+    color: kTextColor,
+    fontFamily: 'Ciaro',
+    fontSize: 18,
+    fontWeight: FontWeight.w700,
+  );
+  
 }

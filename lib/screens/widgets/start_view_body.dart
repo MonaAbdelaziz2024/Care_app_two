@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors
+
 import 'package:care_app_two/helper/constant.dart';
 import 'package:care_app_two/screens/signin/sign_in.dart';
 import 'package:care_app_two/screens/signup/signup_screen.dart';
@@ -45,7 +47,7 @@ class StartViewBody extends StatelessWidget {
           ),
           Center(
             child: Text(
-              'Welcome  ',
+              'Welcome ',
               style: TextStyle(
                 fontFamily: 'Cairo',
                 fontSize: 36.sp,
