@@ -111,7 +111,7 @@ class _CustomSignupItemsState extends State<CustomSignupItems> {
                               fontWeight: FontWeight.w800),
                           children: <TextSpan>[
                             TextSpan(
-                                text: 'Privacy  Policy',
+                                text: 'Privacy Policy',
                                 style: Styles.Style11.copyWith(
                                     color:
                                         const Color(0xff0062D6).withOpacity(.8),
