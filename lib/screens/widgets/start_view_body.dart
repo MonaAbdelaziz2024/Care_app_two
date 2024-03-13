@@ -17,7 +17,7 @@ class StartViewBody extends StatelessWidget {
             image: AssetImage(kBackgroundStart), fit: BoxFit.fill),
       ),
       child: ListView(
-        padding: const EdgeInsets.symmetric(horizontal: 38),
+        padding: const EdgeInsets.only(top: 67, right: 33, left: 33).r,
         children: [
           Row(
             mainAxisAlignment: MainAxisAlignment.center,
@@ -26,42 +26,44 @@ class StartViewBody extends StatelessWidget {
                 "car",
                 style: TextStyle(
                   fontFamily: 'Cairo',
-                  fontSize: 155.07691955566406,
+                  fontSize: 155.07691955566406.sp,
                   fontWeight: FontWeight.w700,
                   color: const Color(0xff0075FE),
                 ),
               ),
               Padding(
-                padding: const EdgeInsets.only(top: 50),
+                padding: const EdgeInsets.only(top: 50).r,
                 child: Image.asset(
                   kLogo,
-                  scale: 0.7,
+                  scale: 0.7.r,
+                  width: MediaQuery.of(context).size.width * 0.25,
+                  height: MediaQuery.of(context).size.height * 0.2,
                 ),
               ),
             ],
           ),
           SizedBox(
-            height: 20,
+            height: 20.h,
           ),
           Center(
             child: Text(
               'Welcome ',
               style: TextStyle(
                 fontFamily: 'Cairo',
-                fontSize: 36,
+                fontSize: 36.sp,
                 fontWeight: FontWeight.w700,
                 color: const Color(0xff0075FE),
               ),
             ),
           ),
           SizedBox(
-            height: 94,
+            height: 94.h,
           ),
           Container(
-            width: 283,
-            height: 61,
+            width: 283.w,
+            height: 61.h,
             decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10).w, color: Colors.white),
+                borderRadius: BorderRadius.circular(10).r, color: Colors.white),
             child: GestureDetector(
               onTap: () {
                 Navigator.of(context).push(
@@ -73,14 +75,14 @@ class StartViewBody extends StatelessWidget {
                 );
               },
               child: Container(
-                height: 61,
+                height: 61.h,
                 decoration: BoxDecoration(
-                  borderRadius: BorderRadius.circular(10),
+                  borderRadius: BorderRadius.circular(10).r,
                   shape: BoxShape.rectangle,
                   color: Colors.white,
                   border: Border.all(
                     color: const Color(0xffFF9500),
-                    width: 2,
+                    width: 2.w,
                   ),
                 ),
                 child: Center(
@@ -88,7 +90,7 @@ class StartViewBody extends StatelessWidget {
                     'START NOW',
                     style: TextStyle(
                       fontFamily: 'Cairo',
-                      fontSize: 20,
+                      fontSize: 20.sp,
                       fontWeight: FontWeight.w700,
                       color: const Color(0xffFF9500),
                     ),
@@ -98,7 +100,7 @@ class StartViewBody extends StatelessWidget {
             ),
           ),
           SizedBox(
-            height: 26,
+            height: 26.h,
           ),
           GestureDetector(
             onTap: () {
@@ -111,14 +113,14 @@ class StartViewBody extends StatelessWidget {
               );
             },
             child: Container(
-              height: 61,
+              height: 61.h,
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(10),
+                borderRadius: BorderRadius.circular(10).r,
                 shape: BoxShape.rectangle,
                 color: kButtonColor,
                 border: Border.all(
                   color: kButtonColor,
-                  width: 2,
+                  width: 2.w,
                 ),
               ),
               child: Center(
@@ -126,7 +128,7 @@ class StartViewBody extends StatelessWidget {
                   'SIGN IN',
                   style: TextStyle(
                     fontFamily: 'Cairo',
-                    fontSize: 20,
+                    fontSize: 20.sp,
                     fontWeight: FontWeight.w700,
                     color: Colors.white,
                   ),
@@ -134,19 +136,9 @@ class StartViewBody extends StatelessWidget {
               ),
             ),
           ),
-          // CustomButton(
-          //   nextIcon: false,
-          //   onTap: () {
-          //     Navigator.of(context).push(
-          //       MaterialPageRoute(
-          //         builder: (context) {
-          //           return const SIGNIN();
-          //         },
-          //       ),
-          //     );
-          //   },
-          //   text: 'SIGN IN',
-          // ),
+          SizedBox(
+            height: 30.h,
+          )
         ],
       ),
     );

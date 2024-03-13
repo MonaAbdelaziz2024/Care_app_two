@@ -9,8 +9,8 @@ class SignupWithGoogle extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-        width: 400.w,
-        height: 53.h,
+        width: MediaQuery.of(context).size.width * 0.9,
+        height: MediaQuery.of(context).size.height * 0.07,
         decoration: BoxDecoration(
           borderRadius: BorderRadius.circular(17).r,
           shape: BoxShape.rectangle,
@@ -25,13 +25,13 @@ class SignupWithGoogle extends StatelessWidget {
           children: [
             Image.asset(
               kGoogleImage,
-              width: 21.w,
-              height: 21.h,
+              width: MediaQuery.of(context).size.width * 0.1,
+              height: MediaQuery.of(context).size.height * 0.1,
             ),
-             SizedBox(
+            SizedBox(
               width: 10.w,
             ),
-             Center(
+            Center(
               child: Text(
                 "Sign up with Google",
                 style: Styles.Style20.copyWith(color: kTextColor),

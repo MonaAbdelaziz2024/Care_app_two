@@ -18,18 +18,20 @@ class CustomSignupItems extends StatefulWidget {
 }
 
 class _CustomSignupItemsState extends State<CustomSignupItems> {
-   Color color = Colors.grey;
+  Color color = Colors.grey;
   @override
   Widget build(BuildContext context) {
     // ignore: unused_local_variable
     bool onTap = false;
-   
 
     return Padding(
-      padding: const EdgeInsets.only(top: 110, left: 38, right: 39).r,
+      padding: const EdgeInsets.only(top: 60, left: 28, right: 29).r,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
+          SizedBox(
+            height: 20.h,
+          ),
           Padding(
             padding: const EdgeInsets.only(top: 12).r,
             child: Center(
@@ -44,7 +46,7 @@ class _CustomSignupItemsState extends State<CustomSignupItems> {
           Padding(
             padding: const EdgeInsets.only(
               left: 28,
-              top: 46,
+              top: 24,
               bottom: 3,
             ).r,
             child: Text("Username", style: Styles.Style16),
@@ -53,7 +55,7 @@ class _CustomSignupItemsState extends State<CustomSignupItems> {
           Padding(
             padding: const EdgeInsets.only(
               left: 28,
-              top: 46,
+              top: 24,
               bottom: 3,
             ).r,
             child: Text("Email", style: Styles.Style14),
@@ -62,7 +64,7 @@ class _CustomSignupItemsState extends State<CustomSignupItems> {
           Padding(
             padding: const EdgeInsets.only(
               left: 28,
-              top: 46,
+              top: 24,
               bottom: 3,
             ).r,
             child: Text("Password", style: Styles.Style14),
@@ -94,7 +96,7 @@ class _CustomSignupItemsState extends State<CustomSignupItems> {
                     ),
                   ),
                 ),
-                Text.rich(
+            Text.rich(
                   TextSpan(
                     text: 'I agree to the ',
                     style: Styles.Style11.copyWith(fontWeight: FontWeight.w800),
@@ -111,7 +113,7 @@ class _CustomSignupItemsState extends State<CustomSignupItems> {
                               fontWeight: FontWeight.w800),
                           children: <TextSpan>[
                             TextSpan(
-                                text: 'Privacy Policy',
+                                text: 'Privacy  Policy',
                                 style: Styles.Style11.copyWith(
                                     color:
                                         const Color(0xff0062D6).withOpacity(.8),
