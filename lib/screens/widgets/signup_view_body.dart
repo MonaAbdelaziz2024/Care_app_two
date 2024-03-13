@@ -14,7 +14,7 @@ class SignUpViewBody extends StatelessWidget {
       children:const [ Stack(
         //fit: StackFit.passthrough,
         children: [ 
-          CustomBackground(image: kBackgroundSigninOne,),
+          CustomBackground(image: kBackgroundStart,),
           CustomAppBarItems(),
           CustomSignupItems(),
          

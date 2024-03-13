@@ -35,7 +35,7 @@ class _SIGNINState extends State<SIGNIN> {
       body: Container(
         decoration: const BoxDecoration(
           image: DecorationImage(
-              image: AssetImage(kBackgroundSigninOne), fit: BoxFit.fill),
+              image: AssetImage(kBackgroundStart), fit: BoxFit.fill),
         ),
         child: ListView(
           children: [

@@ -31,7 +31,7 @@ class SigninTwo extends StatelessWidget {
       body: Container(
         decoration: const BoxDecoration(
           image: DecorationImage(
-              image: AssetImage(kBackgroundSigninTwo), fit: BoxFit.fill),
+              image: AssetImage(kBackgroundStart), fit: BoxFit.fill),
         ),
         child: ListView(
           children: [

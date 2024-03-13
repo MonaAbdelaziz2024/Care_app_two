@@ -9,18 +9,19 @@ class SignupViewTwoBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ListView(
-      children: [ Stack(
-        
-        children:[
-        const CustomBackground(image: kBackgroundSigninTwo,),
-      CustomAppBarItems(
-        backIcon: true,
-        onPressed: () {
-          Navigator.of(context).pop();
-        },
-      ),
-      const SignupInfoTwo()
-    ]),]);
+    return ListView(children: [
+      Stack(children: [
+        const CustomBackground(
+          image: kBackgroundStart,
+        ),
+        CustomAppBarItems(
+          backIcon: true,
+          onPressed: () {
+            Navigator.of(context).pop();
+          },
+        ),
+        const SignupInfoTwo()
+      ]),
+    ]);
   }
 }
