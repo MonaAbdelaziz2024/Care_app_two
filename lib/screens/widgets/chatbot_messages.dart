@@ -19,15 +19,14 @@ class ChatBotMessages extends StatelessWidget {
         appBar: CustomChatbotAppbar(context),
         extendBodyBehindAppBar: true,
         body: SingleChildScrollView(
-          padding: EdgeInsets.zero,
           child: Stack(children: [
             const CustomBackground(image: kBackgroundStart),
             Padding(
               padding: const EdgeInsets.only(
-                top: 50,
-                
+                top: 80,
                 left: 16,
                 right: 16,
+                bottom: 16
               ).r,
               child: SizedBox(
                 width: 400.w,
@@ -42,20 +41,23 @@ class ChatBotMessages extends StatelessWidget {
               padding: const EdgeInsets.only(top: 140, left: 16, right: 16).r,
               child: const Column(
                 children: [
-                   ChatBubble(),
-                   ChatBubbleFromFrined(),
+                  ChatBubble(),
+                  ChatBubbleFromFrined(),
                 ],
               ),
             ),
             Padding(
                 padding: const EdgeInsets.only(
-                        top: 600, right: 32, left: 32, )
-                    .r,
-                child: const CustomMessageTextfield())
+                  top: 600,
+                  right: 32,
+                  left: 32,
+                ).r,
+                child: const CustomMessageTextfield()),
+                SizedBox(height: 16.h,)
           ]),
         ),
         bottomNavigationBar: HomeCurvedNavigationBar()
-          //  const CustomBottomNavigationBar() // body: ListView(
+        //  const CustomBottomNavigationBar() // body: ListView(
 
         );
   }

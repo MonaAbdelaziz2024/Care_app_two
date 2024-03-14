@@ -26,7 +26,7 @@ AppBar CustomChatbotAppbar(BuildContext context) {
 }
 AppBar CustomAppbar(BuildContext context) {
   return AppBar(
-     toolbarHeight: 50.h,
+     toolbarHeight: 65.h,
     iconTheme: IconThemeData(opacity: 0),
    title: Padding(
       padding: const EdgeInsets.only(top: 8),
@@ -42,7 +42,7 @@ AppBar CustomAppbar(BuildContext context) {
 
 AppBar CustomAppbarBack(BuildContext context) {
   return AppBar(
-    toolbarHeight: 50.h,
+    toolbarHeight: 65.h,
     //leadingWidth: 30.w,
     leading: SafeArea(
       child: Padding(

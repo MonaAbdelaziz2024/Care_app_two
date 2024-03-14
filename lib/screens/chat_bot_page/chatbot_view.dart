@@ -16,7 +16,7 @@ class ChatBotView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomChatbotAppbar(context),
+    appBar: CustomChatbotAppbar(context),
       extendBodyBehindAppBar: true,
       body: SingleChildScrollView(
         child: Stack(
@@ -45,17 +45,14 @@ class ChatBotView extends StatelessWidget {
           )
              
         ]),
-        
       ),
 
   
-       
-       
+
       bottomNavigationBar:HomeCurvedNavigationBar()
       
-     
+      // const CustomBottomNavigationBar(),
      
     );
   }
-
 }
