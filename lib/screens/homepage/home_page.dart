@@ -4,6 +4,7 @@ import 'package:care_app_two/helper/constant.dart';
 import 'package:care_app_two/helper/styles.dart';
 import 'package:care_app_two/screens/widgets/custom_home_rec.dart';
 import 'package:care_app_two/screens/widgets/custom_home_squ.dart';
+import 'package:care_app_two/screens/widgets/home_bottom_navigator.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 
 import 'package:flutter/cupertino.dart';
@@ -25,16 +26,7 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     //bool onTap = true;
     return Scaffold(
-      bottomNavigationBar: CurvedNavigationBar(
-        animationDuration: Duration(milliseconds: 100),
-        items: [
-        Icon(Icons.home_outlined),
-         Icon(Icons.document_scanner_outlined),
-          Icon(Icons.add),
-           Icon(Icons.chat_outlined),
-            Icon(Icons.settings),
-        ]
-      ),
+      bottomNavigationBar: HomeCurvedNavigationBar(),
       body: Container(
         decoration: const BoxDecoration(
           image: DecorationImage(
@@ -247,4 +239,3 @@ class _HomePageState extends State<HomePage> {
         )));
   }
 }
-/* */ 
