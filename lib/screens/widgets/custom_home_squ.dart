@@ -21,14 +21,14 @@ class HomeSquare extends StatelessWidget {
     return Row(
       children: [
         Container(
-          width: 90.w,
-          height: 90.h,
+          width: 95.w,
+          height: 95.h,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(15),
             color: color,
           ),
           child: Padding(
-            padding: const EdgeInsets.only(left: 12, top: 10, bottom: 8).r,
+            padding: const EdgeInsets.only(left: 10, top: 10, bottom: 8).r,
             child: Column(
               children: [
                 Row(
@@ -41,7 +41,7 @@ class HomeSquare extends StatelessWidget {
                       ),
                     ),
                     SizedBox(
-                      width: 9.w,
+                      width: 5.w,
                     ),
                     Text(
                       text,
@@ -59,7 +59,7 @@ class HomeSquare extends StatelessWidget {
                       style: Styles.Style11,
                     ),
                     SizedBox(
-                      width: 3.w,
+                      width: 2.w,
                     ),
                     GestureDetector(
                       onTap: onTap,

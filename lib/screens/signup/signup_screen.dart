@@ -1,5 +1,7 @@
 
 
+// ignore_for_file: prefer_const_constructors
+
 import 'package:care_app_two/helper/functions/custom_chat_bot_appbar.dart';
 import 'package:care_app_two/screens/widgets/signup_view_body.dart';
 import 'package:flutter/material.dart';
