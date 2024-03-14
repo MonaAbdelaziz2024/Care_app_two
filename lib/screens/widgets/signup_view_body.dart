@@ -10,16 +10,21 @@ class SignUpViewBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Stack(
-    //fit: StackFit.passthrough,
-    children: [ 
-      CustomBackground(image: kBackgroundStart,),
-     
-      CustomSignupItems(),
-     
+    return const SingleChildScrollView(
+     physics:BouncingScrollPhysics(),
     
-    ]
-          );
+      child: Stack(
+         clipBehavior: Clip.none,
+      //fit: StackFit.passthrough,
+      children: [ 
+        CustomBackground(image: kBackgroundStart,),
+       
+        CustomSignupItems(),
+       
+      
+      ]
+            ),
+    );
 
   }
 }

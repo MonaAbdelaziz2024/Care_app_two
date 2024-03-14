@@ -14,9 +14,8 @@ class SignupInfoTwo extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(top: 80, left: 28, right: 29).r,
-      child: Column(
-        crossAxisAlignment: CrossAxisAlignment.start,
+      padding: const EdgeInsets.only(top: 20, left: 28, right: 29).r,
+      child: ListView(
         children: [
           Center(
             child: Text(

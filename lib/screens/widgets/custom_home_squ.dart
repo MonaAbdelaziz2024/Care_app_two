@@ -45,7 +45,7 @@ class HomeSquare extends StatelessWidget {
                     ),
                     Text(
                       text,
-                      style: Styles.Style111,
+                      style: Styles.Style11,
                     ),
                   ],
                 ),
@@ -56,7 +56,7 @@ class HomeSquare extends StatelessWidget {
                   children: [
                     Text(
                       '  View details',
-                      style: Styles.Style111,
+                      style: Styles.Style11,
                     ),
                     SizedBox(
                       width: 2.w,
