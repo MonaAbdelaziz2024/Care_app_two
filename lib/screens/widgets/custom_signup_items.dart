@@ -96,42 +96,30 @@ class _CustomSignupItemsState extends State<CustomSignupItems> {
                     ),
                   ),
                 ),
-                // Container(
-                //     width: 250.w,
-                //     height: 40,
-                //     child: Text.rich(
-                //         overflow:TextOverflow.visible ,
-                //         TextSpan(
-                //             text:
-                //                 'I agree to the Terms & Conditions and Privacy Policy')))
-                Container(
-                  width: MediaQuery.of(context).size.width * 0.65,
-                  child: Text.rich(
-                    TextSpan(
-                      text: 'I agree to the ',
-                      style:
-                          Styles.Style11.copyWith(fontWeight: FontWeight.w800),
-                      children: <TextSpan>[
-                        TextSpan(
-                          text: 'Terms & Conditions',
+            Text.rich(
+                  TextSpan(
+                    text: 'I agree to the ',
+                    style: Styles.Style11.copyWith(fontWeight: FontWeight.w800),
+                    children: <TextSpan>[
+                      TextSpan(
+                        text: 'Terms & Conditions',
+                        style: Styles.Style11.copyWith(
+                            color: const Color(0xff0062D6).withOpacity(.8),
+                            fontWeight: FontWeight.w800),
+                      ),
+                      TextSpan(
+                          text: ' and ',
                           style: Styles.Style11.copyWith(
-                              color: const Color(0xff0062D6).withOpacity(.8),
                               fontWeight: FontWeight.w800),
-                        ),
-                        TextSpan(
-                            text: ' and ',
-                            style: Styles.Style11.copyWith(
-                                fontWeight: FontWeight.w800),
-                            children: <TextSpan>[
-                              TextSpan(
-                                  text: 'Privacy Policy',
-                                  style: Styles.Style11.copyWith(
-                                      color: const Color(0xff0062D6)
-                                          .withOpacity(.8),
-                                      fontWeight: FontWeight.w800))
-                            ])
-                      ],
-                    ),
+                          children: <TextSpan>[
+                            TextSpan(
+                                text: 'Privacy  Policy',
+                                style: Styles.Style11.copyWith(
+                                    color:
+                                        const Color(0xff0062D6).withOpacity(.8),
+                                    fontWeight: FontWeight.w800))
+                          ])
+                    ],
                   ),
                 ),
               ],

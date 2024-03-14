@@ -46,8 +46,7 @@ class Styles {
     fontSize: 11.sp,
     fontWeight: FontWeight.w500,
   );
-
-  static TextStyle Style12 =  TextStyle(
+  static TextStyle Style12 = TextStyle(
     color: kTextColor,
     fontFamily: 'Ciaro',
     fontSize: 12.sp,
@@ -65,7 +64,7 @@ class Styles {
     fontSize: 16.sp,
     fontWeight: FontWeight.w500,
   );
-  static TextStyle Style13 =  TextStyle(
+   static TextStyle Style13 = TextStyle(
     color: kTextColor,
     fontFamily: 'Ciaro',
     fontSize: 13.sp,
