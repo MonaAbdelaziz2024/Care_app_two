@@ -85,6 +85,7 @@ class _CustomSignupItemsState extends State<CustomSignupItems> {
                   child: IconButton(
                     // focusColor: color,
                     //color: Colors.blue,
+                    
                     onPressed: () {
                       color = Colors.blue;
                       setState(() {});

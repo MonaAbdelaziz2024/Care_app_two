@@ -16,44 +16,38 @@ class ChatBotView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomChatbotAppbar(context),
-      extendBodyBehindAppBar: true,
-      body: SingleChildScrollView(
-        child: Stack(
-          children: [
-          const CustomBackground(image: kBackgroundStart),
-          Padding(
-            padding: const EdgeInsets.only(
-              top: 80,
-              bottom: 16,
-              left: 16,
-              right: 16,
-            ).r,
-            child: Container(
-                width: 400.w,
-                height: 600.h,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(12).r,
-                    color: const Color(0xffEEEEEE).withOpacity(0.5)),
-                child: Image.asset('assets/images/botimage.png')),
-          ),
-          Padding(
-            padding:
-                const EdgeInsets.only(top: 650, right: 32, left: 32, bottom: 28)
-                    .r,
-            child: const CustomMessageTextfield(),
-          )
-             
-        ]),
-      ),
+        appBar: CustomChatbotAppbar(context),
+        extendBodyBehindAppBar: true,
+        body: SingleChildScrollView(
+          child: Stack(children: [
+            const CustomBackground(image: kBackgroundStart),
+            Padding(
+              padding: const EdgeInsets.only(
+                top: 80,
+                bottom: 16,
+                left: 16,
+                right: 16,
+              ).r,
+              child: Container(
+                  width: 400.w,
+                  height: 600.h,
+                  decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(12).r,
+                      color: const Color(0xffEEEEEE).withOpacity(0.5)),
+                  child: Image.asset('assets/images/botimage.png')),
+            ),
+            Padding(
+              padding: const EdgeInsets.only(
+                      top: 600, right: 32, left: 32, bottom: 28)
+                  .r,
+              child: const CustomMessageTextfield(),
+            )
+          ]),
+        ),
+        bottomNavigationBar: HomeCurvedNavigationBar()
 
-  
+        // const CustomBottomNavigationBar(),
 
-      bottomNavigationBar:HomeCurvedNavigationBar()
-      
-      // const CustomBottomNavigationBar(),
-     
-    );
+        );
   }
-
 }
