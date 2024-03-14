@@ -12,6 +12,7 @@ class HomeCurvedNavigationBar extends StatelessWidget {
     return CurvedNavigationBar(
       animationDuration: Duration(milliseconds: 100),
       items: [
+        
       Icon(Icons.home_outlined),
        Icon(Icons.document_scanner_outlined),
         Icon(Icons.add),
