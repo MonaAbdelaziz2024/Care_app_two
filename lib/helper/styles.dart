@@ -1,4 +1,4 @@
-// ignore_for_file: constant_identifier_names, non_constant_identifier_names, prefer_const_constructors
+// ignore_for_file: constant_identifier_names, non_constant_identifier_names, prefer_const_constructors, prefer_typing_uninitialized_variables
 
 
 import 'package:care_app_two/helper/constant.dart';
@@ -7,6 +7,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 //import 'package:flutter_screenutil/flutter_screenutil.dart';
  
 class Styles {
+  
   static  TextStyle Style42 =  TextStyle(
     color: kTextColor,
     fontFamily: 'Ciaro',

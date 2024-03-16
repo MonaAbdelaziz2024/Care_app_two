@@ -5,7 +5,7 @@ import 'package:care_app_two/helper/styles.dart';
 import 'package:care_app_two/screens/chat_bot_page/chatbot_view.dart';
 import 'package:care_app_two/screens/widgets/custom_home_rec.dart';
 import 'package:care_app_two/screens/widgets/custom_home_squ.dart';
-import 'package:care_app_two/screens/widgets/home_bottom_navigator.dart';
+//import 'package:care_app_two/screens/widgets/home_bottom_navigator.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
