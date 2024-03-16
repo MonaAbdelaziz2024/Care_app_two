@@ -84,11 +84,11 @@ class _HomePageState extends State<HomePage> {
                         children: [
                           Text(
                             'Hello!',
-                            style: Styles.Style10,
+                            style: Styles.Style10.copyWith(color: Color(0xff1F1F1F)),
                           ),
                           Text(
                             'Ahmed Anwar',
-                            style: Styles.Style133,
+                            style: Styles.Style133.copyWith(color: Color(0xff000000)),
                           ),
                         ],
                       ),
@@ -191,7 +191,7 @@ class _HomePageState extends State<HomePage> {
                                   child: Center(
                                     child: Text(
                                       'View Tasks',
-                                      style: Styles.Style133,
+                                      style: Styles.Style133.copyWith(color: Color(0xff0075FE)),
                                     ),
                                   ),
                                 ),
@@ -211,7 +211,7 @@ class _HomePageState extends State<HomePage> {
                                 Image.asset('assets/images/Subtract.png'),
                                 Text(
                                   '70 %',
-                                  style: Styles.Style16,
+                                  style: Styles.Style16.copyWith(color: Color(0xffFFFFFF)),
                                 ),
                               ],
                             ),
@@ -227,7 +227,7 @@ class _HomePageState extends State<HomePage> {
                     children: [
                       Text(
                         'Highlights',
-                        style: Styles.Style18,
+                        style: Styles.Style18.copyWith(color: Color(0xff1F1F1F)),
                       ),
                     ],
                   ),

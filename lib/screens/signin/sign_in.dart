@@ -5,6 +5,7 @@ import 'package:care_app_two/helper/constant.dart';
 import 'package:care_app_two/helper/functions/custom_chat_bot_appbar.dart';
 import 'package:care_app_two/helper/styles.dart';
 import 'package:care_app_two/screens/homepage/home_page.dart';
+import 'package:care_app_two/screens/homepage/home_view_body.dart';
 import 'package:care_app_two/screens/signin/sign_in_two.dart';
 import 'package:care_app_two/screens/signup/signup_screen.dart';
 import 'package:care_app_two/screens/widgets/Custom_line.dart';
@@ -120,7 +121,7 @@ class _SIGNINState extends State<SIGNIN> {
                           Navigator.of(context).push(
                             MaterialPageRoute(
                               builder: (context) {
-                                return HomePage();
+                                return HomeViewBody();
                               },
                             ),
                           );

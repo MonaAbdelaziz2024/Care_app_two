@@ -54,17 +54,17 @@ class SigninTwo extends StatelessWidget {
                       ),
                       Text("Trouble logging in?",
                           textAlign: TextAlign.center,
-                          style: Styles.Style20.copyWith(color: kTextColor)),
+                          style: Styles.Style20.copyWith(color: Color(0xff000000))),
                       SizedBox(
                         height: 10.h,
                       ),
                       Text(
                         'Enter your email and we\'ll send you',
-                        style: Styles.Style14,
+                        style: Styles.Style14.copyWith(color: Color(0xff000000)),
                       ),
                       Text(
                         ' a link to reset your password.',
-                        style: Styles.Style14,
+                        style: Styles.Style14.copyWith(color: Color(0xff000000)),
                       ),
                       SizedBox(
                         height: 15.h,
@@ -75,7 +75,7 @@ class SigninTwo extends StatelessWidget {
                           alignment: Alignment.centerLeft,
                           child: Text(
                             'Email',
-                            style: Styles.Style14,
+                            style: Styles.Style14.copyWith(color: Color(0xff000000)),
                           ),
                         ),
                       ),
@@ -107,7 +107,7 @@ class SigninTwo extends StatelessWidget {
                       Center(
                           child: Text(
                         'Can’t reset your password?',
-                        style: Styles.Style11,
+                        style: Styles.Style11.copyWith(color: Color(0xff000000)),
                       )),
                       SizedBox(
                         height: 15.h,
@@ -164,7 +164,7 @@ class SigninTwo extends StatelessWidget {
                           },
                           child: Text(
                             'Back to Sign in',
-                            style: Styles.Style13,
+                            style: Styles.Style13.copyWith(color: Color(0xff000000)),
                           ),
                         ),
                       ),

@@ -7,7 +7,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 //import 'package:flutter_screenutil/flutter_screenutil.dart';
  
 class Styles {
-  
+ 
   static  TextStyle Style42 =  TextStyle(
     color: kTextColor,
     fontFamily: 'Ciaro',
