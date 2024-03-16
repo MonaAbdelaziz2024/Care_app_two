@@ -2,6 +2,7 @@ import 'package:care_app_two/helper/constant.dart';
 import 'package:care_app_two/helper/functions/custom_chat_bot_appbar.dart';
 import 'package:care_app_two/screens/widgets/custom_background.dart';
 import 'package:care_app_two/screens/widgets/signup_info_two.dart';
+import 'package:care_app_two/screens/widgets/signup_view_two_body.dart';
 import 'package:flutter/material.dart';
 
 class SignupViewTwo extends StatelessWidget {
@@ -15,10 +16,10 @@ class SignupViewTwo extends StatelessWidget {
       extendBodyBehindAppBar: true,
       body: const Stack(
         children: [
-          CustomBackground(
+          const CustomBackground(
             image: kBackgroundStart,
           ),
-          SignupInfoTwo()
+          const SignupInfoTwo()
         ],
       ),
     );

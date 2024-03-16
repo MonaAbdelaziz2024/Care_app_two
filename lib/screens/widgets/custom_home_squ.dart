@@ -21,8 +21,8 @@ class HomeSquare extends StatelessWidget {
     return Row(
       children: [
         Container(
-          width: 110.w,
-          height: 110.h,
+          width: 95.w,
+          height: 95.h,
           decoration: BoxDecoration(
             borderRadius: BorderRadius.circular(15),
             color: color,

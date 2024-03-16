@@ -24,11 +24,11 @@ class CustomBottomNavigationBar extends StatelessWidget {
                 ),
               );
           },
-          child: const Icon(Icons.home_outlined),
+          child: Icon(Icons.home_outlined),
         ),
         
-         const Icon(Icons.document_scanner_outlined),
-          const Icon(Icons.add),
+         Icon(Icons.document_scanner_outlined),
+          Icon(Icons.add),
           GestureDetector(
           onTap: () {
             Navigator.of(context).push(
@@ -39,10 +39,10 @@ class CustomBottomNavigationBar extends StatelessWidget {
                 ),
               );
           },
-          child: const Icon(Icons.chat_outlined),
+          child: Icon(Icons.chat_outlined),
         ),
            
-            const Icon(Icons.settings),
+            Icon(Icons.settings),
         ]
       /*items: const [
         BottomNavigationBarItem(
