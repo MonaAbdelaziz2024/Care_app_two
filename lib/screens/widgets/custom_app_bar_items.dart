@@ -47,7 +47,7 @@ class CustomAppBarItems extends StatelessWidget {
               )
             : Padding(
                 padding: EdgeInsets.only(top: 10.r, left: 0.44.sw),
-                child: CustomLogo()),
+                child: const CustomLogo()),
         //SizedBox(width: 80,),
 
         // SvgPicture.asset('assets/images/image4.svg')

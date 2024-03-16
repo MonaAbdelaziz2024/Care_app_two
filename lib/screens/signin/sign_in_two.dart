@@ -88,15 +88,15 @@ class SigninTwo extends StatelessWidget {
                       const SizedBox(
                         height: 30,
                       ),
-                       CustomButton(
+                      CustomButton(
                         onTap: () {
                           Navigator.of(context).push(
-                              MaterialPageRoute(
-                                builder: (context) {
-                                  return const ChatBotView();
-                                },
-                              ),
-                            );
+                            MaterialPageRoute(
+                              builder: (context) {
+                                return const SignUpView();
+                              },
+                            ),
+                          );
                         },
                         nextIcon: false,
                         text: 'Send Login link',
