@@ -15,7 +15,7 @@ class _CustomNavigationBottomBarState extends State<CustomNavigationBottomBar> {
   List<dynamic> pages = [
    
      const HomeViewBody(),
-    const ChatBotView()
+     const ChatBotView(),
   ];
   int indexPage = 0;
 
