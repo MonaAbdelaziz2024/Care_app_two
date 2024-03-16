@@ -6,6 +6,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 // ignore: non_constant_identifier_names
 AppBar CustomCareAppbar(BuildContext context, String text) {
   return AppBar(
+    scrolledUnderElevation: 0,
     leading: IconButton(
       icon: const Icon(
         Icons.arrow_back_ios_new_rounded,
@@ -28,6 +29,7 @@ AppBar CustomCareAppbar(BuildContext context, String text) {
 
 AppBar CustomAppbar(BuildContext context) {
   return AppBar(
+    scrolledUnderElevation: 0,
     toolbarHeight: 65.h,
     iconTheme: const IconThemeData(opacity: 0),
     title: Padding(
@@ -44,7 +46,8 @@ AppBar CustomAppbar(BuildContext context) {
 
 AppBar CustomAppbarBack(BuildContext context) {
   return AppBar(
-    toolbarHeight: 65.h,
+    scrolledUnderElevation: 0,
+    toolbarHeight: 30.h,
     //leadingWidth: 30.w,
     leading: SafeArea(
       child: Padding(
@@ -63,13 +66,8 @@ AppBar CustomAppbarBack(BuildContext context) {
         ),
       ),
     ),
-    title: Padding(
-      padding: const EdgeInsets.only(top: 8),
-      child: Image.asset(
-        kLogo,
-      ),
-    ),
-    centerTitle: true,
+    
+    
     backgroundColor: Colors.transparent,
     elevation: 0.0,
   );

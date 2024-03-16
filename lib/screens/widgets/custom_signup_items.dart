@@ -4,6 +4,7 @@ import 'package:care_app_two/screens/signin/sign_in.dart';
 import 'package:care_app_two/screens/signup/signup_screen_two.dart';
 import 'package:care_app_two/screens/widgets/Custom_line.dart';
 import 'package:care_app_two/screens/widgets/custom_button.dart';
+import 'package:care_app_two/screens/widgets/custom_logo.dart';
 import 'package:care_app_two/screens/widgets/custom_text_feild.dart';
 import 'package:care_app_two/screens/widgets/signup_with_google.dart';
 import 'package:flutter/material.dart';
@@ -25,13 +26,14 @@ class _CustomSignupItemsState extends State<CustomSignupItems> {
     bool onTap = false;
 
     return Padding(
-      padding: const EdgeInsets.only(top: 60, left: 28, right: 29).r,
+      padding: const EdgeInsets.only( left: 28, right: 29).r,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          SizedBox(
-            height: 20.h,
-          ),
+          Center(child: CustomLogo()),
+          // SizedBox(
+          //   height: 20.h,
+          // ),
           Padding(
             padding: const EdgeInsets.only(top: 12).r,
             child: Center(

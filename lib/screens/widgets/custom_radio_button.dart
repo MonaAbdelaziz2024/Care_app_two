@@ -6,60 +6,96 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 class CustomRadioButton extends StatefulWidget {
   CustomRadioButton(
       {super.key,
-      required this.text,
-      required this.value,
-      this.valueChoose = 1,
-      required this.width,
-      required this.height,
-      this.onTap});
-  final String text;
-  int? valueChoose;
-  final int value;
-  final double width, height;
-  final void Function()? onTap;
+      // required this.text,
+      // required this.value,
+      // this.valueChoose = 1,
+      // required this.width,
+      // required this.height,
+      // this.onTap
+      
+      });
+  // final String text;
+  // int? valueChoose;
+  // final int value;
+  // final double width, height;
+  // final void Function()? onTap;
   @override
   State<CustomRadioButton> createState() => _CustomRadioButtonState();
 }
 
 class _CustomRadioButtonState extends State<CustomRadioButton> {
+  bool _value = false;
+  int val = -1;
+
   @override
   Widget build(BuildContext context) {
-    return GestureDetector(
-      onTap: widget.onTap,
-      child: Container(
-        width: widget.width.w,
-        height: widget.height.h,
-        decoration: BoxDecoration(
-          border: Border.all(color: Colors.grey),
-          borderRadius: BorderRadius.circular(10).r,
-          color: Colors.white,
-        ),
-        child: Padding(
-          padding: const EdgeInsets.only(bottom: 10, top: 10).r,
-          child: Center(
-            child: Text(
-              widget.text,
-              style: TextStyle(
-                  color: kTextColor,
-                  fontWeight: FontWeight.w700,
-                  fontSize: 15.sp,
-                  fontFamily: 'Cairo'),
-            ),
+    return Column(
+      mainAxisAlignment: MainAxisAlignment.start,
+      children: [
+        ListTile(
+          title: Text("Male"),
+          leading: Radio(
+            value: 1,
+            groupValue: val,
+            onChanged: (value) {
+              setState(() {
+                val = value!;
+              });
+            },
+            activeColor: Colors.green,
           ),
         ),
-        // const SizedBox(
-        //   width: 10,
-        // ),
-        // Radio(
-        //     //splashRadius: 1,
-        //     value: widget.value,
-        //     groupValue: widget.valueChoose,
-        //     onChanged: (value) {
-        //       setState(() {
-        //         widget.valueChoose = value;
-        //       });
-        //     }),
-      ),
+        ListTile(
+          title: Text("Female"),
+          leading: Radio(
+            value: 2,
+            groupValue: val,
+            onChanged: (value) {
+              setState(() {
+                val = value!;
+              });
+            },
+            activeColor: Colors.green,
+          ),
+        ),
+      ],
     );
+    //  GestureDetector(
+    //   onTap: widget.onTap,
+    //   child: Container(
+    //     width: widget.width.w,
+    //     height: widget.height.h,
+    //     decoration: BoxDecoration(
+    //       border: Border.all(color: Colors.grey),
+    //       borderRadius: BorderRadius.circular(10).r,
+    //       color: Colors.white,
+    //     ),
+    //     child: Padding(
+    //       padding: const EdgeInsets.only(bottom: 10, top: 10).r,
+    //       child: Center(
+    //         child: Text(
+    //           widget.text,
+    //           style: TextStyle(
+    //               color: kTextColor,
+    //               fontWeight: FontWeight.w700,
+    //               fontSize: 15.sp,
+    //               fontFamily: 'Cairo'),
+    //         ),
+    //       ),
+    //     ),
+    // const SizedBox(
+    //   width: 10,
+    // ),
+    // Radio(
+    //     //splashRadius: 1,
+    //     value: widget.value,
+    //     groupValue: widget.valueChoose,
+    //     onChanged: (value) {
+    //       setState(() {
+    //         widget.valueChoose = value;
+    //       });
+    //     }),
+    //   ),
+    // );
   }
 }

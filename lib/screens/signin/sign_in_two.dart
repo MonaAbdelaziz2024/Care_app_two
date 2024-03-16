@@ -39,7 +39,7 @@ class SigninTwo extends StatelessWidget {
               children: [
                 //const CustomBackground(image: kBackgroundSigninTwo),
 
-                const CustomLogo(),
+               // const CustomLogo(),
 
                 Padding(
                   padding:

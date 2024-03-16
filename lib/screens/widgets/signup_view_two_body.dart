@@ -6,8 +6,10 @@ class SignupViewTwoBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const SingleChildScrollView(
-      child: Stack(
+    return  ListView(
+      children: [
+        
+        Stack(
         clipBehavior: Clip.none,
         children: [
         
@@ -15,6 +17,6 @@ class SignupViewTwoBody extends StatelessWidget {
       
         SignupInfoTwo()
       ]),
-    );
+    ]);
   }
 }
