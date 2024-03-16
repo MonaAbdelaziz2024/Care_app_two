@@ -12,7 +12,13 @@ class CustomMessageTextfield extends StatelessWidget {
   Widget build(BuildContext context) {
     return TextField(
       onSubmitted: (data){
-        
+        // Navigator.of(context).push(
+        //           MaterialPageRoute(
+        //             builder: (context) {
+        //               return const ChatBotMessages();
+        //             },
+        //           ),
+        //         );
       },
         decoration: InputDecoration(
           filled: true,
@@ -26,7 +32,7 @@ class CustomMessageTextfield extends StatelessWidget {
                 Navigator.of(context).push(
                   MaterialPageRoute(
                     builder: (context) {
-                      return ChatBotMessages();
+                      return const ChatBotMessages();
                     },
                   ),
                 );

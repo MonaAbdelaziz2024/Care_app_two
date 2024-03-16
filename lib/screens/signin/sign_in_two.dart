@@ -30,7 +30,7 @@ class SigninTwo extends StatelessWidget {
       body: Container(
         decoration: const BoxDecoration(
           image: DecorationImage(
-              image: AssetImage(kBackgroundStart), fit: BoxFit.fill),
+              image: AssetImage(kBackground), fit: BoxFit.fill),
         ),
         child: ListView(
           children: [

@@ -66,7 +66,7 @@ class HomeRectangles extends StatelessWidget {
                     ),
                   ),
                   Padding(
-                    padding: const EdgeInsets.only(left: 50).r,
+                    padding: const EdgeInsets.only(left: 20).r,
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
@@ -81,30 +81,32 @@ class HomeRectangles extends StatelessWidget {
                       ],
                     ),
                   ),
-                  
                 ],
               ),
             ),
             Padding(
-              padding: const EdgeInsets.only(left: 110).r,
+              padding: const EdgeInsets.only(left: 80).r,
               child: GestureDetector(
-                      onTap: onTap,
-                      child: Container(
-                        
-                        width: 66.7938461303711.w,
-                        height: 27.h,
-                        decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(13),
-                          color: Colors.white,
-                          border: Border.all(
-                              width: 1,
-                              color: Color(0xffC2C2C2),
-                              strokeAlign: BorderSide.strokeAlignInside,
-                              style: BorderStyle.solid),
-                        ),
-                        child: Center(child: Text("Check All",style: Styles.Style133,)),
-                      ),
-                    ),
+                onTap: onTap,
+                child: Container(
+                  width: 66.7938461303711.w,
+                  height: 27.h,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(13),
+                    color: Colors.white,
+                    border: Border.all(
+                        width: 1,
+                        color: Color(0xffC2C2C2),
+                        strokeAlign: BorderSide.strokeAlignInside,
+                        style: BorderStyle.solid),
+                  ),
+                  child: Center(
+                      child: Text(
+                    "Check All",
+                    style: Styles.Style133,
+                  )),
+                ),
+              ),
             )
           ],
         ),

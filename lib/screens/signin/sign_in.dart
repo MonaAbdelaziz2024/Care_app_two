@@ -5,14 +5,11 @@ import 'package:care_app_two/helper/constant.dart';
 import 'package:care_app_two/helper/functions/custom_chat_bot_appbar.dart';
 import 'package:care_app_two/helper/styles.dart';
 import 'package:care_app_two/screens/homepage/home_page.dart';
-import 'package:care_app_two/screens/homepage/home_view_body.dart';
 import 'package:care_app_two/screens/signin/sign_in_two.dart';
 import 'package:care_app_two/screens/signup/signup_screen.dart';
 import 'package:care_app_two/screens/widgets/Custom_line.dart';
-import 'package:care_app_two/screens/widgets/custom_app_bar_items.dart';
 //import 'package:care_app_two/screens/widgets/custom_app_bar_items.dart';
 import 'package:care_app_two/screens/widgets/custom_button.dart';
-import 'package:care_app_two/screens/widgets/custom_logo.dart';
 import 'package:care_app_two/screens/widgets/custom_text_feild.dart';
 import 'package:care_app_two/screens/widgets/signin_with_google.dart';
 //import 'package:care_app_two/screens/widgets/signup_with_google.dart';
@@ -39,7 +36,7 @@ class _SIGNINState extends State<SIGNIN> {
       body: Container(
         decoration: const BoxDecoration(
           image: DecorationImage(
-              image: AssetImage(kBackgroundStart), fit: BoxFit.fill),
+              image: AssetImage(kBackground), fit: BoxFit.fill),
         ),
         child: Align(
           alignment: Alignment.topCenter,
@@ -123,7 +120,7 @@ class _SIGNINState extends State<SIGNIN> {
                           Navigator.of(context).push(
                             MaterialPageRoute(
                               builder: (context) {
-                                return HomeViewBody();
+                                return HomePage();
                               },
                             ),
                           );

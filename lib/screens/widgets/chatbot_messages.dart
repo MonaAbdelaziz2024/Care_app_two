@@ -3,10 +3,9 @@ import 'package:care_app_two/helper/functions/custom_chat_bot_appbar.dart';
 
 import 'package:care_app_two/screens/widgets/chatbot_bubble.dart';
 import 'package:care_app_two/screens/widgets/custom_background.dart';
-import 'package:care_app_two/screens/widgets/custom_bottom_navigation_bar.dart';
+//import 'package:care_app_two/screens/widgets/custom_bottom_navigation_bar.dart';
 import 'package:care_app_two/screens/widgets/custom_message_textfield.dart';
 import 'package:care_app_two/screens/widgets/home_bottom_navigator.dart';
-import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -16,18 +15,15 @@ class ChatBotMessages extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: CustomChatbotAppbar(context),
+        appBar: CustomCareAppbar(context,'Chat with AI Bot Now' ),
         extendBodyBehindAppBar: true,
         body: SingleChildScrollView(
           child: Stack(children: [
             const CustomBackground(image: kBackgroundStart),
             Padding(
               padding: const EdgeInsets.only(
-                top: 80,
-                left: 16,
-                right: 16,
-                bottom: 16
-              ).r,
+                      top: 80, left: 16, right: 16, bottom: 16)
+                  .r,
               child: SizedBox(
                 width: 400.w,
                 height: 600.h,
@@ -53,10 +49,12 @@ class ChatBotMessages extends StatelessWidget {
                   left: 32,
                 ).r,
                 child: const CustomMessageTextfield()),
-                SizedBox(height: 16.h,)
+            SizedBox(
+              height: 16.h,
+            )
           ]),
         ),
-        bottomNavigationBar: HomeCurvedNavigationBar()
+        bottomNavigationBar: const CustomNavigationBottomBar()
         //  const CustomBottomNavigationBar() // body: ListView(
 
         );

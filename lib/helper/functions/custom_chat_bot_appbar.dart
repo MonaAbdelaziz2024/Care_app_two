@@ -3,7 +3,8 @@ import 'package:care_app_two/helper/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-AppBar CustomChatbotAppbar(BuildContext context) {
+// ignore: non_constant_identifier_names
+AppBar CustomCareAppbar(BuildContext context, String text) {
   return AppBar(
     leading: IconButton(
       icon: const Icon(
@@ -14,7 +15,7 @@ AppBar CustomChatbotAppbar(BuildContext context) {
       onPressed: () => Navigator.of(context).pop(),
     ),
     title: Text(
-      'Chat with AI Bot',
+      text,
       style: Styles.Style20.copyWith(
         color: Colors.black,
       ),
@@ -24,11 +25,12 @@ AppBar CustomChatbotAppbar(BuildContext context) {
     elevation: 0.0,
   );
 }
+
 AppBar CustomAppbar(BuildContext context) {
   return AppBar(
-     toolbarHeight: 65.h,
-    iconTheme: IconThemeData(opacity: 0),
-   title: Padding(
+    toolbarHeight: 65.h,
+    iconTheme: const IconThemeData(opacity: 0),
+    title: Padding(
       padding: const EdgeInsets.only(top: 8),
       child: Image.asset(
         kLogo,
@@ -49,7 +51,7 @@ AppBar CustomAppbarBack(BuildContext context) {
         padding: const EdgeInsets.only(left: 8),
         child: CircleAvatar(
           radius: 50,
-          backgroundColor: Color(0xff7E869E).withOpacity(0.25),
+          backgroundColor: const Color(0xff7E869E).withOpacity(0.25),
           child: IconButton(
             icon: const Icon(
               Icons.arrow_back_ios_new_rounded,

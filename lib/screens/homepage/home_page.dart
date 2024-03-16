@@ -3,7 +3,6 @@
 import 'package:care_app_two/screens/widgets/home_bottom_navigator.dart';
 import 'package:flutter/material.dart';
 
-
 //import 'package:curved_labeled_navigation_bar/curved_navigation_bar_item.dart';
 
 class HomePage extends StatefulWidget {
@@ -18,30 +17,30 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     final Function? ontap;
     return Scaffold(
-        // bottomNavigationBar: 
-        // CurvedNavigationBar(
-        //     key: globalKey,
-        //     index: 0,
-        //     onTap: (index) {
-        //       setState(() {
-        //         indexPage = index;
-        //       });
-        //     },
-        //     letIndexChange: (index) => true,
-        //     animationDuration: Duration(milliseconds: 100),
-          
-        //     items: [
-              
-        //       Icon(Icons.home_outlined),
-        //       // Icon(Icons.document_scanner_outlined),
-        //       // Icon(Icons.add),
-             
-        //         Icon(Icons.chat_outlined),
-        //       // Icon(Icons.settings),
-        //     ]),
-       
-        body: CustomNavigationBottomBar(),
-        
-        );
+      // bottomNavigationBar:
+      // CurvedNavigationBar(
+      //     key: globalKey,
+      //     index: 0,
+      //     onTap: (index) {
+      //       setState(() {
+      //         indexPage = index;
+      //       });
+      //     },
+      //     letIndexChange: (index) => true,
+      //     animationDuration: Duration(milliseconds: 100),
+
+      //     items: [
+
+      //       Icon(Icons.home_outlined),
+      //       // Icon(Icons.document_scanner_outlined),
+      //       // Icon(Icons.add),
+
+      //         Icon(Icons.chat_outlined),
+      //       // Icon(Icons.settings),
+      //     ]),
+      //  bottomNavigationBar: CustomNavigationBottomBar(),
+      //   body:HomeViewBody()
+      body: CustomNavigationBottomBar(),
+    );
   }
 }

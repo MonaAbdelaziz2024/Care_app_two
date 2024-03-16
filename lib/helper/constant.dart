@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 
 const kLogo = 'assets/images/logo.png';
-const kBackgroundSignupOne = 'assets/images/SignUpback1.png';
-const kBackgroundSignupTwo = 'assets/images/SignUpback2.png';
-const kBackgroundSigninOne = 'assets/images/Signin1.png';
-const kBackgroundSigninTwo = 'assets/images/SignIn2.png';
+// const kBackgroundSignupOne = 'assets/images/SignUpback1.png';
+// const kBackgroundSignupTwo = 'assets/images/SignUpback2.png';
+// const kBackgroundSigninOne = 'assets/images/Signin1.png';
+// const kBackgroundSigninTwo = 'assets/images/SignIn2.png';
+const kBackground = 'assets/images/background.png';
 const kBackgroundStart = 'assets/images/startback.png';
 const kGoogleImage = 'assets/images/google.png';
 const kBackArrowImage = 'assets/images/backArrow.png';
