@@ -1,3 +1,5 @@
+// ignore_for_file: non_constant_identifier_names
+
 import 'package:care_app_two/helper/constant.dart';
 import 'package:care_app_two/helper/styles.dart';
 import 'package:flutter/material.dart';
@@ -27,7 +29,7 @@ AppBar CustomChatbotAppbar(BuildContext context) {
 AppBar CustomAppbar(BuildContext context) {
   return AppBar(
      toolbarHeight: 65.h,
-    iconTheme: IconThemeData(opacity: 0),
+    iconTheme: const IconThemeData(opacity: 0),
    title: Padding(
       padding: const EdgeInsets.only(top: 8),
       child: Image.asset(
@@ -49,7 +51,7 @@ AppBar CustomAppbarBack(BuildContext context) {
         padding: const EdgeInsets.only(left: 8),
         child: CircleAvatar(
           radius: 50,
-          backgroundColor: Color(0xff7E869E).withOpacity(0.25),
+          backgroundColor: const Color(0xff7E869E).withOpacity(0.25),
           child: IconButton(
             icon: const Icon(
               Icons.arrow_back_ios_new_rounded,

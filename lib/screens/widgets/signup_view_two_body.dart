@@ -1,6 +1,3 @@
-import 'package:care_app_two/helper/constant.dart';
-import 'package:care_app_two/screens/widgets/custom_app_bar_items.dart';
-import 'package:care_app_two/screens/widgets/custom_background.dart';
 import 'package:care_app_two/screens/widgets/signup_info_two.dart';
 import 'package:flutter/material.dart';
 
@@ -9,14 +6,14 @@ class SignupViewTwoBody extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return SingleChildScrollView(
-      child: const Stack(
+    return const SingleChildScrollView(
+      child: Stack(
         clipBehavior: Clip.none,
         children: [
         
         
       
-        const SignupInfoTwo()
+        SignupInfoTwo()
       ]),
     );
   }

@@ -1,14 +1,10 @@
 // ignore_for_file: unused_local_variable, prefer_const_constructors, prefer_const_literals_to_create_immutables, use_key_in_widget_constructors, prefer_typing_uninitialized_variables
 
-import 'package:care_app_two/helper/constant.dart';
-import 'package:care_app_two/helper/styles.dart';
-import 'package:care_app_two/screens/chat_bot_page/chatbot_view.dart';
-import 'package:care_app_two/screens/widgets/custom_home_rec.dart';
-import 'package:care_app_two/screens/widgets/custom_home_squ.dart';
+import 'package:care_app_two/screens/widgets/home_bottom_navigator.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+
 //import 'package:curved_labeled_navigation_bar/curved_navigation_bar_item.dart';
 
 class HomePage extends StatefulWidget {
@@ -19,28 +15,48 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
+  // List<dynamic> pages = [
+   
+  //   HomeViewBody(),
+  //   ChatBotView()
+  // ];
+  // int indexPage = 0;
+  // GlobalKey<CurvedNavigationBarState> globalKey = GlobalKey();
   @override
   Widget build(BuildContext context) {
     final Function? ontap;
     return Scaffold(
-       /* bottomNavigationBar: CurvedNavigationBar(
-            backgroundColor: Colors.cyan,
-            animationCurve: Curves.easeInOut,
-            height: 50.h,
-            onTap: (index) {
-              setState(() {
-                var pageIndex = index;
-              });
-            },
-            letIndexChange: (index) => true,
+      bottomNavigationBar: CurvedNavigationBar(
             animationDuration: Duration(milliseconds: 100),
             items: [
-              Icon(Icons.home_outlined),
+              GestureDetector(
+                onTap: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return const HomePage();
+                      },
+                    ),
+                  );
+                },
+                child: Icon(Icons.home_outlined),
+              ),
               Icon(Icons.document_scanner_outlined),
               Icon(Icons.add),
-              Icon(Icons.chat_outlined),
+              GestureDetector(
+                onTap: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return const ChatBotView();
+                      },
+                    ),
+                  );
+                },
+                child: Icon(Icons.chat_outlined),
+              ),
               Icon(Icons.settings),
-            ]),*/
+            ]),
         body: Container(
             decoration: const BoxDecoration(
               image: DecorationImage(
@@ -255,3 +271,4 @@ class _HomePageState extends State<HomePage> {
             )));
   }
 }
+
