@@ -23,37 +23,24 @@ class _HomePageState extends State<HomePage> {
   Widget build(BuildContext context) {
     final Function? ontap;
     return Scaffold(
-        bottomNavigationBar: CurvedNavigationBar(
+       /* bottomNavigationBar: CurvedNavigationBar(
+            backgroundColor: Colors.cyan,
+            animationCurve: Curves.easeInOut,
+            height: 50.h,
+            onTap: (index) {
+              setState(() {
+                var pageIndex = index;
+              });
+            },
+            letIndexChange: (index) => true,
             animationDuration: Duration(milliseconds: 100),
             items: [
-              GestureDetector(
-                onTap: () {
-                  Navigator.of(context).push(
-                    MaterialPageRoute(
-                      builder: (context) {
-                        return const HomePage();
-                      },
-                    ),
-                  );
-                },
-                child: Icon(Icons.home_outlined),
-              ),
+              Icon(Icons.home_outlined),
               Icon(Icons.document_scanner_outlined),
               Icon(Icons.add),
-              GestureDetector(
-                onTap: () {
-                  Navigator.of(context).push(
-                    MaterialPageRoute(
-                      builder: (context) {
-                        return const ChatBotView();
-                      },
-                    ),
-                  );
-                },
-                child: Icon(Icons.chat_outlined),
-              ),
+              Icon(Icons.chat_outlined),
               Icon(Icons.settings),
-            ]),
+            ]),*/
         body: Container(
             decoration: const BoxDecoration(
               image: DecorationImage(
