@@ -65,27 +65,22 @@ class SignupInfoTwo extends StatelessWidget {
             ),
             Padding(
               padding: const EdgeInsets.only(
-                left: 28,
+                left: 8,
                 top: 24,
                 bottom: 3,
               ).r,
               child: Text("Date of birth", style: Styles.Style14),
             ),
-            SizedBox(
-              height: 15.h,
-            ),
+
             const CustomDateOfBirth(),
             Padding(
               padding: const EdgeInsets.only(
-                left: 28,
-                top: 17,
-                bottom: 3,
+                left: 8,
+                top: 18,
               ).r,
               child: Text("Gender", style: Styles.Style14),
             ),
-            SizedBox(
-              height: 15.h,
-            ),
+
             // Row(
             //   children: [
             //     CustomRadioButton(
@@ -105,14 +100,10 @@ class SignupInfoTwo extends StatelessWidget {
             // ),
             CustomRadioButton(),
 
-            SizedBox(
-              height: 21.h,
-            ),
             Padding(
               padding: const EdgeInsets.only(
-                left: 28,
-                top: 21,
-                bottom: 3,
+                left: 8,
+                top: 18,
               ).r,
               child: Row(
                 children: [
@@ -125,7 +116,7 @@ class SignupInfoTwo extends StatelessWidget {
               ),
             ),
             SizedBox(
-              height: 12.h,
+              height: 4.h,
             ),
             Row(
               children: [
@@ -145,9 +136,9 @@ class SignupInfoTwo extends StatelessWidget {
             //  SizedBox(height: 20,),
             Padding(
               padding: const EdgeInsets.only(
-                left: 28,
-                top: 20,
-                bottom: 11,
+                left: 8,
+                top: 18,
+                bottom: 4,
               ).r,
               child: Text(
                 'The Disease',
@@ -160,9 +151,9 @@ class SignupInfoTwo extends StatelessWidget {
                 height: MediaQuery.of(context).size.height * 0.05),
             Padding(
               padding: const EdgeInsets.only(
-                left: 28,
-                top: 13,
-                bottom: 13,
+                left: 8,
+                top: 18,
+                bottom: 8,
               ).r,
               child: Text(
                 'Date of illness',
