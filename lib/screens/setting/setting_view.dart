@@ -182,7 +182,7 @@ class SettingView extends StatelessWidget {
                   );
                 },
                 child: SettingRec(
-                    icon: Icons.phone_outlined,
+                    icon: Icons.logout,
                     icontext: 'Log-Out',
                     endtext: ''),
               ),
