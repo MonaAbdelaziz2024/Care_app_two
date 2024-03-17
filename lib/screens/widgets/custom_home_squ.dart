@@ -45,7 +45,7 @@ class HomeSquare extends StatelessWidget {
                     ),
                     Text(
                       text,
-                      style: Styles.Style11,
+                      style: Styles.Style11.copyWith(color: Colors.white,),
                     ),
                   ],
                 ),
@@ -56,7 +56,7 @@ class HomeSquare extends StatelessWidget {
                   children: [
                     Text(
                       '  View details',
-                      style: Styles.Style11,
+                      style: Styles.Style11.copyWith(color: Colors.white,),
                     ),
                     SizedBox(
                       width: 2.w,

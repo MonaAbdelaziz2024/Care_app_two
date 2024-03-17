@@ -15,14 +15,14 @@ class HomeRectangles extends StatelessWidget {
   final String text;
   final String time;
   final void Function()? onTap;
-  // final color;
+  //final color;
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.only(bottom: 15).r,
       child: Container(
         decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(25),
+          borderRadius: BorderRadius.circular(27),
           color: Colors.white,
           border: Border.all(
             color: Color(0xffF4F5F5),
@@ -38,7 +38,7 @@ class HomeRectangles extends StatelessWidget {
               width: 178.w,
               height: 66.h,
               decoration: BoxDecoration(
-                borderRadius: BorderRadius.circular(25),
+                borderRadius: BorderRadius.circular(27),
                 color: Color(0xffF4F5F5),
                 boxShadow: [
                   BoxShadow(
@@ -51,10 +51,10 @@ class HomeRectangles extends StatelessWidget {
                 children: [
                   Container(
                     alignment: Alignment.centerLeft,
-                    width: 70.97142791748047.w,
+                    width: 66.w,
                     height: 66.h,
                     decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(25),
+                      borderRadius: BorderRadius.circular(27),
                       color: Color(0xff0074fe),
                     ),
                     child: Center(
@@ -70,13 +70,13 @@ class HomeRectangles extends StatelessWidget {
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Text(
-                          text,
-                          style: Styles.Style133,
-                        ),
+                        Text(text,
+                            style: Styles.Style13.copyWith(
+                                color: Color(0xff1F1F1F))),
                         Text(
                           time,
-                          style: Styles.Style133,
+                          style: Styles.Style133.copyWith(
+                                color: Color(0xff0075FE)),
                         )
                       ],
                     ),
@@ -103,7 +103,7 @@ class HomeRectangles extends StatelessWidget {
                   child: Center(
                       child: Text(
                     "Check All",
-                    style: Styles.Style133,
+                    style: Styles.Style133.copyWith(color: Color(0xff0075FE)),
                   )),
                 ),
               ),

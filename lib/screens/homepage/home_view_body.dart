@@ -31,9 +31,15 @@ class HomeViewBody extends StatelessWidget {
                   ),
                   Column(
                     children: [
-                      Text(
-                        'Hello!',
-                        style: Styles.Style10,
+                      Row(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          Text(
+                            
+                            'Hello!',
+                            style: Styles.Style10,
+                          ),
+                        ],
                       ),
                       Text(
                         'Ahmed Anwar',
@@ -42,7 +48,7 @@ class HomeViewBody extends StatelessWidget {
                     ],
                   ),
                   SizedBox(
-                    width: 50.w,
+                    width: 15.w,
                   ),
                   const Text(
                     "car",
@@ -61,8 +67,9 @@ class HomeViewBody extends StatelessWidget {
                     ),
                   ),
                   SizedBox(
-                    width: 70.w,
+                    width: 90.w,
                   ),
+                 // Actions(actions: , child: child)
                   const Icon(Icons.notifications_none),
                 ],
               ),
@@ -158,7 +165,7 @@ class HomeViewBody extends StatelessWidget {
                             Image.asset('assets/images/Subtract.png'),
                             Text(
                               '70 %',
-                              style: Styles.Style16,
+                              style: Styles.Style16.copyWith(color: Colors.white),
                             ),
                           ],
                         ),
@@ -174,7 +181,7 @@ class HomeViewBody extends StatelessWidget {
                 children: [
                   Text(
                     'Highlights',
-                    style: Styles.Style18,
+                    style: Styles.Style18.copyWith(color: Color(0xff1F1F1F)),
                   ),
                 ],
               ),

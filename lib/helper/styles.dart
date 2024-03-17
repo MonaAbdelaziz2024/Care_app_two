@@ -69,7 +69,7 @@ class Styles {
     color: kTextColor,
     fontFamily: 'Ciaro',
     fontSize: 16.sp,
-    fontWeight: FontWeight.w500,
+    fontWeight: FontWeight.w400,
   );
   static TextStyle Style166 =  TextStyle(
     color: kTextColor,

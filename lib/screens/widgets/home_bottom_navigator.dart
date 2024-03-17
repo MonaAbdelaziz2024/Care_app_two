@@ -1,5 +1,6 @@
 import 'package:care_app_two/screens/chat_bot_page/chatbot_view.dart';
 import 'package:care_app_two/screens/homepage/home_view_body.dart';
+import 'package:care_app_two/screens/setting/setting_view.dart';
 import 'package:curved_navigation_bar/curved_navigation_bar.dart';
 import 'package:flutter/material.dart';
 
@@ -12,7 +13,7 @@ class CustomNavigationBottomBar extends StatefulWidget {
 }
 
 class _CustomNavigationBottomBarState extends State<CustomNavigationBottomBar> {
-  List<dynamic> pages = [const HomeViewBody(), const ChatBotView()];
+  List<dynamic> pages = [const HomeViewBody(), const ChatBotView(), const SettingView()];
   int indexPage = 0;
 
   GlobalKey<CurvedNavigationBarState> globalKey = GlobalKey();
@@ -21,6 +22,7 @@ class _CustomNavigationBottomBarState extends State<CustomNavigationBottomBar> {
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: CurvedNavigationBar(
+        animationCurve: Curves.easeInOut,
         //backgroundColor: Colors.white,
         //buttonBackgroundColor: kLogoColor,
           key: globalKey,
@@ -31,7 +33,7 @@ class _CustomNavigationBottomBarState extends State<CustomNavigationBottomBar> {
             });
           },
           letIndexChange: (index) => true,
-          animationDuration: const Duration(milliseconds: 100),
+          animationDuration: const Duration(milliseconds: 300),
           // animationCurve: Curves.easeIn,
           items: const [
 
@@ -40,7 +42,7 @@ class _CustomNavigationBottomBarState extends State<CustomNavigationBottomBar> {
             // Icon(Icons.add),
 
                 Icon(Icons.chat_outlined),
-           // Icon(Icons.settings),
+               Icon(Icons.settings_outlined),
           ]),
            body: Container(
           child: pages[indexPage],
