@@ -104,7 +104,7 @@ class SignupInfoTwo extends StatelessWidget {
             //   ],
             // ),
             CustomRadioButton(),
-            
+
             SizedBox(
               height: 21.h,
             ),
@@ -132,14 +132,14 @@ class SignupInfoTwo extends StatelessWidget {
                 CustomDropDownList(
                     items: const ['item1', 'item2'],
                     width: MediaQuery.of(context).size.width * 0.36,
-                    height: MediaQuery.of(context).size.height * 0.06),
+                    height: MediaQuery.of(context).size.height * 0.05),
                 SizedBox(
                   width: 40.w,
                 ),
                 CustomDropDownList(
                     items: const ['item1', 'item2'],
                     width: MediaQuery.of(context).size.width * 0.36,
-                    height: MediaQuery.of(context).size.height * 0.06),
+                    height: MediaQuery.of(context).size.height * 0.05),
               ],
             ),
             //  SizedBox(height: 20,),
@@ -157,7 +157,7 @@ class SignupInfoTwo extends StatelessWidget {
             CustomDropDownList(
                 items: const ['item1', 'item2'],
                 width: MediaQuery.of(context).size.width * 0.85,
-                height: MediaQuery.of(context).size.height * 0.06),
+                height: MediaQuery.of(context).size.height * 0.05),
             Padding(
               padding: const EdgeInsets.only(
                 left: 28,

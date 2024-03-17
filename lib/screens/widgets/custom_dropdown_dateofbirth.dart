@@ -18,7 +18,7 @@ class _CustomDateOfBirthState extends State<CustomDateOfBirth> {
   Widget build(BuildContext context) {
     return SizedBox(
       //DropdownDatePicker
-      height: 55.h,
+      height: 45.h,
       child: DropdownDatePicker(
         dateformatorder: OrderFormat.DMY, // default is myd
         inputDecoration: InputDecoration(
@@ -34,7 +34,7 @@ class _CustomDateOfBirthState extends State<CustomDateOfBirth> {
         isFormValidator: true, // optional
         startYear: 1900, // optional
         endYear: 2020, // optional
-        width: 5.w, isExpanded: true,
+        width: 15.w, isExpanded: true,
         // optional
         selectedDay: 21, // optional
         selectedMonth: 2, // optional

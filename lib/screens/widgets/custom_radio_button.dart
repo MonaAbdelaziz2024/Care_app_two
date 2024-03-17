@@ -1,19 +1,19 @@
 import 'package:care_app_two/helper/constant.dart';
+import 'package:care_app_two/helper/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 // ignore: must_be_immutable
 class CustomRadioButton extends StatefulWidget {
-  CustomRadioButton(
-      {super.key,
-      // required this.text,
-      // required this.value,
-      // this.valueChoose = 1,
-      // required this.width,
-      // required this.height,
-      // this.onTap
-      
-      });
+  CustomRadioButton({
+    super.key,
+    // required this.text,
+    // required this.value,
+    // this.valueChoose = 1,
+    // required this.width,
+    // required this.height,
+    // this.onTap
+  });
   // final String text;
   // int? valueChoose;
   // final int value;
@@ -29,33 +29,61 @@ class _CustomRadioButtonState extends State<CustomRadioButton> {
 
   @override
   Widget build(BuildContext context) {
-    return Column(
-      mainAxisAlignment: MainAxisAlignment.start,
+    return Row(
+      mainAxisAlignment: MainAxisAlignment.spaceBetween,
       children: [
-        ListTile(
-          title: Text("Male"),
-          leading: Radio(
-            value: 1,
-            groupValue: val,
-            onChanged: (value) {
-              setState(() {
-                val = value!;
-              });
-            },
-            activeColor: Colors.green,
+        Container(
+          width: 130.w,
+          height: 40.h,
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(10).r,
+              border: Border.all(color: Color(0xffC2C2C2))),
+          child: ListTile(
+            horizontalTitleGap: 8,
+            titleAlignment: ListTileTitleAlignment.center,
+            contentPadding: EdgeInsets.zero,
+            title: Text(
+              
+              "Male",
+              style: Styles.Style15,
+            ),
+            leading: Radio(
+              value: 1,
+              groupValue: val,
+              onChanged: (value) {
+                setState(() {
+                  val = value!;
+                });
+              },
+              activeColor: Colors.blue,
+            ),
           ),
         ),
-        ListTile(
-          title: Text("Female"),
-          leading: Radio(
-            value: 2,
-            groupValue: val,
-            onChanged: (value) {
-              setState(() {
-                val = value!;
-              });
-            },
-            activeColor: Colors.green,
+        Container(
+          width: 130.w,
+          height: 40.h,
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(10).r,
+              border: Border.all(color: Color(0xffC2C2C2))),
+          child: ListTile(
+            titleAlignment: ListTileTitleAlignment.center,
+            horizontalTitleGap: 8,
+            contentPadding: EdgeInsets.zero,
+            minVerticalPadding: 0,
+            title: Text(
+              "Female",
+              style: Styles.Style15,
+            ),
+            leading: Radio(
+              value: 2,
+              groupValue: val,
+              onChanged: (value) {
+                setState(() {
+                  val = value!;
+                });
+              },
+              activeColor: Colors.blue,
+            ),
           ),
         ),
       ],
