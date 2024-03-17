@@ -3,7 +3,7 @@
 import 'package:care_app_two/helper/constant.dart';
 import 'package:care_app_two/helper/functions/custom_chat_bot_appbar.dart';
 
-import 'package:care_app_two/screens/widgets/custom_background.dart';
+//import 'package:care_app_two/screens/widgets/custom_background.dart';
 //import 'package:care_app_two/screens/widgets/custom_bottom_navigation_bar.dart';
 import 'package:care_app_two/screens/widgets/custom_message_textfield.dart';
 import 'package:flutter/material.dart';

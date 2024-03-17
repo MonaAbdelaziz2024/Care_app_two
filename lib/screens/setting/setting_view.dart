@@ -1,11 +1,12 @@
 // ignore_for_file: prefer_const_constructors
 
-import 'dart:ffi';
+//import 'dart:ffi';
 
 import 'package:care_app_two/helper/constant.dart';
 import 'package:care_app_two/helper/functions/custom_chat_bot_appbar.dart';
 import 'package:care_app_two/helper/styles.dart';
 import 'package:care_app_two/screens/start_screen/start.dart';
+import 'package:care_app_two/screens/widgets/custom_line_setting.dart';
 //import 'package:care_app_two/screens/start_screen/start.dart';
 import 'package:care_app_two/screens/widgets/custom_setting_rec.dart';
 //import 'package:care_app_two/screens/widgets/home_bottom_navigator.dart';
@@ -104,28 +105,47 @@ class SettingView extends StatelessWidget {
                   )
                 ],
               ),
-              SizedBox(height: 7.h,),
-              SettingRec(
-                  icon: Icons.email_outlined,
-                  icontext: 'Email',
-                  endtext: 'Ahmed Anwar'),
-              SettingRec(
-                  icon: Icons.date_range,
-                  icontext: 'Birthdate',
-                  endtext: '20/2/2000'),
-              SettingRec(icontext: 'Gender', endtext: 'Male'),
-              SettingRec(
-                  icon: Icons.monitor_weight,
-                  icontext: 'Weight',
-                  endtext: '65kg'),
-              SettingRec(
-                  icon: Icons.height_rounded,
-                  icontext: 'Height',
-                  endtext: '177 cm'),
-              SettingRec(
-                  icon: Icons.medical_information_outlined,
-                  icontext: 'The Disease',
-                  endtext: 'cholesterol'),
+              SizedBox(
+                height: 7.h,
+              ),
+              Container(
+                height: 290.h,
+                decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(15),
+                  color: const Color(0xffcccccc).withOpacity(0.5),
+                ),
+                child: Column(
+                  /// mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: const [
+                    SettingRec(
+                        icon: Icons.email_outlined,
+                        icontext: 'Email',
+                        endtext: 'Ahmed Anwar'),
+                         LineSetting(),
+                    SettingRec(
+                        icon: Icons.date_range,
+                        icontext: 'Birthdate',
+                        endtext: '20/2/2000'),
+                         LineSetting(),
+                    SettingRec(icontext: 'Gender', endtext: 'Male'),
+                   LineSetting(),
+                    SettingRec(
+                        icon: Icons.monitor_weight,
+                        icontext: 'Weight',
+                        endtext: '65kg'),
+                   LineSetting(),
+                    SettingRec(
+                        icon: Icons.height_rounded,
+                        icontext: 'Height',
+                        endtext: '177 cm'),
+                         LineSetting(),
+                    SettingRec(
+                        icon: Icons.medical_information_outlined,
+                        icontext: 'The Disease',
+                        endtext: 'cholesterol'),
+                  ],
+                ),
+              ),
               SizedBox(
                 height: 14.h,
               ),
@@ -133,18 +153,25 @@ class SettingView extends StatelessWidget {
                 'Utilities',
                 style: Styles.Style166,
               ),
-              SizedBox(height: 7.h,),
-              SettingRec(
+              SizedBox(
+                height: 7.h,
+              ),
+              Container(
+                height: 150.h,
+                 decoration: BoxDecoration(
+                  borderRadius: BorderRadius.circular(15),
+                  color: const Color(0xffcccccc).withOpacity(0.5),
+                ),child: Column(
+                  children: [
+                        SettingRec(
                   icon: Icons.phone_outlined,
                   icontext: 'Contact us',
                   endtext: ''),
-
-                   SettingRec(
-                  icon: Icons.help_outline,
-                  icontext: 'Help',
-                  endtext: ''),
-
-                  GestureDetector(
+                  LineSetting(),
+              SettingRec(
+                  icon: Icons.help_outline, icontext: 'Help', endtext: ''),
+              LineSetting(),
+              GestureDetector(
                 onTap: () {
                   Navigator.of(context).push(
                     MaterialPageRoute(
@@ -155,15 +182,18 @@ class SettingView extends StatelessWidget {
                   );
                 },
                 child: SettingRec(
-                  icon: Icons.phone_outlined,
-                  icontext: 'Log-Out',
-                  endtext: ''
+                    icon: Icons.phone_outlined,
+                    icontext: 'Log-Out',
+                    endtext: ''),
+              ),
+                  ],
                 ),
               ),
+              
+              SizedBox(
+                height: 5.h,
+              )
 
-              SizedBox(height: 5.h,)
-
-                  
               /*
              /* SettingRec(
                 */

@@ -18,64 +18,72 @@ class HomeViewBody extends StatelessWidget {
               image: AssetImage(kBackgroundStart), fit: BoxFit.fill),
         ),
         child: Padding(
-          padding: const EdgeInsets.only(right: 12, left: 12, bottom: 8).r,
+          padding: const EdgeInsets.only(right: 16, left: 16, bottom: 8).r,
           child: ListView(
             children: [
+              //profilephoto and name
               Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  CircleAvatar(
-                    child: Image.asset('assets/images/person.png'),
-                  ),
-                  SizedBox(
-                    width: 5.w,
-                  ),
-                  Column(
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      Row(
-                        crossAxisAlignment: CrossAxisAlignment.start,
+                      CircleAvatar(
+                        child: Image.asset('assets/images/person.png'),
+                      ),
+                      SizedBox(
+                        width: 6.w,
+                      ),
+                      Column(
+                        // mainAxisAlignment: MainAxisAlignment.start,
                         children: [
                           Text(
-                            
                             'Hello!',
                             style: Styles.Style10,
                           ),
+                          Text(
+                            'Ahmed Anwar',
+                            style: Styles.Style133,
+                          ),
                         ],
-                      ),
-                      Text(
-                        'Ahmed Anwar',
-                        style: Styles.Style133,
                       ),
                     ],
                   ),
                   SizedBox(
                     width: 15.w,
                   ),
-                  const Text(
-                    "car",
-                    style: TextStyle(
-                      fontFamily: 'Cairo',
-                      fontSize: 49.07691955566406,
-                      fontWeight: FontWeight.w700,
-                      color: Color(0xff0075FE),
-                    ),
+                  //logo and netification bill
+                  Row(
+                    children: [
+                      const Text(
+                        "car",
+                        style: TextStyle(
+                          fontFamily: 'Cairo',
+                          fontSize: 49.07691955566406,
+                          fontWeight: FontWeight.w700,
+                          color: Color(0xff0075FE),
+                        ),
+                      ),
+                      Padding(
+                        padding: const EdgeInsets.only(top: 15),
+                        child: Image.asset(
+                          kLogo,
+                          scale: 2.5,
+                        ),
+                      ),
+                      SizedBox(
+                        width: 95.w,
+                      ),
+                    ],
                   ),
-                  Padding(
-                    padding: const EdgeInsets.only(top: 15),
-                    child: Image.asset(
-                      kLogo,
-                      scale: 2.5,
-                    ),
-                  ),
-                  SizedBox(
-                    width: 90.w,
-                  ),
-                 // Actions(actions: , child: child)
+                  // Actions(actions: , child: child)
                   const Icon(Icons.notifications_none),
                 ],
               ),
               SizedBox(
-                height: 13.h,
+                height: 26.h,
               ),
+              //search container
               Container(
                 height: 35.h,
                 decoration: BoxDecoration(
@@ -111,6 +119,7 @@ class HomeViewBody extends StatelessWidget {
               SizedBox(
                 height: 20.h,
               ),
+              //task measurment
               Container(
                 padding: const EdgeInsets.only(top: 25, left: 36, right: 49).r,
                 height: 140.h,
@@ -146,7 +155,7 @@ class HomeViewBody extends StatelessWidget {
                               child: Center(
                                 child: Text(
                                   'View Tasks',
-                                  style: Styles.Style133,
+                                  style: Styles.Style133.copyWith(color: Color(0xff0075FE)),
                                 ),
                               ),
                             ),
@@ -165,7 +174,8 @@ class HomeViewBody extends StatelessWidget {
                             Image.asset('assets/images/Subtract.png'),
                             Text(
                               '70 %',
-                              style: Styles.Style16.copyWith(color: Colors.white),
+                              style:
+                                  Styles.Style16.copyWith(color: Colors.white),
                             ),
                           ],
                         ),

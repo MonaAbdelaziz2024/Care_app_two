@@ -12,36 +12,25 @@ class SettingRec extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.only(bottom: 2),
-      child: Container(
-        height: 50,
-        
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(15),
-          color: const Color(0xffCDCDCD),
-        ),
-        child: Padding(
-          padding: const EdgeInsets.all(12),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      padding: const EdgeInsets.only(bottom: 11, top: 12, left: 15, right: 15),
+      child: Row(
+        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+        children: [
+          Row(
             children: [
-              Row(
-                children: [
-                  Icon(icon),
-                  SizedBox(width: 9.w,),
-                  Text(
-              icontext,
-              style: Styles.Style16,)
-                ],
-              ),
+              Icon(icon),
+              SizedBox(width: 9.w,),
               Text(
-              endtext,
-              style: Styles.Style16,
-            ),
+          icontext,
+          style: Styles.Style16,)
             ],
-            
           ),
+          Text(
+          endtext,
+          style: Styles.Style16,
         ),
+        ],
+        
       ),
     );
   }
