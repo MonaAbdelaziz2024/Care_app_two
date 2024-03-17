@@ -23,31 +23,30 @@ class ChatBotView extends StatelessWidget {
                 image: AssetImage(kBackgroundStart), fit: BoxFit.fill),
           ),
           child: ListView(
-            children:[ Stack(
-              children: [
-Padding(
-                padding: const EdgeInsets.only(
-                  left: 16,
-                  right: 16,
-                ).r,
-                child: Container(
-                    width: 400.w,
-                    height: 600.h,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(12).r,
-                        color: const Color(0xffEEEEEE).withOpacity(0.5)),
-                    child: Image.asset('assets/images/botimage.png')),
-              ),
-              Padding(
-                padding: const EdgeInsets.only(top: 600,right: 32, left: 32).r,
-                child: const CustomMessageTextfield(),
-              )
+            children: [
+              Stack(children: [
+                Padding(
+                  padding: const EdgeInsets.only(
+                    left: 16,
+                    right: 16,
+                  ).r,
+                  child: Container(
+                      width: 400.w,
+                      height: 560.h,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(12).r,
+                          color: const Color(0xffEEEEEE).withOpacity(0.5)),
+                      child: Image.asset('assets/images/botimage.png')),
+                ),
+                Padding(
+                  padding:
+                      const EdgeInsets.only(top: 560, right: 32, left: 32).r,
+                  child: const CustomMessageTextfield(),
+                )
               ])
               //const CustomBackground(image: kBackgroundStart),
-              
             ],
-          )
-          ),
+          )),
     );
 
     //bottomNavigationBar:CustomBottomNavigationBar()
