@@ -1,15 +1,10 @@
-// ignore_for_file: prefer_const_constructors
-
-//import 'dart:ffi';
 
 import 'package:care_app_two/helper/constant.dart';
 import 'package:care_app_two/helper/functions/custom_chat_bot_appbar.dart';
 import 'package:care_app_two/helper/styles.dart';
 import 'package:care_app_two/screens/start_screen/start.dart';
 import 'package:care_app_two/screens/widgets/custom_line_setting.dart';
-//import 'package:care_app_two/screens/start_screen/start.dart';
 import 'package:care_app_two/screens/widgets/custom_setting_rec.dart';
-//import 'package:care_app_two/screens/widgets/home_bottom_navigator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
