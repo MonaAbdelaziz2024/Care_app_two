@@ -34,7 +34,7 @@ class _CustomDateOfBirthState extends State<CustomDateOfBirth> {
         isFormValidator: true, // optional
         startYear: 1900, // optional
         endYear: 2020, // optional
-        width: 15.w, isExpanded: true,
+        width: 4.w, isExpanded: true,
         // optional
         selectedDay: 21, // optional
         selectedMonth: 2, // optional
