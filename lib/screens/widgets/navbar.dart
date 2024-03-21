@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_final_fields, prefer_const_constructors
+// ignore_for_file: prefer_const_constructors
 
 import 'package:care_app_two/screens/chat_bot_page/chatbot_view.dart';
 import 'package:care_app_two/screens/homepage/home_view_body.dart';
@@ -6,76 +6,95 @@ import 'package:care_app_two/screens/scanPage/scan_view.dart';
 import 'package:care_app_two/screens/setting/setting_view.dart';
 import 'package:flutter/material.dart';
 
-class FluidNavBar extends StatefulWidget {
+class NavBar extends StatefulWidget {
+  const NavBar({super.key});
+
   @override
-  _FluidNavBarState createState() => _FluidNavBarState();
+  State<NavBar> createState() => _NavBarState();
 }
 
-class _FluidNavBarState extends State<FluidNavBar> {
-  int _selectedIndex = 0;
-  List<dynamic> pages = [
-    const HomeViewBody(),
-    const ScanView(),
-    const ChatBotView(),
-    const SettingView(),
+class _NavBarState extends State<NavBar> {
+  List screens = [
+    HomeViewBody(),
+    ScanView(),
+    ChatBotView(),
+    SettingView(),
   ];
 
+  int currentindex = 0;
+  PageController controller = PageController();
 
-  List<NavItem> _navItems = [
-    NavItem(Icons.home_outlined, "HomeViewBody"),
-    NavItem(Icons.document_scanner_outlined, "ScanView"),
-    NavItem(Icons.chat_outlined, "ChatBotView"),
-    NavItem(Icons.settings_outlined, "SettingView"),
-  ];
-
-  void _onNavItemTapped(int index) {
-    setState(() {
-      _selectedIndex = index;
-    });
+  void nextPage(index) {
+    currentindex - index;
+    controller.jumpToPage(index);
   }
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-      floatingActionButton: FloatingActionButton(
-       // clipBehavior: Clip.antiAliasWithSaveLayer,
-       shape: RoundedRectangleBorder(
-              borderRadius: BorderRadius.all(Radius.circular(25),),),
-        onPressed: () {},
-        child: const Icon(
-          Icons.add,
-          color: Colors.white,
+    return Expanded(
+      child: Scaffold(
+        floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
+        floatingActionButton: FloatingActionButton(
+          backgroundColor: Colors.blue[700],
+          onPressed: () {},
+          child: Icon(Icons.add,color: Colors.white,),
         ),
-      ),
-      
-      bottomNavigationBar: BottomAppBar(
-        shape: CircularNotchedRectangle(),
-        
-        notchMargin: 4,
-        surfaceTintColor:Colors.blue[800],
-        //color: Colors.yellow[100],
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: _navItems.map((item) {
-            var index = _navItems.indexOf(item);
-            return IconButton(
-              onPressed: () => _onNavItemTapped(index),
-              icon: Icon(
-                item.icon,
-                color: _selectedIndex == index ? Colors.yellow : Colors.grey,
-              ),
-            );
-          }).toList(),
+        bottomNavigationBar: Container(
+          clipBehavior: Clip.hardEdge,
+          decoration: BoxDecoration(
+           // gradient: ,
+            border: Border.all(color:Colors.grey,),
+          ),
+          child: BottomAppBar(
+            height: 50,
+            child: Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                IconButton(
+                  onPressed: () {
+                    nextPage(0);
+                  },
+                  icon: Icon(Icons.home_outlined,
+                      color: currentindex == 0
+                          ? Colors.yellow[700]
+                          : Colors.grey),
+                ),
+                IconButton(
+                  onPressed: () {
+                    nextPage(1);
+                  },
+                  icon: Icon(Icons.document_scanner_outlined,
+                      color: currentindex == 1
+                          ? Colors.yellow[700]
+                          : Colors.grey),
+                ),
+                IconButton(
+                    onPressed: () {
+                      nextPage(2);
+                    },
+                    icon: Icon(Icons.chat_outlined,
+                        color: currentindex == 2
+                            ? Colors.yellow[700]
+                            : Colors.grey)),
+                IconButton(
+                    onPressed: () {
+                      nextPage(3);
+                    },
+                    icon: Icon(Icons.settings_outlined,
+                        color: currentindex == 3
+                            ? Colors.yellow[700]
+                            : Colors.grey)),
+              ],
+            ),
+          ),
         ),
+        body: PageView.builder(
+            controller: controller,
+            itemCount: screens.length,
+            itemBuilder: (context, index) {
+              return screens[index];
+            }),
       ),
     );
   }
-}
-
-class NavItem {
-  IconData icon;
-  String title;
-
-  NavItem(this.icon, this.title);
 }

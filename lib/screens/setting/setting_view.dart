@@ -1,4 +1,6 @@
 
+// ignore_for_file: prefer_const_constructors
+
 import 'package:care_app_two/helper/constant.dart';
 import 'package:care_app_two/helper/functions/custom_chat_bot_appbar.dart';
 import 'package:care_app_two/helper/styles.dart';
@@ -186,7 +188,7 @@ class SettingView extends StatelessWidget {
               ),
               
               SizedBox(
-                height: 5.h,
+                height: 2.h,
               )
 
               /*

@@ -42,7 +42,7 @@ class _HomePageState extends State<HomePage> {
       //  bottomNavigationBar: CustomNavigationBottomBar(),
       //   body:HomeViewBody()
      // body: CustomNavigationBottomBar(),
-     body:FluidNavBar(),
+     body:NavBar(),
     );
   }
 }
