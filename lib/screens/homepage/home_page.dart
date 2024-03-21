@@ -1,6 +1,7 @@
 // ignore_for_file: unused_local_variable, prefer_const_constructors, prefer_const_literals_to_create_immutables, use_key_in_widget_constructors, prefer_typing_uninitialized_variables
 
 import 'package:care_app_two/screens/widgets/home_bottom_navigator.dart';
+import 'package:care_app_two/screens/widgets/navbar.dart';
 import 'package:flutter/material.dart';
 
 //import 'package:curved_labeled_navigation_bar/curved_navigation_bar_item.dart';
@@ -40,7 +41,8 @@ class _HomePageState extends State<HomePage> {
       //     ]),
       //  bottomNavigationBar: CustomNavigationBottomBar(),
       //   body:HomeViewBody()
-      body: CustomNavigationBottomBar(),
+     // body: CustomNavigationBottomBar(),
+     body:FluidNavBar(),
     );
   }
 }
