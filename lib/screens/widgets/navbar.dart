@@ -21,12 +21,14 @@ class _NavBarState extends State<NavBar> {
     SettingView(),
   ];
 
-  int currentindex = 0;
+  num currentindex = 0;
   PageController controller = PageController();
 
   void nextPage(index) {
-    currentindex - index;
+    
+    
     controller.jumpToPage(index);
+    currentindex = index;
   }
 
   @override
@@ -37,13 +39,18 @@ class _NavBarState extends State<NavBar> {
         floatingActionButton: FloatingActionButton(
           backgroundColor: Colors.blue[700],
           onPressed: () {},
-          child: Icon(Icons.add,color: Colors.white,),
+          child: Icon(
+            Icons.add,
+            color: Colors.white,
+          ),
         ),
         bottomNavigationBar: Container(
           clipBehavior: Clip.hardEdge,
           decoration: BoxDecoration(
-           // gradient: ,
-            border: Border.all(color:Colors.grey,),
+            // gradient: ,
+            border: Border.all(
+              color: Colors.grey,
+            ),
           ),
           child: BottomAppBar(
             height: 50,
@@ -53,24 +60,31 @@ class _NavBarState extends State<NavBar> {
                 IconButton(
                   onPressed: () {
                     nextPage(0);
+                    setState(() {
+                        
+                      });
                   },
                   icon: Icon(Icons.home_outlined,
-                      color: currentindex == 0
-                          ? Colors.yellow[700]
-                          : Colors.grey),
+                      color:
+                          currentindex == 0 ? Colors.yellow[700] : Colors.grey),
                 ),
                 IconButton(
                   onPressed: () {
                     nextPage(1);
+                    setState(() {
+                        
+                      });
                   },
                   icon: Icon(Icons.document_scanner_outlined,
-                      color: currentindex == 1
-                          ? Colors.yellow[700]
-                          : Colors.grey),
+                      color:
+                          currentindex == 1 ? Colors.yellow[700] : Colors.grey),
                 ),
                 IconButton(
                     onPressed: () {
                       nextPage(2);
+                      setState(() {
+                        
+                      });
                     },
                     icon: Icon(Icons.chat_outlined,
                         color: currentindex == 2
@@ -79,6 +93,9 @@ class _NavBarState extends State<NavBar> {
                 IconButton(
                     onPressed: () {
                       nextPage(3);
+                      setState(() {
+                        
+                      });
                     },
                     icon: Icon(Icons.settings_outlined,
                         color: currentindex == 3

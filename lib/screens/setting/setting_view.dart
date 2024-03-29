@@ -1,4 +1,3 @@
-
 // ignore_for_file: prefer_const_constructors
 
 import 'package:care_app_two/helper/constant.dart';
@@ -106,7 +105,7 @@ class SettingView extends StatelessWidget {
                 height: 7.h,
               ),
               Container(
-                height: 290.h,
+                height: 220.h,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(15),
                   color: const Color(0xffcccccc).withOpacity(0.5),
@@ -118,24 +117,24 @@ class SettingView extends StatelessWidget {
                         icon: Icons.email_outlined,
                         icontext: 'Email',
                         endtext: 'Ahmed Anwar'),
-                         LineSetting(),
+                    LineSetting(),
                     SettingRec(
                         icon: Icons.date_range,
                         icontext: 'Birthdate',
                         endtext: '20/2/2000'),
-                         LineSetting(),
+                    LineSetting(),
                     SettingRec(icontext: 'Gender', endtext: 'Male'),
-                   LineSetting(),
+                    LineSetting(),
                     SettingRec(
                         icon: Icons.monitor_weight,
                         icontext: 'Weight',
                         endtext: '65kg'),
-                   LineSetting(),
+                    LineSetting(),
                     SettingRec(
                         icon: Icons.height_rounded,
                         icontext: 'Height',
                         endtext: '177 cm'),
-                         LineSetting(),
+                    LineSetting(),
                     SettingRec(
                         icon: Icons.medical_information_outlined,
                         icontext: 'The Disease',
@@ -154,41 +153,41 @@ class SettingView extends StatelessWidget {
                 height: 7.h,
               ),
               Container(
-                height: 150.h,
-                 decoration: BoxDecoration(
+                height: 115.h,
+                decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(15),
                   color: const Color(0xffcccccc).withOpacity(0.5),
-                ),child: Column(
+                ),
+                child: Column(
                   children: [
-                        SettingRec(
-                  icon: Icons.phone_outlined,
-                  icontext: 'Contact us',
-                  endtext: ''),
-                  LineSetting(),
-              SettingRec(
-                  icon: Icons.help_outline, icontext: 'Help', endtext: ''),
-              LineSetting(),
-              GestureDetector(
-                onTap: () {
-                  Navigator.of(context).push(
-                    MaterialPageRoute(
-                      builder: (context) {
-                        return const Start();
+                    SettingRec(
+                        icon: Icons.phone_outlined,
+                        icontext: 'Contact us',
+                        endtext: ''),
+                    LineSetting(),
+                    SettingRec(
+                        icon: Icons.help_outline,
+                        icontext: 'Help',
+                        endtext: ''),
+                    LineSetting(),
+                    GestureDetector(
+                      onTap: () {
+                        Navigator.of(context).push(
+                          MaterialPageRoute(
+                            builder: (context) {
+                              return const Start();
+                            },
+                          ),
+                        );
                       },
+                      child: SettingRec(
+                          icon: Icons.logout, icontext: 'Log-Out', endtext: ''),
                     ),
-                  );
-                },
-                child: SettingRec(
-                    icon: Icons.logout,
-                    icontext: 'Log-Out',
-                    endtext: ''),
-              ),
                   ],
                 ),
               ),
-              
               SizedBox(
-                height: 2.h,
+                height: 8.h,
               )
 
               /*
