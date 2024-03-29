@@ -92,11 +92,12 @@ class _CustomSignupItemsState extends State<CustomSignupItems> {
                         },
                         child: Container(
                           decoration: BoxDecoration(
-                              // border: Border.all(color: Colors.grey),
+                               border: Border.all(color: Colors.grey),
                               shape: BoxShape.circle,
-                              color: Colors.blue),
+                              color: !value ? Colors.white : Colors.blue
+                              ),
                           child: Padding(
-                            padding: const EdgeInsets.all(3.0).r,
+                            padding: const EdgeInsets.all(2.0).r,
                             child: value
                                 ? Icon(
                                     Icons.check,
@@ -106,7 +107,7 @@ class _CustomSignupItemsState extends State<CustomSignupItems> {
                                 : Icon(
                                     Icons.check_box_outline_blank,
                                     size: 18.0,
-                                    color: Colors.blue,
+                                    color: Colors.white,
                                   ),
                           ),
                         ))
