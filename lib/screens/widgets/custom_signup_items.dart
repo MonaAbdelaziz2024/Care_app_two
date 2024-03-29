@@ -20,13 +20,13 @@ class CustomSignupItems extends StatefulWidget {
 
 class _CustomSignupItemsState extends State<CustomSignupItems> {
   Color color = Colors.grey;
+  bool value = false;
   @override
   Widget build(BuildContext context) {
     // ignore: unused_local_variable
     bool onTap = false;
-
     return Padding(
-      padding: const EdgeInsets.only( left: 28, right: 29).r,
+      padding: const EdgeInsets.only(left: 28, right: 29).r,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
@@ -83,23 +83,62 @@ class _CustomSignupItemsState extends State<CustomSignupItems> {
               // mainAxisAlignment: MainAxisAlignment.start,
               children: [
                 Padding(
-                  padding: const EdgeInsets.only(bottom: 12).r,
-                  child: IconButton(
-                    // focusColor: color,
-                    //color: Colors.blue,
-                    
-                    onPressed: () {
-                      color = Colors.blue;
-                      setState(() {});
-                    },
-                    icon: Icon(
-                      FontAwesomeIcons.solidCircleCheck,
-                      color: color,
-                      size: 24,
+                    padding: const EdgeInsets.only(bottom: 12, right: 8).r,
+                    child: InkWell(
+                        onTap: () {
+                          setState(() {
+                            value = !value;
+                          });
+                        },
+                        child: Container(
+                          decoration: BoxDecoration(
+                              // border: Border.all(color: Colors.grey),
+                              shape: BoxShape.circle,
+                              color: Colors.blue),
+                          child: Padding(
+                            padding: const EdgeInsets.all(3.0).r,
+                            child: value
+                                ? Icon(
+                                    Icons.check,
+                                    size: 18.0,
+                                    color: Colors.white,
+                                  )
+                                : Icon(
+                                    Icons.check_box_outline_blank,
+                                    size: 18.0,
+                                    color: Colors.blue,
+                                  ),
+                          ),
+                        ))
+
+                    //               Checkbox(value: value,
+
+                    //               checkColor: Colors.white,
+                    // activeColor: Color(0xff0075FE),
+                    //  tristate: true,
+                    // shape: CircleBorder(),
+                    //                onChanged: (newValue) {setState(() {value=newValue?? false;
+
+                    //                });
+
+                    //                }
+                    //                )
+                    // IconButton(
+                    //   // focusColor: color,
+                    //   //color: Colors.blue,
+
+                    //   onPressed: () {
+                    //     color = Colors.blue;
+                    //     setState(() {});
+                    //   },
+                    //   icon: Icon(
+                    //     FontAwesomeIcons.solidCircleCheck,
+                    //     color: color,
+                    //     size: 24,
+                    //   ),
+                    // ),
                     ),
-                  ),
-                ),
-            Text.rich(
+                Text.rich(
                   TextSpan(
                     text: 'I agree to the ',
                     style: Styles.Style11.copyWith(fontWeight: FontWeight.w800),

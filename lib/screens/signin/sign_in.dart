@@ -28,6 +28,7 @@ class SIGNIN extends StatefulWidget {
 
 class _SIGNINState extends State<SIGNIN> {
   Color color = Colors.grey;
+  bool value=false;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -94,18 +95,31 @@ class _SIGNINState extends State<SIGNIN> {
                       ),
                       Row(
                         children: [
-                          IconButton(
-                            onPressed: () {
-                              color = Colors.blue;
-                              setState(() {});
-                            },
-                            icon: Icon(
-                              FontAwesomeIcons.solidCircleCheck,
-                              color: color,
-                              size: 24,
-                            ),
-                          ),
-                          Text(
+                          Checkbox(value: value,
+                   
+                    checkColor: Colors.white,
+      activeColor: Color(0xff0075FE),
+       tristate: true,
+      shape: CircleBorder(),
+                     onChanged: (newValue) {setState(() {value=newValue?? false;
+                       
+                     });
+                     
+                     }
+                     )
+                     
+                          // IconButton(
+                          //   onPressed: () {
+                          //     color = Colors.blue;
+                          //     setState(() {});
+                          //   },
+                          //   icon: Icon(
+                          //     FontAwesomeIcons.solidCircleCheck,
+                          //     color: color,
+                          //     size: 24,
+                          //   ),
+                          // ),
+                          ,Text(
                             'Remember me',
                             style: Styles.Style13,
                           ),
