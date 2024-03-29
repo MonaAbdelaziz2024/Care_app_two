@@ -9,7 +9,6 @@ import 'package:care_app_two/screens/widgets/custom_text_feild.dart';
 import 'package:care_app_two/screens/widgets/signup_with_google.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class CustomSignupItems extends StatefulWidget {
   const CustomSignupItems({super.key});
@@ -30,7 +29,7 @@ class _CustomSignupItemsState extends State<CustomSignupItems> {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
-          Center(child: CustomLogo()),
+          const Center(child: CustomLogo()),
           // SizedBox(
           //   height: 20.h,
           // ),
@@ -99,12 +98,12 @@ class _CustomSignupItemsState extends State<CustomSignupItems> {
                           child: Padding(
                             padding: const EdgeInsets.all(2.0).r,
                             child: value
-                                ? Icon(
+                                ? const Icon(
                                     Icons.check,
                                     size: 18.0,
                                     color: Colors.white,
                                   )
-                                : Icon(
+                                : const Icon(
                                     Icons.check_box_outline_blank,
                                     size: 18.0,
                                     color: Colors.white,

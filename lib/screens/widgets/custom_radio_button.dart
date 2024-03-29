@@ -1,11 +1,10 @@
-import 'package:care_app_two/helper/constant.dart';
 import 'package:care_app_two/helper/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 // ignore: must_be_immutable
 class CustomRadioButton extends StatefulWidget {
-  CustomRadioButton({
+  const CustomRadioButton({
     super.key,
     // required this.text,
     // required this.value,
@@ -24,7 +23,6 @@ class CustomRadioButton extends StatefulWidget {
 }
 
 class _CustomRadioButtonState extends State<CustomRadioButton> {
-  bool _value = false;
   int val = -1;
 
   @override
@@ -37,7 +35,7 @@ class _CustomRadioButtonState extends State<CustomRadioButton> {
           height: 40.h,
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10).r,
-              border: Border.all(color: Color(0xffC2C2C2))),
+              border: Border.all(color: const Color(0xffC2C2C2))),
           child: ListTile(
             horizontalTitleGap: 8,
             titleAlignment: ListTileTitleAlignment.center,
@@ -64,7 +62,7 @@ class _CustomRadioButtonState extends State<CustomRadioButton> {
           height: 40.h,
           decoration: BoxDecoration(
               borderRadius: BorderRadius.circular(10).r,
-              border: Border.all(color: Color(0xffC2C2C2))),
+              border: Border.all(color: const Color(0xffC2C2C2))),
           child: ListTile(
             titleAlignment: ListTileTitleAlignment.center,
             horizontalTitleGap: 8,

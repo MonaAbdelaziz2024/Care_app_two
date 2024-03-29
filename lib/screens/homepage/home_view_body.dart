@@ -155,7 +155,7 @@ class HomeViewBody extends StatelessWidget {
                               child: Center(
                                 child: Text(
                                   'View Tasks',
-                                  style: Styles.Style133.copyWith(color: Color(0xff0075FE)),
+                                  style: Styles.Style133.copyWith(color: const Color(0xff0075FE)),
                                 ),
                               ),
                             ),
@@ -191,7 +191,7 @@ class HomeViewBody extends StatelessWidget {
                 children: [
                   Text(
                     'Highlights',
-                    style: Styles.Style18.copyWith(color: Color(0xff1F1F1F)),
+                    style: Styles.Style18.copyWith(color: const Color(0xff1F1F1F)),
                   ),
                 ],
               ),

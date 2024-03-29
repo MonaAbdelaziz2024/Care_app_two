@@ -1,14 +1,12 @@
 import 'package:care_app_two/helper/constant.dart';
 import 'package:care_app_two/helper/styles.dart';
 import 'package:care_app_two/screens/signin/sign_in.dart';
-import 'package:care_app_two/screens/signin/sign_in_two.dart';
 import 'package:care_app_two/screens/widgets/custom_button.dart';
 import 'package:care_app_two/screens/widgets/custom_dropdown_dateofbirth.dart';
 import 'package:care_app_two/screens/widgets/custom_dropdown_list.dart';
 import 'package:care_app_two/screens/widgets/custom_logo.dart';
 import 'package:care_app_two/screens/widgets/custom_radio_button.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class SignupInfoTwo extends StatelessWidget {
@@ -46,7 +44,7 @@ class SignupInfoTwo extends StatelessWidget {
                     ),
                     Padding(
                       padding: const EdgeInsets.only(left: 73).r,
-                      child: CustomLogo(),
+                      child: const CustomLogo(),
                     ),
                   ],
                 ),
@@ -98,7 +96,7 @@ class SignupInfoTwo extends StatelessWidget {
             //         height: MediaQuery.of(context).size.height * 0.06),
             //   ],
             // ),
-            CustomRadioButton(),
+            const CustomRadioButton(),
 
             Padding(
               padding: const EdgeInsets.only(

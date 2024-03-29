@@ -13,7 +13,6 @@ import 'package:care_app_two/screens/widgets/Custom_line.dart';
 //import 'package:care_app_two/screens/widgets/custom_app_bar_items.dart';
 //import 'package:care_app_two/screens/widgets/custom_background.dart';
 import 'package:care_app_two/screens/widgets/custom_button.dart';
-import 'package:care_app_two/screens/widgets/custom_logo.dart';
 import 'package:care_app_two/screens/widgets/custom_text_feild.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';

@@ -1,6 +1,5 @@
 // ignore_for_file: unused_local_variable, prefer_const_constructors, prefer_const_literals_to_create_immutables, use_key_in_widget_constructors, prefer_typing_uninitialized_variables
 
-import 'package:care_app_two/screens/widgets/home_bottom_navigator.dart';
 import 'package:care_app_two/screens/widgets/navbar.dart';
 import 'package:flutter/material.dart';
 
