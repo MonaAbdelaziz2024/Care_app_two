@@ -5,8 +5,9 @@ import 'package:care_app_two/helper/functions/custom_chat_bot_appbar.dart';
 import 'package:care_app_two/helper/styles.dart';
 import 'package:care_app_two/screens/start_screen/start.dart';
 import 'package:care_app_two/screens/widgets/custom_line_setting.dart';
-import 'package:care_app_two/screens/widgets/custom_setting_rec.dart';
+import 'package:care_app_two/screens/widgets/custom_profile_rec.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ProfileView extends StatelessWidget {
@@ -105,10 +106,10 @@ class ProfileView extends StatelessWidget {
                 height: 7.h,
               ),
               Container(
-                height: 220.h,
+                height: 280.h,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(15),
-                  color: const Color(0xffcccccc).withOpacity(0.5),
+                  color: const Color(0xfff6f6f6),
                 ),
                 child: Column(
                   /// mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -153,10 +154,10 @@ class ProfileView extends StatelessWidget {
                 height: 7.h,
               ),
               Container(
-                height: 115.h,
+                height: 150.h,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(15),
-                  color: const Color(0xffcccccc).withOpacity(0.5),
+                  color: const Color(0xfff6f6f6),
                 ),
                 child: Column(
                   children: [

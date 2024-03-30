@@ -1,5 +1,7 @@
 // ignore_for_file: prefer_const_constructors
 
+//import 'package:care_app_two/screens/addition/addition_view.dart';
+import 'package:care_app_two/screens/addition/addition_view.dart';
 import 'package:care_app_two/screens/chat_bot_page/chatbot_view.dart';
 import 'package:care_app_two/screens/homepage/home_view_body.dart';
 import 'package:care_app_two/screens/scanPage/scan_view.dart';
@@ -25,8 +27,6 @@ class _NavBarState extends State<NavBar> {
   PageController controller = PageController();
 
   void nextPage(index) {
-    
-    
     controller.jumpToPage(index);
     currentindex = index;
   }
@@ -37,8 +37,14 @@ class _NavBarState extends State<NavBar> {
       child: Scaffold(
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
         floatingActionButton: FloatingActionButton(
+          shape: CircleBorder(),
           backgroundColor: Colors.blue[700],
-          onPressed: () {},
+          onPressed: () {
+            Navigator.push(
+              context,
+              MaterialPageRoute(builder: (context) => AdditionView()),
+            ); 
+          },
           child: Icon(
             Icons.add,
             color: Colors.white,
@@ -55,14 +61,12 @@ class _NavBarState extends State<NavBar> {
           child: BottomAppBar(
             height: 50,
             child: Row(
-              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
                 IconButton(
                   onPressed: () {
                     nextPage(0);
-                    setState(() {
-                        
-                      });
+                    setState(() {});
                   },
                   icon: Icon(Icons.home_outlined,
                       color:
@@ -71,9 +75,7 @@ class _NavBarState extends State<NavBar> {
                 IconButton(
                   onPressed: () {
                     nextPage(1);
-                    setState(() {
-                        
-                      });
+                    setState(() {});
                   },
                   icon: Icon(Icons.document_scanner_outlined,
                       color:
@@ -82,9 +84,7 @@ class _NavBarState extends State<NavBar> {
                 IconButton(
                     onPressed: () {
                       nextPage(2);
-                      setState(() {
-                        
-                      });
+                      setState(() {});
                     },
                     icon: Icon(Icons.chat_outlined,
                         color: currentindex == 2
@@ -93,14 +93,12 @@ class _NavBarState extends State<NavBar> {
                 IconButton(
                     onPressed: () {
                       nextPage(3);
-                      setState(() {
-                        
-                      });
+                      setState(() {});
                     },
                     icon: Icon(Icons.settings_outlined,
                         color: currentindex == 3
                             ? Colors.yellow[700]
-                            : Colors.grey)),
+                           : Colors.grey)),
               ],
             ),
           ),

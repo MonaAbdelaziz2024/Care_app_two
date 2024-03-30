@@ -4,11 +4,17 @@ import 'package:care_app_two/helper/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class SettingRec extends StatelessWidget {
-  const SettingRec({super.key, required this.icontext, this.endtext, this.icon});
+class ProfileRec extends StatelessWidget {
+  const ProfileRec({
+    super.key,
+    required this.icontext,
+    this.endtext,
+    this.icon,
+  });
   final icontext;
   final endtext;
   final icon;
+
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -19,18 +25,20 @@ class SettingRec extends StatelessWidget {
           Row(
             children: [
               Icon(icon),
-              SizedBox(width: 9.w,),
+              SizedBox(
+                width: 9.w,
+              ),
               Text(
-          icontext,
-          style: Styles.Style16,)
+                icontext,
+                style: Styles.Style16,
+              ),
             ],
           ),
           Text(
-          endtext,
-          style: Styles.Style16,
-        ),
+            endtext,
+            style: Styles.Style16,
+          ),
         ],
-        
       ),
     );
   }

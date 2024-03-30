@@ -1,3 +1,4 @@
+//import 'package:care_app_two/screens/addition/addition_view.dart';
 import 'package:care_app_two/screens/chat_bot_page/chatbot_view.dart';
 import 'package:care_app_two/screens/homepage/home_view_body.dart';
 import 'package:care_app_two/screens/scanPage/scan_view.dart';
@@ -14,7 +15,7 @@ class CustomNavigationBottomBar extends StatefulWidget {
 }
 
 class _CustomNavigationBottomBarState extends State<CustomNavigationBottomBar> {
-List<dynamic> pages = [const HomeViewBody(), const ScanView(), const ChatBotView()/*, const SettingView()*/];
+List<dynamic> pages = [const HomeViewBody(), const ScanView(),const ChatBotView()/*, const SettingView()*/];
   int indexPage = 0;
 
   GlobalKey<CurvedNavigationBarState> globalKey = GlobalKey();
@@ -41,7 +42,7 @@ List<dynamic> pages = [const HomeViewBody(), const ScanView(), const ChatBotView
 
             Icon(Icons.home_outlined),
              Icon(Icons.document_scanner_outlined),
-            // Icon(Icons.add),
+            
 
                 Icon(Icons.chat_outlined),
                Icon(Icons.settings_outlined),

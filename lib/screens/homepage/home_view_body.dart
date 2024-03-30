@@ -1,3 +1,5 @@
+// ignore_for_file: unnecessary_import
+
 import 'package:care_app_two/helper/constant.dart';
 import 'package:care_app_two/helper/styles.dart';
 import 'package:care_app_two/screens/profile/profile_view.dart';
