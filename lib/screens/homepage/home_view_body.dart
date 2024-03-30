@@ -1,14 +1,17 @@
 import 'package:care_app_two/helper/constant.dart';
 import 'package:care_app_two/helper/styles.dart';
+import 'package:care_app_two/screens/profile/profile_view.dart';
 import 'package:care_app_two/screens/widgets/custom_home_rec.dart';
 import 'package:care_app_two/screens/widgets/custom_home_squ.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class HomeViewBody extends StatelessWidget {
   const HomeViewBody({
     super.key,
   });
+
 
   @override
   Widget build(BuildContext context) {
@@ -28,8 +31,17 @@ class HomeViewBody extends StatelessWidget {
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
-                      CircleAvatar(
-                        child: Image.asset('assets/images/person.png'),
+                      GestureDetector(
+                        onTap: (){Navigator.of(context).push(
+                  MaterialPageRoute(
+                    builder: (context) {
+                      return const ProfileView();
+                    },
+                  ),
+                );},
+                        child: CircleAvatar(
+                          child: Image.asset('assets/images/person.png'),
+                        ),
                       ),
                       SizedBox(
                         width: 6.w,

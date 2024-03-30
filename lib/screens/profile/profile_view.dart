@@ -9,8 +9,8 @@ import 'package:care_app_two/screens/widgets/custom_setting_rec.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class SettingView extends StatelessWidget {
-  const SettingView({super.key, this.ontap});
+class ProfileView extends StatelessWidget {
+  const ProfileView({super.key, this.ontap});
   final void Function()? ontap;
   @override
   Widget build(BuildContext context) {
