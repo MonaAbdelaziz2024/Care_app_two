@@ -5,6 +5,7 @@ import 'package:care_app_two/screens/addition/addition_view.dart';
 import 'package:care_app_two/screens/chat_bot_page/chatbot_view.dart';
 import 'package:care_app_two/screens/homepage/home_view_body.dart';
 import 'package:care_app_two/screens/scanPage/scan_view.dart';
+import 'package:care_app_two/screens/setting/setting_view.dart';
 //import 'package:care_app_two/screens/setting/setting_view.dart';
 import 'package:flutter/material.dart';
 
@@ -18,9 +19,9 @@ class NavBar extends StatefulWidget {
 class _NavBarState extends State<NavBar> {
   List screens = [
     HomeViewBody(),
-    ScanView(),
+    ScanView(), 
     ChatBotView(),
-    //SettingView(),
+    SettingView(),
   ];
 
   num currentindex = 0;
@@ -43,7 +44,7 @@ class _NavBarState extends State<NavBar> {
             Navigator.push(
               context,
               MaterialPageRoute(builder: (context) => AdditionView()),
-            ); 
+            );
           },
           child: Icon(
             Icons.add,
@@ -98,7 +99,7 @@ class _NavBarState extends State<NavBar> {
                     icon: Icon(Icons.settings_outlined,
                         color: currentindex == 3
                             ? Colors.yellow[700]
-                           : Colors.grey)),
+                            : Colors.grey)),
               ],
             ),
           ),

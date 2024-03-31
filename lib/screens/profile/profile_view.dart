@@ -114,29 +114,29 @@ class ProfileView extends StatelessWidget {
                 child: Column(
                   /// mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: const [
-                    SettingRec(
+                    ProfileRec(
                         icon: Icons.email_outlined,
                         icontext: 'Email',
                         endtext: 'Ahmed Anwar'),
                     LineSetting(),
-                    SettingRec(
+                   ProfileRec(
                         icon: Icons.date_range,
                         icontext: 'Birthdate',
                         endtext: '20/2/2000'),
                     LineSetting(),
-                    SettingRec(icontext: 'Gender', endtext: 'Male'),
+                    ProfileRec(icontext: 'Gender', endtext: 'Male'),
                     LineSetting(),
-                    SettingRec(
+                    ProfileRec(
                         icon: Icons.monitor_weight,
                         icontext: 'Weight',
                         endtext: '65kg'),
                     LineSetting(),
-                    SettingRec(
+                    ProfileRec(
                         icon: Icons.height_rounded,
                         icontext: 'Height',
                         endtext: '177 cm'),
                     LineSetting(),
-                    SettingRec(
+                   ProfileRec(
                         icon: Icons.medical_information_outlined,
                         icontext: 'The Disease',
                         endtext: 'cholesterol'),
@@ -161,12 +161,12 @@ class ProfileView extends StatelessWidget {
                 ),
                 child: Column(
                   children: [
-                    SettingRec(
+                    ProfileRec(
                         icon: Icons.phone_outlined,
                         icontext: 'Contact us',
                         endtext: ''),
                     LineSetting(),
-                    SettingRec(
+                    ProfileRec(
                         icon: Icons.help_outline,
                         icontext: 'Help',
                         endtext: ''),
@@ -181,7 +181,7 @@ class ProfileView extends StatelessWidget {
                           ),
                         );
                       },
-                      child: SettingRec(
+                      child: ProfileRec(
                           icon: Icons.logout, icontext: 'Log-Out', endtext: ''),
                     ),
                   ],

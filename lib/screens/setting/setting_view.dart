@@ -1,0 +1,116 @@
+// ignore_for_file: prefer_const_literals_to_create_immutables, prefer_const_constructors
+
+import 'package:care_app_two/helper/constant.dart';
+import 'package:care_app_two/helper/functions/custom_chat_bot_appbar.dart';
+import 'package:care_app_two/helper/styles.dart';
+import 'package:care_app_two/screens/widgets/custom_line_setting.dart';
+import 'package:care_app_two/screens/widgets/custom_settingrow.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+
+class SettingView extends StatelessWidget {
+  const SettingView({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+        appBar: CustomCareAppbar(context, 'Setting'),
+        extendBodyBehindAppBar: true,
+        body: Container(
+          decoration: const BoxDecoration(
+            image: DecorationImage(
+                image: AssetImage(kBackground), fit: BoxFit.fill),
+          ),
+          child: Padding(
+            padding: const EdgeInsets.symmetric(horizontal: 16),
+            child: ListView(
+              children: [
+                Text(
+                  'Notification',
+                  style: Styles.Style166,
+                ),
+                SizedBox(
+                  height: 11,
+                ),
+                Container(
+                  height: 245.h,
+                  decoration: BoxDecoration(
+                    borderRadius: BorderRadius.circular(15),
+                    color: const Color(0xfff6f6f6),
+                  ),
+                  child: Column(
+                    children: [
+                      SetRow(
+                        text: 'General Notification',
+                        icon: (Icons.toggle_on, color: Color(0xff0074fe)),
+                      ),
+                      LineSetting(),
+                      SetRow(
+                        text: 'Sound',
+                      ),
+                      LineSetting(),
+                      SetRow(
+                        text: 'Vibrate ',
+                        icon: (Icons.toggle_off, color: Color(0xffb7b7b7)),
+                      ),
+                      LineSetting(),
+                      SetRow(
+                        text: ' App Updates',
+                        icon: (Icons.toggle_on, color: Color(0xff0074fe)),
+                      ),
+                      LineSetting(),
+                      SetRow(
+                        text: ' New Service Available',
+                        icon: (Icons.toggle_on, color: Color(0xff0074fe)),
+                      ),
+                    ],
+                  ),
+                ),
+                SizedBox(
+                  height: 47.h,
+                ),
+                Container(
+                    height: 98.h,
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(15),
+                      color: const Color(0xfff6f6f6),
+                    ),
+                    child: Padding(
+                      padding: const EdgeInsets.only(
+                          left: 10, top: 9, right: 22, bottom: 12),
+                      child: Column(children: [
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            Icon(Icons.privacy_tip_outlined),
+                            SizedBox(
+                              width: 7.w,
+                            ),
+                            Text(
+                              'Privacy Policy',
+                              style: Styles.Style16,
+                            )
+                          ],
+                        ),
+                        LineSetting(),
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            Icon(Icons.check_circle_outline_rounded),
+                            SizedBox(
+                              width: 7.w,
+                            ),
+                            Text(
+                              'Terms of Use',
+                              style: Styles.Style16,
+                            )
+                          ],
+                        ),
+                      ]),
+                    ))
+              ],
+            ),
+          ),
+        ));
+  }
+}
