@@ -106,7 +106,7 @@ class ProfileView extends StatelessWidget {
                 height: 7.h,
               ),
               Container(
-                height: 280.h,
+                height: 290.h,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(15),
                   color: const Color(0xfff6f6f6),
@@ -119,7 +119,7 @@ class ProfileView extends StatelessWidget {
                         icontext: 'Email',
                         endtext: 'Ahmed Anwar'),
                     LineSetting(),
-                   ProfileRec(
+                    ProfileRec(
                         icon: Icons.date_range,
                         icontext: 'Birthdate',
                         endtext: '20/2/2000'),
@@ -136,7 +136,7 @@ class ProfileView extends StatelessWidget {
                         icontext: 'Height',
                         endtext: '177 cm'),
                     LineSetting(),
-                   ProfileRec(
+                    ProfileRec(
                         icon: Icons.medical_information_outlined,
                         icontext: 'The Disease',
                         endtext: 'cholesterol'),
