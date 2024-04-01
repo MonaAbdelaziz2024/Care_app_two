@@ -23,6 +23,7 @@ class ChatBotView extends StatelessWidget {
                 image: AssetImage(kBackgroundStart), fit: BoxFit.fill),
           ),
           child: ListView(
+           // physics:,
             children: [
               Stack(children: [
                 Padding(

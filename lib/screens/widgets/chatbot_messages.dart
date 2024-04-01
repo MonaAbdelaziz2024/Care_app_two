@@ -15,48 +15,58 @@ class ChatBotMessages extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-        appBar: CustomCareAppbar(context,'Chat with AI Bot Now' ),
-        extendBodyBehindAppBar: true,
-        body: SingleChildScrollView(
-          child: Stack(children: [
-            const CustomBackground(image: kBackgroundStart),
-            Padding(
+      appBar: CustomCareAppbar(context, 'Chat with AI Bot Now'),
+      extendBodyBehindAppBar: true,
+      body: SingleChildScrollView(
+        child: Stack(children: [
+          const CustomBackground(image: kBackgroundStart),
+          Padding(
               padding: const EdgeInsets.only(
-                      top: 80, left: 16, right: 16, bottom: 16)
+                      top: 70, left: 16, right: 16, bottom: 16)
                   .r,
-              child: SizedBox(
+              child: Container(
                 width: 400.w,
                 height: 600.h,
+                decoration: BoxDecoration(
+                    color: Color(0xffeeeeee).withOpacity(0.5),
+                    borderRadius: BorderRadius.circular(16)),
                 child: Image.asset(
                   "assets/images/chatmessages.png",
                   scale: 0.1,
                 ),
+              )
+              //  SizedBox(
+              //   width: 400.w,
+              //   height: 600.h,
+              //   child: Image.asset(
+              //     "assets/images/chatmessages.png",
+              //     scale: 0.1,
+              //   ),
+              // ),
               ),
+          Padding(
+            padding: const EdgeInsets.only(top: 140, left: 16, right: 16).r,
+            child: const Column(
+              children: [
+                ChatBubble(),
+                ChatBubbleFromFrined(),
+              ],
             ),
-            Padding(
-              padding: const EdgeInsets.only(top: 140, left: 16, right: 16).r,
-              child: const Column(
-                children: [
-                  ChatBubble(),
-                  ChatBubbleFromFrined(),
-                ],
-              ),
-            ),
-            Padding(
-                padding: const EdgeInsets.only(
-                  top: 600,
-                  right: 32,
-                  left: 32,
-                ).r,
-                child: const CustomMessageTextfield()),
-            SizedBox(
-              height: 16.h,
-            )
-          ]),
-        ),
-        bottomNavigationBar: const CustomNavigationBottomBar()
-        //  const CustomBottomNavigationBar() // body: ListView(
-
-        );
+          ),
+          Padding(
+              padding: const EdgeInsets.only(
+                top: 660,
+                right: 24,
+                left: 24,
+              ).r,
+              child: const CustomMessageTextfield()),
+          SizedBox(
+            height: 16.h,
+          )
+        ]),
+      ),
+      //bottomNavigationBar: const CustomNavigationBottomBar()
+      //  const CustomBottomNavigationBar() // body: ListView(
+    );
   }
 }

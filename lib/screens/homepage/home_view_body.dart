@@ -2,9 +2,12 @@
 
 import 'package:care_app_two/helper/constant.dart';
 import 'package:care_app_two/helper/styles.dart';
+import 'package:care_app_two/screens/calender_page/calendar_two.dart';
+import 'package:care_app_two/screens/calender_page/calender_view.dart';
 import 'package:care_app_two/screens/profile/profile_view.dart';
 import 'package:care_app_two/screens/widgets/custom_home_rec.dart';
 import 'package:care_app_two/screens/widgets/custom_home_squ.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -230,7 +233,7 @@ class HomeViewBody extends StatelessWidget {
               SizedBox(
                 height: 20.h,
               ),
-              const Row(
+               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   HomeSquare(
@@ -243,10 +246,21 @@ class HomeViewBody extends StatelessWidget {
                     text: 'Reports',
                     color: Color(0xff1EBFC4),
                   ),
-                  HomeSquare(
-                    icon: Icons.calendar_month_outlined,
-                    text: 'Calender',
-                    color: Color(0xffED686C),
+                  GestureDetector(
+                    onTap: () {
+                       Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) {
+                    return CalendarTwo();
+                  },
+                ),
+              );
+                    },
+                    child: HomeSquare(
+                      icon: Icons.calendar_month_outlined,
+                      text: 'Calender',
+                      color: Color(0xffED686C),
+                    ),
                   ),
                 ],
               ),

@@ -12,8 +12,8 @@ class AdditionContainer extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Container(
-      width: 328,
-      height: 158,
+      width: 328.w,
+      height: 158.h,
       decoration: BoxDecoration(boxShadow: const [
         BoxShadow(
             color: Color.fromARGB(255, 214, 212, 212),
