@@ -2,12 +2,19 @@ import 'package:care_app_two/helper/styles.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-class RectShowTasks extends StatelessWidget {
+class RectShowTasks extends StatefulWidget {
   const RectShowTasks(
       {super.key, this.icon, required this.text, required this.time});
   final icon;
   final String text;
   final String time;
+
+  @override
+  State<RectShowTasks> createState() => _RectShowTasksState();
+}
+
+class _RectShowTasksState extends State<RectShowTasks> {
+  bool value = false;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -50,7 +57,8 @@ class RectShowTasks extends StatelessWidget {
                       color: Color(0xff0074fe),
                     ),
                     child: Center(
-                      child: Icon(icon,
+                      child: Icon(
+                        widget.icon,
                         //Image.asset('assets/images/pil.png'),
                         color: Colors.white,
                         size: 30,
@@ -62,11 +70,11 @@ class RectShowTasks extends StatelessWidget {
                     child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
                       children: [
-                        Text(text,
+                        Text(widget.text,
                             style: Styles.Style13.copyWith(
                                 color: Color(0xff1F1F1F))),
                         Text(
-                          time,
+                          widget.time,
                           style: Styles.Style133.copyWith(
                               color: Color(0xff0075FE)),
                         )
@@ -88,16 +96,30 @@ class RectShowTasks extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
                 IconButton(
-                    onPressed: () {},
-                    icon: Image.asset('assets/images/Pin_fill.png')),
+                    onPressed: () {
+                      setState(() {
+                        value = !value;
+                      });
+                      
+                    },
+                    icon: Image.asset('assets/images/Pin_fill.png', 
+                    color: value? Colors.amber[700]: Colors.grey,)),
                 IconButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    setState(() {
+                        value = !value;
+                      });
+                  },
                   icon: Image.asset(
                     'assets/images/edit.png',
                   ),
                 ),
                 IconButton(
-                    onPressed: () {},
+                    onPressed: () {
+                      setState(() {
+                        value = !value;
+                      });
+                    },
                     icon: Image.asset('assets/images/delete.png'))
               ],
             )
