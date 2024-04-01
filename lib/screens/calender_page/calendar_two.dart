@@ -42,9 +42,10 @@ class CalendarTwoState extends State<CalendarTwo> {
     /// multi range.
     setState(() {
       if (args.value is PickerDateRange) {
-        _range = ' ${DateFormat.MMMEd().format(args.value.startDate)}  -'
-            // ignore: lines_longer_than_80_chars
-            ' ${DateFormat.MMMEd().format(args.value.endDate ?? args.value.startDate)}';
+        _range = ' ${DateFormat.MMMEd().format(args.value.startDate)} ';
+        // -'
+        // ignore: lines_longer_than_80_chars
+        // ' ${DateFormat.MMMEd().format(args.value.endDate ?? args.value.startDate)}';
       } else if (args.value is DateTime) {
         _selectedDate = args.value.toString();
       } else if (args.value is List<DateTime>) {

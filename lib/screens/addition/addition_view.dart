@@ -2,9 +2,12 @@
 
 import 'package:care_app_two/helper/constant.dart';
 import 'package:care_app_two/helper/functions/custom_chat_bot_appbar.dart';
+import 'package:care_app_two/screens/addition/addition_two.dart';
 //import 'package:care_app_two/helper/styles.dart';
 import 'package:care_app_two/screens/widgets/custom_addition_container.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class AdditionView extends StatelessWidget {
@@ -35,12 +38,28 @@ class AdditionView extends StatelessWidget {
               SizedBox(
                 height: 11.h,
               ),
-              AdditionContainer(
-                  image: ('assets/images/medicine.png'), text: 'Medicine'),
+              GestureDetector(
+                onTap: () {
+                   Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (context) {
+                            return AdditionTwo();
+                          },
+                        ),
+                      );
+                },
+                child: AdditionContainer(
+                    image: ('assets/images/medicine.png'), text: 'Medicine'),
+              ),
               SizedBox(height: 16.h),
-              AdditionContainer(
-                  image: ('assets/images/tests.png'),
-                  text: 'Doctor\'s appointment / tests / x-rays'),
+              GestureDetector(
+                onTap: () {
+                  
+                },
+                child: AdditionContainer(
+                    image: ('assets/images/tests.png'),
+                    text: 'Doctor\'s appointment / tests / x-rays'),
+              ),
             ],
           ),
         ),
