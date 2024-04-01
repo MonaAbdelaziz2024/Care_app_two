@@ -5,6 +5,7 @@ import 'package:care_app_two/helper/styles.dart';
 import 'package:care_app_two/screens/calender_page/calendar_two.dart';
 import 'package:care_app_two/screens/calender_page/calender_view.dart';
 import 'package:care_app_two/screens/profile/profile_view.dart';
+import 'package:care_app_two/screens/view_tasks/view_tasks.dart';
 import 'package:care_app_two/screens/widgets/custom_home_rec.dart';
 import 'package:care_app_two/screens/widgets/custom_home_squ.dart';
 import 'package:flutter/cupertino.dart';
@@ -16,7 +17,6 @@ class HomeViewBody extends StatelessWidget {
   const HomeViewBody({
     super.key,
   });
-
 
   @override
   Widget build(BuildContext context) {
@@ -37,13 +37,15 @@ class HomeViewBody extends StatelessWidget {
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       GestureDetector(
-                        onTap: (){Navigator.of(context).push(
-                  MaterialPageRoute(
-                    builder: (context) {
-                      return const ProfileView();
-                    },
-                  ),
-                );},
+                        onTap: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) {
+                                return const ProfileView();
+                              },
+                            ),
+                          );
+                        },
                         child: CircleAvatar(
                           child: Image.asset('assets/images/person.png'),
                         ),
@@ -162,6 +164,12 @@ class HomeViewBody extends StatelessWidget {
                             height: 25.h,
                           ),
                           GestureDetector(
+                            onTap: () {
+                              Navigator.of(context)
+                                  .push(MaterialPageRoute(builder: (context) {
+                                return ShowAllTasks();
+                              }));
+                            },
                             child: Container(
                               width: 90.w,
                               height: 35.h,
@@ -172,7 +180,8 @@ class HomeViewBody extends StatelessWidget {
                               child: Center(
                                 child: Text(
                                   'View Tasks',
-                                  style: Styles.Style133.copyWith(color: const Color(0xff0075FE)),
+                                  style: Styles.Style133.copyWith(
+                                      color: const Color(0xff0075FE)),
                                 ),
                               ),
                             ),
@@ -208,7 +217,8 @@ class HomeViewBody extends StatelessWidget {
                 children: [
                   Text(
                     'Highlights',
-                    style: Styles.Style18.copyWith(color: const Color(0xff1F1F1F)),
+                    style:
+                        Styles.Style18.copyWith(color: const Color(0xff1F1F1F)),
                   ),
                 ],
               ),
@@ -233,7 +243,7 @@ class HomeViewBody extends StatelessWidget {
               SizedBox(
                 height: 20.h,
               ),
-               Row(
+              Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   HomeSquare(
@@ -248,13 +258,13 @@ class HomeViewBody extends StatelessWidget {
                   ),
                   GestureDetector(
                     onTap: () {
-                       Navigator.of(context).push(
-                MaterialPageRoute(
-                  builder: (context) {
-                    return CalendarTwo();
-                  },
-                ),
-              );
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (context) {
+                            return CalendarTwo();
+                          },
+                        ),
+                      );
                     },
                     child: HomeSquare(
                       icon: Icons.calendar_month_outlined,

@@ -29,6 +29,32 @@ AppBar CustomCareAppbar(BuildContext context, String text) {
   );
 }
 
+AppBar CustomCareAppbarWithLogo(BuildContext context) {
+  return AppBar(
+    
+    toolbarHeight: 55.h,
+    scrolledUnderElevation: 0,
+    leading: Padding(
+      padding: const EdgeInsets.all(8.0),
+      child: IconButton(
+        icon: const Icon(
+          Icons.arrow_back_ios_new_rounded,
+          size: 20,
+          color: Colors.black,
+        ),
+        onPressed: () => Navigator.of(context).pop(),
+      ),
+    ),
+    title: Image.asset(
+      kLogo,
+      scale: 1.3,
+    ),
+    centerTitle: true,
+    backgroundColor: Colors.transparent,
+    elevation: 0.0,
+  );
+}
+
 AppBar CustomAppbar(BuildContext context) {
   return AppBar(
     scrolledUnderElevation: 0,
@@ -68,8 +94,7 @@ AppBar CustomAppbarBack(BuildContext context) {
         ),
       ),
     ),
-    
-    
+
     backgroundColor: Colors.transparent,
     elevation: 0.0,
   );
