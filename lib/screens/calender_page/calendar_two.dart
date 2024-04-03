@@ -47,6 +47,8 @@ class CalendarTwoState extends State<CalendarTwo> {
         // ignore: lines_longer_than_80_chars
         // ' ${DateFormat.MMMEd().format(args.value.endDate ?? args.value.startDate)}';
       } else if (args.value is DateTime) {
+        _range = ' ${DateFormat.MMMEd().format(args.value)} ';
+        
       } else if (args.value is List<DateTime>) {
       } else {
       }
@@ -108,9 +110,12 @@ class CalendarTwoState extends State<CalendarTwo> {
 
                         //  Text('Selected ranges count: $_rangeCount')
                         SfDateRangePicker(
+                          
+                          
+                          //showTodayButton: true,
                           monthCellStyle: DateRangePickerMonthCellStyle(
                               textStyle: TextStyle(
-                                  fontSize: 14.sp,
+                                  fontSize: 15.sp,
                                   color: const Color(0xff1F1F1F),
                                   fontWeight: FontWeight.w400)
 
@@ -125,7 +130,8 @@ class CalendarTwoState extends State<CalendarTwo> {
                               fontSize: 14.sp,
                               //color: Color(0xff1F1F1F),
                               fontWeight: FontWeight.w400),
-                          showActionButtons: true,
+                          showActionButtons: false,
+                          showNavigationArrow: true,
                           headerStyle: DateRangePickerHeaderStyle(
                               backgroundColor: const Color(0xffF6F6F6).withOpacity(0),
                               textStyle: TextStyle(
@@ -133,15 +139,15 @@ class CalendarTwoState extends State<CalendarTwo> {
                                   fontWeight: FontWeight.w700,
                                   color: const Color(0xff1F1F1F))),
                           headerHeight: 40.h,
-                          // todayHighlightColor: Color(0xff0075FE),
-                          //selectionColor: Color(0xff0075FE),
-                          rangeSelectionColor: const Color(0xff9FCBFF),
-                          endRangeSelectionColor: const Color(0xff0075FE),
-                          startRangeSelectionColor: const Color(0xff0075FE),
+                          //todayHighlightColor: Color(0xff0075FE),
+                          selectionColor: const Color(0xff0075FE),
+                          // rangeSelectionColor: const Color(0xff9FCBFF),
+                          // endRangeSelectionColor: const Color(0xff0075FE),
+                          // startRangeSelectionColor: const Color(0xff0075FE),
                           todayHighlightColor: const Color(0xff0075FE),
                           backgroundColor: const Color(0xffF6F6F6).withOpacity(1),
                           onSelectionChanged: _onSelectionChanged,
-                          selectionMode: DateRangePickerSelectionMode.range,
+                          selectionMode: DateRangePickerSelectionMode.single,
                           initialSelectedRange: PickerDateRange(
                               DateTime.now().subtract(const Duration(days: 4)),
                               DateTime.now().add(const Duration(days: 3))),
@@ -149,6 +155,8 @@ class CalendarTwoState extends State<CalendarTwo> {
                       ],
                     ),
                   ),
+                  
+                  
                   Padding(
                     padding: const EdgeInsets.only(top: 350).r,
                     child: const Column(
@@ -166,6 +174,12 @@ class CalendarTwoState extends State<CalendarTwo> {
                       ],
                     ),
                   )
+                
+               ,
+               
+              // TableCalendar(focusedDay: DateTime.now(),
+              
+              // firstDay: DateTime.now(), lastDay: DateTime.now().add(Duration(days: 365*5)))
                 ],
               ),
             ),
