@@ -5,6 +5,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 class RectShowTasks extends StatefulWidget {
   const RectShowTasks(
       {super.key, this.icon, required this.text, required this.time});
+  // ignore: prefer_typing_uninitialized_variables
   final icon;
   final String text;
   final String time;
@@ -24,7 +25,7 @@ class _RectShowTasksState extends State<RectShowTasks> {
           borderRadius: BorderRadius.circular(27),
           color: Colors.white,
           border: Border.all(
-            color: Color(0xffF4F5F5),
+            color: const Color(0xffF4F5F5),
             style: BorderStyle.solid,
             strokeAlign: BorderSide.strokeAlignOutside,
             width: 3,
@@ -38,8 +39,8 @@ class _RectShowTasksState extends State<RectShowTasks> {
               height: 66.h,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(27),
-                color: Color(0xffF4F5F5),
-                boxShadow: [
+                color: const Color(0xffF4F5F5),
+                boxShadow: const [
                   BoxShadow(
                     color: Color.fromARGB(255, 206, 211, 211),
                     offset: Offset(1, -2),
@@ -54,7 +55,7 @@ class _RectShowTasksState extends State<RectShowTasks> {
                     height: 66.h,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(27),
-                      color: Color(0xff0074fe),
+                      color: const Color(0xff0074fe),
                     ),
                     child: Center(
                       child: Icon(
@@ -72,11 +73,11 @@ class _RectShowTasksState extends State<RectShowTasks> {
                       children: [
                         Text(widget.text,
                             style: Styles.Style13.copyWith(
-                                color: Color(0xff1F1F1F))),
+                                color: const Color(0xff1F1F1F))),
                         Text(
                           widget.time,
                           style: Styles.Style133.copyWith(
-                              color: Color(0xff0075FE)),
+                              color: const Color(0xff0075FE)),
                         )
                       ],
                     ),
@@ -127,6 +128,5 @@ class _RectShowTasksState extends State<RectShowTasks> {
         ),
       ),
     );
-    ;
   }
 }

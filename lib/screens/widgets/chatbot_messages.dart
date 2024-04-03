@@ -5,7 +5,6 @@ import 'package:care_app_two/screens/widgets/chatbot_bubble.dart';
 import 'package:care_app_two/screens/widgets/custom_background.dart';
 //import 'package:care_app_two/screens/widgets/custom_bottom_navigation_bar.dart';
 import 'package:care_app_two/screens/widgets/custom_message_textfield.dart';
-import 'package:care_app_two/screens/widgets/home_bottom_navigator.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -28,7 +27,7 @@ class ChatBotMessages extends StatelessWidget {
                 width: 400.w,
                 height: 600.h,
                 decoration: BoxDecoration(
-                    color: Color(0xffeeeeee).withOpacity(0.5),
+                    color: const Color(0xffeeeeee).withOpacity(0.5),
                     borderRadius: BorderRadius.circular(16)),
                 child: Image.asset(
                   "assets/images/chatmessages.png",

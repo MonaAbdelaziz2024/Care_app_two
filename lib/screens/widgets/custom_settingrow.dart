@@ -4,11 +4,9 @@
 import 'package:care_app_two/helper/styles.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:lite_rolling_switch/lite_rolling_switch.dart';
 
 class SetRow extends StatelessWidget {
-  SetRow({super.key, this.icon, this.text});
+  const SetRow({super.key, this.icon, this.text});
 
   final text;
   final icon;
@@ -24,7 +22,7 @@ class SetRow extends StatelessWidget {
         ),
         Icon(
           icon,
-          color: Color(0xff0075FE),
+          color: const Color(0xff0075FE),
           size: 55,
         )
 

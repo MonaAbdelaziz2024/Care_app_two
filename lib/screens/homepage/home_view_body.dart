@@ -3,7 +3,6 @@
 import 'package:care_app_two/helper/constant.dart';
 import 'package:care_app_two/helper/styles.dart';
 import 'package:care_app_two/screens/calender_page/calendar_two.dart';
-import 'package:care_app_two/screens/calender_page/calender_view.dart';
 import 'package:care_app_two/screens/profile/profile_view.dart';
 import 'package:care_app_two/screens/view_tasks/view_tasks.dart';
 import 'package:care_app_two/screens/widgets/custom_home_rec.dart';
@@ -167,7 +166,7 @@ class HomeViewBody extends StatelessWidget {
                             onTap: () {
                               Navigator.of(context)
                                   .push(MaterialPageRoute(builder: (context) {
-                                return ShowAllTasks();
+                                return const ShowAllTasks();
                               }));
                             },
                             child: Container(
@@ -246,12 +245,12 @@ class HomeViewBody extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  HomeSquare(
+                  const HomeSquare(
                     icon: Icons.tips_and_updates_outlined,
                     text: 'Tips',
                     color: Color(0xff329DFF),
                   ),
-                  HomeSquare(
+                  const HomeSquare(
                     icon: Icons.insert_chart_outlined_outlined,
                     text: 'Reports',
                     color: Color(0xff1EBFC4),
@@ -261,12 +260,12 @@ class HomeViewBody extends StatelessWidget {
                       Navigator.of(context).push(
                         MaterialPageRoute(
                           builder: (context) {
-                            return CalendarTwo();
+                            return const CalendarTwo();
                           },
                         ),
                       );
                     },
-                    child: HomeSquare(
+                    child: const HomeSquare(
                       icon: Icons.calendar_month_outlined,
                       text: 'Calender',
                       color: Color(0xffED686C),

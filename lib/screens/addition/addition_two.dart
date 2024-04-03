@@ -1,9 +1,7 @@
 import 'package:care_app_two/helper/constant.dart';
 import 'package:care_app_two/helper/functions/custom_chat_bot_appbar.dart';
 import 'package:care_app_two/screens/widgets/custom_button.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
@@ -21,14 +19,14 @@ class _AdditionTwoState extends State<AdditionTwo> {
   Widget build(BuildContext context) {
     return Scaffold(
       bottomNavigationBar: Container(
-        decoration:  BoxDecoration(boxShadow: [
+        decoration:  const BoxDecoration(boxShadow: [
               BoxShadow(
                 color: Colors.red,
                 offset: Offset(0, 2.5),
                 blurRadius: 4.0,
               )
             ]),
-        child: BottomAppBar(
+        child: const BottomAppBar(
            elevation: 0,
         color: Color(0xfffdfdff),
         shadowColor: Color(0xffECECEC),
@@ -48,11 +46,11 @@ class _AdditionTwoState extends State<AdditionTwo> {
                     TextField(
                       decoration: InputDecoration(
                           border: OutlineInputBorder(
-                              borderRadius: BorderRadius.circular(17).r,
+                              borderRadius: BorderRadius.circular(20).r,
                               borderSide: BorderSide.none),
                           labelText: 'Name of Medicine',
                           filled: true,
-                          fillColor: Color(0xffECECEC)),
+                          fillColor: const Color(0xffECECEC)),
                     ),
                     SizedBox(
                       height: 4.h,
@@ -65,14 +63,14 @@ class _AdditionTwoState extends State<AdditionTwo> {
                               borderSide: BorderSide.none),
                           labelText: 'Notes',
                           filled: true,
-                          fillColor: Color(0xffECECEC)),
+                          fillColor: const Color(0xffECECEC)),
                     ),
                     SizedBox(
                       height: 8.h,
                     ),
                     Padding(
                       padding: const EdgeInsets.only(bottom: 16).r,
-                      child: Divider(
+                      child: const Divider(
                         thickness: 0.5,
                       ),
                     ),
@@ -98,7 +96,7 @@ class _AdditionTwoState extends State<AdditionTwo> {
                                         num -= 1;
                                       });
                                     },
-                                    icon: Icon(
+                                    icon: const Icon(
                                       FontAwesomeIcons.minus,
                                       size: 14,
                                       color: Color(0xff676767),
@@ -115,7 +113,7 @@ class _AdditionTwoState extends State<AdditionTwo> {
                         Padding(
                           padding: const EdgeInsets.only(left: 16).r,
                           child: CircleAvatar(
-                            backgroundColor: Color(0xff0597F2),
+                            backgroundColor: const Color(0xff0597F2),
                             radius: 13.r,
                             child: Center(
                               child: IconButton(
@@ -124,7 +122,7 @@ class _AdditionTwoState extends State<AdditionTwo> {
                                       num += 1;
                                     });
                                   },
-                                  icon: Icon(
+                                  icon: const Icon(
                                     Icons.add,
                                     size: 14,
                                     color: Colors.white,
@@ -136,13 +134,13 @@ class _AdditionTwoState extends State<AdditionTwo> {
                     ),
                     Padding(
                       padding: const EdgeInsets.only(top: 16, bottom: 18).r,
-                      child: Divider(
+                      child: const Divider(
                         thickness: 1,
                       ),
                     ),
                     Padding(
                       padding: const EdgeInsets.only(bottom: 8).r,
-                      child: Text("Times per Day",
+                      child: const Text("Times per Day",
                           style: TextStyle(
                             fontSize: 16,
                             fontWeight: FontWeight.w500,
@@ -156,12 +154,12 @@ class _AdditionTwoState extends State<AdditionTwo> {
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(16).r,
                               border: Border.all(
-                                color: Color(0xff0597F2),
+                                color: const Color(0xff0597F2),
                               )),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                             children: [
-                              Center(
+                              const Center(
                                 child: Text("9:16 PM",
                                     style: TextStyle(
                                       fontSize: 12,
@@ -169,9 +167,9 @@ class _AdditionTwoState extends State<AdditionTwo> {
                                     )),
                               ),
                               CircleAvatar(
-                                backgroundColor: Color(0xff0597F2),
+                                backgroundColor: const Color(0xff0597F2),
                                 radius: 10.r,
-                                child: Icon(
+                                child: const Icon(
                                   FontAwesomeIcons.xmark,
                                   size: 15,
                                   color: Colors.white,
@@ -189,7 +187,7 @@ class _AdditionTwoState extends State<AdditionTwo> {
                           decoration: BoxDecoration(
                               borderRadius: BorderRadius.circular(16).r,
                               border: Border.all(
-                                color: Color(0xff0597F2),
+                                color: const Color(0xff0597F2),
                               )),
                           child: Row(
                             mainAxisAlignment: MainAxisAlignment.spaceEvenly,
@@ -197,7 +195,7 @@ class _AdditionTwoState extends State<AdditionTwo> {
                               Center(
                                 child: Padding(
                                   padding: const EdgeInsets.only(left: 16).r,
-                                  child: Text("New time",
+                                  child: const Text("New time",
                                       style: TextStyle(
                                         fontSize: 12,
                                         fontWeight: FontWeight.w500,
@@ -206,7 +204,8 @@ class _AdditionTwoState extends State<AdditionTwo> {
                               ),
                               IconButton(
                                   onPressed: () {},
-                                  icon: Icon(
+                                  icon: const Icon(
+                                    // ignore: deprecated_member_use
                                     FontAwesomeIcons.add,
                                     size: 15,
                                     color: Colors.black,
@@ -218,11 +217,11 @@ class _AdditionTwoState extends State<AdditionTwo> {
                     ),
                     Padding(
                       padding: const EdgeInsets.only(top: 14).r,
-                      child: Divider(),
+                      child: const Divider(),
                     ),
                     Row(
                       children: [
-                        Text(
+                        const Text(
                           "Repetition",
                           style: TextStyle(
                             fontSize: 16,
@@ -232,19 +231,19 @@ class _AdditionTwoState extends State<AdditionTwo> {
                         SizedBox(
                           width: 140.w,
                         ),
-                        Text("Different days",
+                        const Text("Different days",
                             style: TextStyle(
                               fontSize: 14,
                               fontWeight: FontWeight.w400,
                             )),
                         IconButton(
                             onPressed: () {},
-                            icon: Icon(Icons.chevron_right_sharp))
+                            icon: const Icon(Icons.chevron_right_sharp))
                       ],
                     ),
                     Row(
                       children: [
-                        Text(
+                        const Text(
                           "Is taken in",
                           style: TextStyle(
                             fontSize: 16,
@@ -254,14 +253,14 @@ class _AdditionTwoState extends State<AdditionTwo> {
                         SizedBox(
                           width: 165.w,
                         ),
-                        Text("Add Days",
+                        const Text("Add Days",
                             style: TextStyle(
                               fontSize: 14,
                               fontWeight: FontWeight.w400,
                             )),
                         IconButton(
                             onPressed: () {},
-                            icon: Icon(Icons.chevron_right_sharp))
+                            icon: const Icon(Icons.chevron_right_sharp))
                       ],
                     )
                   

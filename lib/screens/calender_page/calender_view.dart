@@ -1,14 +1,14 @@
 // Copyright 2019 Aleksander Woźniak
 // SPDX-License-Identifier: Apache-2.0
 
-import 'package:care_app_two/helper/functions/custom_chat_bot_appbar.dart';
-import 'package:flutter/cupertino.dart';
+// ignore_for_file: library_private_types_in_public_api
+
 import 'package:flutter/material.dart';
 import 'package:flutter_modal_date_picker/flutter_modal_date_picker.dart';
-import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:table_calendar/table_calendar.dart';
 
 class CalendarOne extends StatefulWidget {
+  const CalendarOne({super.key});
+
   @override
   _CalendarOneState createState() => _CalendarOneState();
 }
@@ -23,38 +23,36 @@ String date = "";
   @override
   Widget build(BuildContext context) {
 
-    return Container(
-            child: Center(
-              child: Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  ElevatedButton(
-                    child: Text(
-                      'show date picker',
-                      style: TextStyle(fontSize: 30),
-                    ),
-                    onPressed: () async {
-                      String chosenDate =
-                          await showModalDatePicker(context, DateTime.now());
-                      setState(() {
-                        date = chosenDate;
-                      });
-                    },
-                  ),
-                  SizedBox(
-                    height: 20,
-                  ),
-                  Text(
-                    date,
-                    style: TextStyle(
-                      backgroundColor: Colors.amber,
-                      fontSize: 30
-                    ),
-                  )
-                ],
-              ),
+    return Center(
+      child: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          ElevatedButton(
+            child: const Text(
+              'show date picker',
+              style: TextStyle(fontSize: 30),
             ),
-          );
+            onPressed: () async {
+              String chosenDate =
+                  await showModalDatePicker(context, DateTime.now());
+              setState(() {
+                date = chosenDate;
+              });
+            },
+          ),
+          const SizedBox(
+            height: 20,
+          ),
+          Text(
+            date,
+            style: const TextStyle(
+              backgroundColor: Colors.amber,
+              fontSize: 30
+            ),
+          )
+        ],
+      ),
+    );
     
     
     // Scaffold(

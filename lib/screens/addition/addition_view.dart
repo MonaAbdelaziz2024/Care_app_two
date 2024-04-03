@@ -5,9 +5,7 @@ import 'package:care_app_two/helper/functions/custom_chat_bot_appbar.dart';
 import 'package:care_app_two/screens/addition/addition_two.dart';
 //import 'package:care_app_two/helper/styles.dart';
 import 'package:care_app_two/screens/widgets/custom_addition_container.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class AdditionView extends StatelessWidget {

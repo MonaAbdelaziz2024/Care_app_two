@@ -7,7 +7,6 @@ import 'package:care_app_two/screens/start_screen/start.dart';
 import 'package:care_app_two/screens/widgets/custom_line_setting.dart';
 import 'package:care_app_two/screens/widgets/custom_profile_rec.dart';
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ProfileView extends StatelessWidget {

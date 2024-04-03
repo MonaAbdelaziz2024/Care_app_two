@@ -5,10 +5,8 @@ import 'package:care_app_two/helper/functions/custom_chat_bot_appbar.dart';
 import 'package:care_app_two/helper/styles.dart';
 import 'package:care_app_two/screens/widgets/custom_line_setting.dart';
 import 'package:care_app_two/screens/widgets/custom_settingrow.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:lite_rolling_switch/lite_rolling_switch.dart';
 
 
 class SettingView extends StatelessWidget {

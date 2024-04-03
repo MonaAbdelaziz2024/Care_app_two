@@ -1,10 +1,10 @@
 import 'package:care_app_two/helper/styles.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class RectCalendar extends StatelessWidget {
   const RectCalendar({super.key, this.icon, required this.text, required this.time});
+// ignore: prefer_typing_uninitialized_variables
 final icon;
   final String text;
   final String time;
@@ -17,7 +17,7 @@ final icon;
           borderRadius: BorderRadius.circular(27),
           color: Colors.white,
           border: Border.all(
-            color: Color(0xffF4F5F5),
+            color: const Color(0xffF4F5F5),
             style: BorderStyle.solid,
             strokeAlign: BorderSide.strokeAlignOutside,
             width: 3,
@@ -31,8 +31,8 @@ final icon;
               height: 66.h,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(27),
-                color: Color(0xffF4F5F5),
-                boxShadow: [
+                color: const Color(0xffF4F5F5),
+                boxShadow: const [
                   BoxShadow(
                     color: Color.fromARGB(255, 206, 211, 211),
                     offset: Offset(1, -2),
@@ -47,7 +47,7 @@ final icon;
                     height: 66.h,
                     decoration: BoxDecoration(
                       borderRadius: BorderRadius.circular(27),
-                      color: Color(0xff0074fe),
+                      color: const Color(0xff0074fe),
                     ),
                     child: Center(
                       child: Icon(
@@ -64,11 +64,11 @@ final icon;
                       children: [
                         Text(text,
                             style: Styles.Style13.copyWith(
-                                color: Color(0xff1F1F1F))),
+                                color: const Color(0xff1F1F1F))),
                         Text(
                           time,
                           style: Styles.Style133.copyWith(
-                                color: Color(0xff0075FE)),
+                                color: const Color(0xff0075FE)),
                         )
                       ],
                     ),
@@ -80,6 +80,6 @@ final icon;
           ],
         ),
       ),
-    );;
+    );
   }
 }
