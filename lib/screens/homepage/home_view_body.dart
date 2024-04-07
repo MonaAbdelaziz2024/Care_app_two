@@ -4,6 +4,7 @@ import 'package:care_app_two/helper/constant.dart';
 import 'package:care_app_two/helper/styles.dart';
 import 'package:care_app_two/screens/calender_page/calendar_two.dart';
 import 'package:care_app_two/screens/profile/profile_view.dart';
+import 'package:care_app_two/screens/reports/reports_view.dart';
 import 'package:care_app_two/screens/view_tasks/view_tasks.dart';
 import 'package:care_app_two/screens/widgets/custom_home_rec.dart';
 import 'package:care_app_two/screens/widgets/custom_home_squ.dart';
@@ -250,10 +251,21 @@ class HomeViewBody extends StatelessWidget {
                     text: 'Tips',
                     color: Color(0xff329DFF),
                   ),
-                  const HomeSquare(
-                    icon: Icons.insert_chart_outlined_outlined,
-                    text: 'Reports',
-                    color: Color(0xff1EBFC4),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (context) {
+                            return const ReportsView();
+                          },
+                        ),
+                      );
+                    },
+                    child: const HomeSquare(
+                      icon: Icons.insert_chart_outlined_outlined,
+                      text: 'Reports',
+                      color: Color(0xff1EBFC4),
+                    ),
                   ),
                   GestureDetector(
                     onTap: () {
