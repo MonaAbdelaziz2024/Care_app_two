@@ -4,7 +4,7 @@ import 'package:care_app_two/helper/constant.dart';
 import 'package:care_app_two/helper/functions/custom_chat_bot_appbar.dart';
 import 'package:care_app_two/helper/styles.dart';
 import 'package:care_app_two/screens/start_screen/start.dart';
-import 'package:care_app_two/screens/widgets/custom_line_setting.dart';
+import 'package:care_app_two/screens/widgets/custom_divider.dart';
 import 'package:care_app_two/screens/widgets/custom_profile_rec.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -105,36 +105,36 @@ class ProfileView extends StatelessWidget {
                 height: 7.h,
               ),
               Container(
-                height: 290.h,
+                height: 316.h,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(15),
                   color: const Color(0xfff6f6f6),
                 ),
                 child: Column(
-                  /// mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  mainAxisAlignment: MainAxisAlignment.spaceAround,
                   children: const [
                     ProfileRec(
                         icon: Icons.email_outlined,
                         icontext: 'Email',
                         endtext: 'Ahmed Anwar'),
-                    LineSetting(),
+                    CustomDivider(),
                     ProfileRec(
                         icon: Icons.date_range,
                         icontext: 'Birthdate',
                         endtext: '20/2/2000'),
-                    LineSetting(),
+                    CustomDivider(),
                     ProfileRec(icontext: 'Gender', endtext: 'Male'),
-                    LineSetting(),
+                    CustomDivider(),
                     ProfileRec(
                         icon: Icons.monitor_weight,
                         icontext: 'Weight',
                         endtext: '65kg'),
-                    LineSetting(),
+                    CustomDivider(),
                     ProfileRec(
                         icon: Icons.height_rounded,
                         icontext: 'Height',
                         endtext: '177 cm'),
-                    LineSetting(),
+                    CustomDivider(),
                     ProfileRec(
                         icon: Icons.medical_information_outlined,
                         icontext: 'The Disease',
@@ -164,12 +164,12 @@ class ProfileView extends StatelessWidget {
                         icon: Icons.phone_outlined,
                         icontext: 'Contact us',
                         endtext: ''),
-                    LineSetting(),
+                    CustomDivider(),
                     ProfileRec(
                         icon: Icons.help_outline,
                         icontext: 'Help',
                         endtext: ''),
-                    LineSetting(),
+                    CustomDivider(),
                     GestureDetector(
                       onTap: () {
                         Navigator.of(context).push(

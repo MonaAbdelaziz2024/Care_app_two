@@ -1,8 +1,10 @@
-// ignore_for_file: unused_local_variable, prefer_const_constructors
+// ignore_for_file: unused_local_variable, prefer_const_constructors, sort_child_properties_last, unused_import
 
 import 'package:care_app_two/bar%20graph/bar_data.dart';
+import 'package:care_app_two/helper/styles.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:fl_chart/fl_chart.dart';
+import 'package:flutter/material.dart';
 
 class BarGraph extends StatelessWidget {
   final List weeklySummary;
@@ -34,6 +36,7 @@ class BarGraph extends StatelessWidget {
             show: true,
             topTitles: AxisTitles(sideTitles: SideTitles(showTitles: false)),
             rightTitles: AxisTitles(sideTitles: SideTitles(showTitles: false)),
+          
           ),
           barGroups: myBarData.barData
               .map(
@@ -42,8 +45,8 @@ class BarGraph extends StatelessWidget {
                   barRods: [
                     BarChartRodData(
                       toY: data.y,
-                      color: Color(0xffC2C2C2),
-                      width: 13,
+                      color: Color(0xff0075FE).withOpacity(0.5),
+                      width: 14,
                       borderRadius: BorderRadius.circular(5),
                     ),
                   ],
@@ -53,3 +56,4 @@ class BarGraph extends StatelessWidget {
     );
   }
 }
+

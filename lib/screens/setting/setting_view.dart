@@ -3,13 +3,12 @@
 import 'package:care_app_two/helper/constant.dart';
 import 'package:care_app_two/helper/functions/custom_chat_bot_appbar.dart';
 import 'package:care_app_two/helper/styles.dart';
-import 'package:care_app_two/screens/widgets/custom_line_setting.dart';
+import 'package:care_app_two/screens/widgets/custom_divider.dart';
 import 'package:care_app_two/screens/widgets/custom_settingrow.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
-
-class SettingView extends StatelessWidget {
+/*class SettingView extends StatelessWidget {
   const SettingView({super.key});
 
  
@@ -129,10 +128,9 @@ class SettingView extends StatelessWidget {
           ),
         ));
   }
-}
+}*/
 
-
-/*class SettingView extends StatefulWidget {
+class SettingView extends StatefulWidget {
   const SettingView({super.key});
 
   @override
@@ -140,16 +138,31 @@ class SettingView extends StatelessWidget {
 }
 
 class _SettingViewState extends State<SettingView> {
-  bool val1 = true;
-  onChangedFunction1(bool newvalue1){
-    setState((){
-      val1 = newvalue1;
+  bool valNotify1 = true;
+  bool valNotify2 = false;
+  bool valNotify3 = false;
+  bool valNotify4 = true;
+  onChangeFunction1(bool newvalue1) {
+    setState(() {
+      valNotify1 = newvalue1;
     });
   }
-   bool val2 = false;
-  onChangedFunction2(bool newvalue2){
-    setState((){
-      val1 = newvalue2;
+
+  onChangeFunction2(bool newvalue2) {
+    setState(() {
+      valNotify2 = newvalue2;
+    });
+  }
+
+  onChangeFunction3(bool newvalue3) {
+    setState(() {
+      valNotify3 = newvalue3;
+    });
+  }
+
+  onChangeFunction4(bool newvalue4) {
+    setState(() {
+      valNotify4 = newvalue4;
     });
   }
 
@@ -184,33 +197,23 @@ class _SettingViewState extends State<SettingView> {
                   child: Padding(
                     padding: const EdgeInsets.only(left: 10, right: 20),
                     child: Column(
+                      //mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
-                        SetRow(
-                          
-                          CustomSwitch( val1, onChangedFunction1)  ,
-                          text: 'General Notification', 
-                         // LiteRollingSwitch(onChanged: (bool ) { on; },),
-                          //icon: (),
-                        ),
-                        LineSetting(),
+                        buildNotificationOption('General Notification',
+                            valNotify1, onChangeFunction1),
+                        CustomDivider(),
                         SetRow(
                           text: 'Sound',
                         ),
-                        LineSetting(),
-                        SetRow(
-                          text: 'Vibrate ',
-                          //icon: (Icons.toggle_off),
-                        ),
-                        LineSetting(),
-                        SetRow(
-                          text: ' App Updates',
-                          icon: (Icons.toggle_on),
-                        ),
-                        LineSetting(),
-                        SetRow(
-                          text: ' New Service Available',
-                          icon: (Icons.toggle_on),
-                        ),
+                        CustomDivider(),
+                        buildNotificationOption(
+                            'Vibrate', valNotify2, onChangeFunction2),
+                        CustomDivider(),
+                        buildNotificationOption(
+                            'App Updates', valNotify3, onChangeFunction3),
+                        CustomDivider(),
+                        buildNotificationOption('Vew Service Available',
+                            valNotify4, onChangeFunction4),
                       ],
                     ),
                   ),
@@ -225,44 +228,43 @@ class _SettingViewState extends State<SettingView> {
                       color: const Color(0xfff6f6f6),
                     ),
                     child: Padding(
-                      padding: const EdgeInsets.only(left: 10, top: 11),
-                      child: Column(children: [
-                        Padding(
-                          padding: const EdgeInsets.only(bottom: 8),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            children: [
-                              Icon(Icons.privacy_tip_outlined),
-                              SizedBox(
-                                width: 7.w,
+                      padding: const EdgeInsets.only(left: 10),
+                      child: Column(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: [
+                            Row(
+                              mainAxisAlignment: MainAxisAlignment.start,
+                              children: [
+                                Icon(Icons.privacy_tip_outlined),
+                                SizedBox(
+                                  width: 7.w,
+                                ),
+                                Text(
+                                  'Privacy Policy',
+                                  style: Styles.Style16,
+                                )
+                              ],
+                            ),
+                            CustomDivider(),
+                            Padding(
+                              padding: const EdgeInsets.only(
+                                top: 1,
                               ),
-                              Text(
-                                'Privacy Policy',
-                                style: Styles.Style16,
-                              )
-                            ],
-                          ),
-                        ),
-                        LineSetting(),
-                        Padding(
-                          padding: const EdgeInsets.only(
-                            top: 10,
-                          ),
-                          child: Row(
-                            mainAxisAlignment: MainAxisAlignment.start,
-                            children: [
-                              Icon(Icons.check_circle_outline_rounded),
-                              SizedBox(
-                                width: 7.w,
+                              child: Row(
+                                mainAxisAlignment: MainAxisAlignment.start,
+                                children: [
+                                  Icon(Icons.check_circle_outline_rounded),
+                                  SizedBox(
+                                    width: 7.w,
+                                  ),
+                                  Text(
+                                    'Terms of Use',
+                                    style: Styles.Style16,
+                                  )
+                                ],
                               ),
-                              Text(
-                                'Terms of Use',
-                                style: Styles.Style16,
-                              )
-                            ],
-                          ),
-                        ),
-                      ]),
+                            ),
+                          ]),
                     ))
               ],
             ),
@@ -270,5 +272,3 @@ class _SettingViewState extends State<SettingView> {
         ));
   }
 }
-  
-*/
