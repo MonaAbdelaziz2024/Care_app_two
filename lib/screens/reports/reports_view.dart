@@ -6,6 +6,8 @@ import 'package:care_app_two/bar%20graph/bar_graph.dart';
 import 'package:care_app_two/helper/constant.dart';
 import 'package:care_app_two/helper/functions/custom_chat_bot_appbar.dart';
 import 'package:care_app_two/helper/styles.dart';
+import 'package:care_app_two/screens/reports/weekly_reports.dart';
+import 'package:care_app_two/screens/widgets/custom_divider.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -111,62 +113,129 @@ class _ReportsViewState extends State<ReportsView> {
                 height: 27.h,
               ),
               Container(
-                width: 323.w,
-                height: 52.h,
+                width: 328.w,
+                height: 187.h,
                 decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(12),
-                    border: Border.all(color: Color(0xffC2C2C2)),
-                    color: Color(0xfffdfdff)),
+                    borderRadius: BorderRadius.circular(25),
+                    color: Color(0xfff6f6f6)),
                 child: Padding(
-                  padding: const EdgeInsets.only(left: 33, right: 17.25).r,
-                  child: Row(
+                  padding: const EdgeInsets.symmetric(horizontal: 15).r,
+                  child: Column(
                     crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                    mainAxisAlignment: MainAxisAlignment.spaceAround,
                     children: [
-                      Text(
-                        'Weekly Report',
-                        style: Styles.Style20.copyWith(
-                            fontWeight: FontWeight.w600,
-                            color: Color(0xff000000)),
-                      ),
-                      GestureDetector(
-                        onTap: () {},
-                        child: Icon(
-                          Icons.chevron_right_sharp,
-                          color: Colors.black,size: 40,
+                      Row(children: [
+                        CircleAvatar(
+                          backgroundColor: Color(0xffD5E8FF),
+                          child: Icon(
+                            Icons.text_snippet_outlined,
+                            color: Color(0xff0075FE),
+                          ),
                         ),
-                      )
-                    ],
-                  ),
-                ),
-              ),
-              SizedBox(height: 27.h,),
-              Container(
-                width: 323.w,
-                height: 52.h,
-                decoration: BoxDecoration(
-                    borderRadius: BorderRadius.circular(12),
-                    border: Border.all(color: Color(0xffC2C2C2)),
-                    color: Color(0xfffdfdff)),
-                child: Padding(
-                  padding: const EdgeInsets.only(left: 33, right: 17.25).r,
-                  child: Row(
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                    children: [
-                      Text(
-                        'Monthly Report',
-                        style: Styles.Style20.copyWith(
-                            fontWeight: FontWeight.w600,
-                            color: Color(0xff000000)),
-                      ),
-                      GestureDetector(
-                        onTap: () {},
-                        child: Icon(
-                          Icons.chevron_right_sharp,
-                          color: Colors.black,size: 40,
+                        SizedBox(
+                          width: 10.w,
                         ),
-                      )
+                        Text(
+                          'Reports',
+                          style: Styles.Style166,
+                        ),
+                      ]),
+                      Padding(
+                        padding: const EdgeInsets.only(left: 7).r,
+                        child: Column(
+                          children: [
+                            Padding(
+                              padding: const EdgeInsets.only(bottom: 15).r,
+                              child: Row(
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Text(
+                                    'Weekly Report',
+                                    style: Styles.Style18.copyWith(
+                                        fontWeight: FontWeight.w600,
+                                        color: Color(0xff000000)),
+                                  ),
+                                  Row(
+                                    children: [
+                                      Text(
+                                        '  View details',
+                                        style: Styles.Style11.copyWith(
+                                          fontWeight: FontWeight.w700,
+                                          color: Colors.black,
+                                        ),
+                                      ),
+                                      SizedBox(
+                                        width: 2.w,
+                                      ),
+                                      GestureDetector(
+                                        onTap: () {
+                                          Navigator.of(context).push(
+                                            MaterialPageRoute(
+                                              builder: (context) {
+                                                return const WeeklyReport();
+                                              },
+                                            ),
+                                          );
+                                        },
+                                        child: Icon(
+                                          Icons.arrow_right_alt,
+                                          color: Colors.black,
+                                          size: 24,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              ),
+                            ),
+                            Divider(
+                              height: 20.h,
+                              thickness: 1,
+                              color: Color(0xffC2C2C2),
+                            ),
+                            Padding(
+                              padding: const EdgeInsets.only(bottom: 15).r,
+                              child: Row(
+                                crossAxisAlignment: CrossAxisAlignment.center,
+                                mainAxisAlignment:
+                                    MainAxisAlignment.spaceBetween,
+                                children: [
+                                  Text(
+                                    'Monthly Report',
+                                    style: Styles.Style18.copyWith(
+                                        fontWeight: FontWeight.w600,
+                                        color: Color(0xff000000)),
+                                  ),
+                                  Row(
+                                    children: [
+                                      Text(
+                                        '  View details',
+                                        style: Styles.Style11.copyWith(
+                                          fontWeight: FontWeight.w700,
+                                          color: Colors.black,
+                                        ),
+                                      ),
+                                      SizedBox(
+                                        width: 2.w,
+                                      ),
+                                      GestureDetector(
+                                        onTap: () {},
+                                        child: Icon(
+                                          Icons.arrow_right_alt,
+                                          color: Colors.black,
+                                          size: 24,
+                                        ),
+                                      ),
+                                    ],
+                                  ),
+                                ],
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
                     ],
                   ),
                 ),
