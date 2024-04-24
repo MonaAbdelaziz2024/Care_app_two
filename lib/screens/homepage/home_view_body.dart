@@ -27,7 +27,7 @@ class HomeViewBody extends StatelessWidget {
               image: AssetImage(kBackgroundStart), fit: BoxFit.fill),
         ),
         child: Padding(
-          padding: const EdgeInsets.only(right: 16, left: 16, bottom: 8).r,
+          padding: const EdgeInsets.only(right: 16, left: 16, bottom: 4).r,
           child: ListView(
             children: [
               //profilephoto and name
@@ -241,9 +241,9 @@ class HomeViewBody extends StatelessWidget {
                 text: 'Light exercise',
                 time: '1:00 - 1:45 AM',
               ),
-              SizedBox(
-                height: 20.h,
-              ),
+              // SizedBox(
+              //   height: 20.h,
+              // ),
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
@@ -295,8 +295,10 @@ class HomeViewBody extends StatelessWidget {
                       color: Color(0xffED686C),
                     ),
                   ),
+                 
                 ],
               ),
+               
             ],
           ),
         ));

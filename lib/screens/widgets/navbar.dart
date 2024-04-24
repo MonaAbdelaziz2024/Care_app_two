@@ -6,8 +6,11 @@ import 'package:care_app_two/screens/chat_bot_page/chatbot_view.dart';
 import 'package:care_app_two/screens/homepage/home_view_body.dart';
 import 'package:care_app_two/screens/scanPage/scan_view.dart';
 import 'package:care_app_two/screens/setting/setting_view.dart';
+import 'package:fl_chart/fl_chart.dart';
+import 'package:flutter/cupertino.dart';
 //import 'package:care_app_two/screens/setting/setting_view.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class NavBar extends StatefulWidget {
   const NavBar({super.key});
@@ -37,33 +40,46 @@ class _NavBarState extends State<NavBar> {
     return Expanded(
       child: Scaffold(
         floatingActionButtonLocation: FloatingActionButtonLocation.centerDocked,
-        floatingActionButton: FloatingActionButton(
-          shape: CircleBorder(),
-          backgroundColor: Colors.blue[700],
-          onPressed: () {
-            Navigator.push(
-              context,
-              MaterialPageRoute(builder: (context) => AdditionView()),
-            );
-          },
-          child: Icon(
-            Icons.add,
-            color: Colors.white,
+        floatingActionButton: Padding(
+          padding: const EdgeInsets.only(top: 24, ).r,
+          child: FloatingActionButton(
+            mini: true,
+            shape: CircleBorder(),
+            backgroundColor: Colors.blue[700],
+            onPressed: () {
+              Navigator.push(
+                context,
+                MaterialPageRoute(builder: (context) => AdditionView()),
+              );
+            },
+            child: Icon(
+              Icons.add,
+              color: Colors.white,
+            ),
           ),
         ),
         bottomNavigationBar: Container(
+          
           clipBehavior: Clip.hardEdge,
+          //color: Colors.white,
+
           decoration: BoxDecoration(
+            image: DecorationImage(fit: BoxFit.fill ,image:  AssetImage('assets/images/rectangle1.png',))
+           //, color: Colors.transparent,
             // gradient: ,
-            border: Border.all(
-              color: Colors.grey,
+            ,border: Border.all(
+              color: Colors.transparent
             ),
           ),
           child: BottomAppBar(
-            height: 50,
-            child: Row(
+            color: Colors.transparent,
+            elevation: 0,
+            height: 50.h,
+            child: 
+            Row(
               mainAxisAlignment: MainAxisAlignment.spaceAround,
               children: [
+                
                 IconButton(
                   onPressed: () {
                     nextPage(0);
@@ -113,4 +129,23 @@ class _NavBarState extends State<NavBar> {
       ),
     );
   }
+  
 }
+class MyPainter extends CustomPainter { //         <-- CustomPainter class
+  @override
+  void paint(Canvas canvas, Size size) {
+    
+    //                                           <-- Insert your painting code here.
+  final p1 = Offset(60, -30);
+  final p2 = Offset(250, 150);
+  final paint = Paint()
+    ..color = Colors.black
+    ..strokeWidth = 4;
+  canvas.drawLine(p1, p2, paint);
+  
+  }
+   @override
+  bool shouldRepaint(CustomPainter old) {
+    return false;
+  }
+  }
