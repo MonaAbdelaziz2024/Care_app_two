@@ -5,6 +5,7 @@ import 'package:care_app_two/helper/styles.dart';
 import 'package:care_app_two/screens/calender_page/calendar_two.dart';
 import 'package:care_app_two/screens/profile/profile_view.dart';
 import 'package:care_app_two/screens/reports/reports_view.dart';
+import 'package:care_app_two/screens/tips/tips_view.dart';
 import 'package:care_app_two/screens/view_tasks/view_tasks.dart';
 import 'package:care_app_two/screens/widgets/custom_home_rec.dart';
 import 'package:care_app_two/screens/widgets/custom_home_squ.dart';
@@ -246,10 +247,21 @@ class HomeViewBody extends StatelessWidget {
               Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
-                  const HomeSquare(
-                    icon: Icons.tips_and_updates_outlined,
-                    text: 'Tips',
-                    color: Color(0xff329DFF),
+                  GestureDetector(
+                    onTap: (){
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (context) {
+                            return const TipsView();
+                          },
+                        ),
+                      );
+                    },
+                    child: const HomeSquare(
+                      icon: Icons.tips_and_updates_outlined,
+                      text: 'Tips',
+                      color: Color(0xff329DFF),
+                    ),
                   ),
                   GestureDetector(
                     onTap: () {
