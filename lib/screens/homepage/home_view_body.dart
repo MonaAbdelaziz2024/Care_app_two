@@ -104,9 +104,18 @@ class HomeViewBody extends StatelessWidget {
                 height: 26.h,
               ),
               //search container
-              Container(
+              TextField(
+                decoration: InputDecoration(
+                    border: OutlineInputBorder(
+                      borderRadius: BorderRadius.circular(20).r,
+                    ),
+                    hintText: 'Search',
+                    filled: true,
+                    fillColor: const Color(0xfff7f7f7)),
+              ),
+              /* Container(
                 height: 35.h,
-                decoration: BoxDecoration(
+                decoration: BoxDecoration( 
                     borderRadius: BorderRadius.circular(20),
                     color: const Color(0xfff7f7f7),
                     boxShadow: const [
@@ -135,7 +144,7 @@ class HomeViewBody extends StatelessWidget {
                     ),
                   ],
                 ),
-              ),
+              ),*/
               SizedBox(
                 height: 20.h,
               ),
@@ -248,7 +257,7 @@ class HomeViewBody extends StatelessWidget {
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
                 children: [
                   GestureDetector(
-                    onTap: (){
+                    onTap: () {
                       Navigator.of(context).push(
                         MaterialPageRoute(
                           builder: (context) {
@@ -295,10 +304,8 @@ class HomeViewBody extends StatelessWidget {
                       color: Color(0xffED686C),
                     ),
                   ),
-                 
                 ],
               ),
-               
             ],
           ),
         ));
