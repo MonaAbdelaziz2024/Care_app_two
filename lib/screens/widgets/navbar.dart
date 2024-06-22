@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, avoid_renaming_method_parameters, unnecessary_import, unused_import
 
 //import 'package:care_app_two/screens/addition/addition_view.dart';
 import 'package:care_app_two/screens/addition/addition_view.dart';

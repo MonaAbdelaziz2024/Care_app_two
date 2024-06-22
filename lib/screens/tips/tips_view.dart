@@ -1,3 +1,5 @@
+// ignore_for_file: unnecessary_import, prefer_const_constructors
+
 import 'package:care_app_two/helper/constant.dart';
 import 'package:care_app_two/helper/functions/custom_chat_bot_appbar.dart';
 import 'package:flutter/cupertino.dart';

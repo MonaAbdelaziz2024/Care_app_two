@@ -1,4 +1,5 @@
 // ignore_for_file: prefer_const_constructors
+import 'package:care_app_two/screens/signin/new_password.dart';
 import 'package:care_app_two/screens/start_screen/start.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
           return MaterialApp(
             theme: ThemeData(),
             debugShowCheckedModeBanner: false,
-            home:  Start(),
+            home:  NewPassword(),
           );
         });
   }

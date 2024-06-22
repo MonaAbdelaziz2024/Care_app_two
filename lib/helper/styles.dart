@@ -111,5 +111,12 @@ class Styles {
     fontSize: 18,
     fontWeight: FontWeight.w700,
   );
+
+  static TextStyle Style24 = TextStyle(
+    color: kTextColor,
+    fontFamily: 'Ciaro',
+    fontSize: 24,
+    fontWeight: FontWeight.w400,
+  );
   
 }
