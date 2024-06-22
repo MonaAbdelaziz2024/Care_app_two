@@ -88,7 +88,7 @@ class _SIGNINState extends State<SIGNIN> {
                       SizedBox(
                         height: 10.h,
                       ),
-                      CustomTextField(),
+                      CustomTextField(obscureText: true,),
                       SizedBox(
                         height: 10.h,
                       ),

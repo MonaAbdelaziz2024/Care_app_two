@@ -6,6 +6,7 @@
 import 'package:care_app_two/helper/constant.dart';
 import 'package:care_app_two/helper/styles.dart';
 import 'package:care_app_two/screens/chat_bot_page/chatbot_view.dart';
+import 'package:care_app_two/screens/signin/new_password.dart';
 import 'package:care_app_two/screens/signin/sign_in.dart';
 import 'package:care_app_two/screens/signup/signup_screen.dart';
 import 'package:care_app_two/screens/widgets/Custom_line.dart';
@@ -92,7 +93,7 @@ class SigninTwo extends StatelessWidget {
                           Navigator.of(context).push(
                               MaterialPageRoute(
                                 builder: (context) {
-                                  return const ChatBotView();
+                                  return  NewPassword();
                                 },
                               ),
                             );

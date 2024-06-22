@@ -107,6 +107,7 @@ class HomeViewBody extends StatelessWidget {
               TextField(
                 decoration: InputDecoration(
                     border: OutlineInputBorder(
+                      borderSide: BorderSide.none,
                       borderRadius: BorderRadius.circular(20).r,
                     ),
                     hintText: 'Search',

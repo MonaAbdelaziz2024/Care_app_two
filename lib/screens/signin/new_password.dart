@@ -57,7 +57,7 @@ class NewPassword extends StatelessWidget {
                       SizedBox(
                         height: 6.h,
                       ),
-                      const CustomTextField(
+                      const CustomTextField(obscureText: true,
                         backgroundColor: Color(0xffD4D6EE),
                       ),
                       SizedBox(
@@ -77,7 +77,7 @@ class NewPassword extends StatelessWidget {
                       SizedBox(
                         height: 6.h,
                       ),
-                      const CustomTextField(
+                      const CustomTextField(obscureText: true,
                         backgroundColor: Color(0xffD4D6EE),
                       ),
                       SizedBox(
