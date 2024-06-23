@@ -180,8 +180,19 @@ class ProfileView extends StatelessWidget {
                           ),
                         );
                       },
-                      child: ProfileRec(
-                          icon: Icons.logout, icontext: 'Log-Out', endtext: ''),
+                      child: GestureDetector(
+                            onTap: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) {
+                                return const Start();
+                              },
+                            ),
+                          );
+                        },
+                        child: ProfileRec(
+                            icon: Icons.logout, icontext: 'Log-Out', endtext: ''),
+                      ),
                     ),
                   ],
                 ),

@@ -54,18 +54,30 @@ class HomeViewBody extends StatelessWidget {
                       SizedBox(
                         width: 6.w,
                       ),
-                      Column(
-                        // mainAxisAlignment: MainAxisAlignment.start,
-                        children: [
-                          Text(
-                            'Hello!',
-                            style: Styles.Style10,
-                          ),
-                          Text(
-                            'Ahmed Anwar',
-                            style: Styles.Style133,
-                          ),
-                        ],
+                      GestureDetector(
+                            onTap: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) {
+                                return const ProfileView();
+                              },
+                            ),
+                          );
+                        },
+
+                        child: Column(
+                          // mainAxisAlignment: MainAxisAlignment.start,
+                          children: [
+                            Text(
+                              'Hello!',
+                              style: Styles.Style10,
+                            ),
+                            Text(
+                              'Ahmed Anwar',
+                              style: Styles.Style133,
+                            ),
+                          ],
+                        ),
                       ),
                     ],
                   ),
@@ -236,20 +248,48 @@ class HomeViewBody extends StatelessWidget {
               SizedBox(
                 height: 8.h,
               ),
-              const HomeRectangles(
+               HomeRectangles(
                 icon: Icons.alarm,
                 text: 'Panadol',
                 time: '2:00 AM',
+                    onTap: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) {
+                                return const ShowAllTasks();
+                              },
+                            ),
+                          );
+                        },
               ),
-              const HomeRectangles(
+               HomeRectangles(
                 icon: Icons.monitor_heart_outlined,
                 text: 'Heart Doctor',
                 time: '1:00 AM',
+                    onTap: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) {
+                                return const ShowAllTasks();
+                              },
+                            ),
+                          );
+                        },
               ),
-              const HomeRectangles(
+               HomeRectangles(
+                
                 icon: Icons.local_fire_department_outlined,
                 text: 'Light exercise',
                 time: '1:00 - 1:45 AM',
+                    onTap: () {
+                          Navigator.of(context).push(
+                            MaterialPageRoute(
+                              builder: (context) {
+                                return const  ShowAllTasks();
+                              },
+                            ),
+                          );
+                        },
               ),
               // SizedBox(
               //   height: 20.h,

@@ -16,6 +16,7 @@ import 'package:care_app_two/screens/widgets/Custom_line.dart';
 import 'package:care_app_two/screens/widgets/custom_button.dart';
 import 'package:care_app_two/screens/widgets/custom_text_feild.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 //import 'package:flutter_screenutil/flutter_screenutil.dart';
 
@@ -104,11 +105,22 @@ class SigninTwo extends StatelessWidget {
                       SizedBox(
                         height: 12.h,
                       ),
-                      Center(
-                          child: Text(
-                        'Can’t reset your password?',
-                        style: Styles.Style11.copyWith(color: Color(0xff000000)),
-                      )),
+                      GestureDetector(
+                        onTap: () {
+                            Navigator.of(context).push(
+                              MaterialPageRoute(
+                                builder: (context) {
+                                  return const SIGNIN();
+                                },
+                              ),
+                            );
+                          },
+                        child: Center(
+                            child: Text(
+                          'Can’t reset your password?',
+                          style: Styles.Style11.copyWith(color: Color(0xff000000)),
+                        )),
+                      ),
                       SizedBox(
                         height: 15.h,
                       ),
