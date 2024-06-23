@@ -1,7 +1,7 @@
 //import 'package:flutter/gestures.dart';
 //import 'dart:ffi';
 
-// ignore_for_file: prefer_const_constructors
+// ignore_for_file: prefer_const_constructors, unnecessary_import, unused_import
 
 import 'package:care_app_two/helper/constant.dart';
 import 'package:care_app_two/helper/styles.dart';
