@@ -15,7 +15,7 @@ class ProfileView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomCareAppbar(context, 'My Profile'),
+      // appBar: CustomCareAppbar(context, 'My Profile'),
       extendBodyBehindAppBar: true,
       body: Container(
         decoration: const BoxDecoration(
@@ -23,9 +23,36 @@ class ProfileView extends StatelessWidget {
               DecorationImage(image: AssetImage(kBackground), fit: BoxFit.fill),
         ),
         child: Padding(
-          padding: const EdgeInsets.symmetric(horizontal: 18),
+          padding: const EdgeInsets.symmetric(horizontal: 18).r,
           child: ListView(
             children: [
+              Row(
+                // mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                // crossAxisAlignment: CrossAxisAlignment.stretch,
+                children: [
+                  // SizedBox(width: 2.w,),
+                  IconButton(
+                    onPressed: () {
+                      Navigator.of(context).pop();
+                    },
+                    icon: Icon(
+                      color: Colors.black,
+                      Icons.arrow_back_ios_new,
+                      size: 20,
+                    ),
+                  ),
+                   SizedBox(width: 74.w,),
+                  Center(
+                    child: Text(
+                      'My Profile',
+                      textAlign: TextAlign.center,
+                      style: Styles.Style20.copyWith(
+                        color: Colors.black,
+                      ),
+                    ),
+                  )
+                ],
+              ),
               SizedBox(
                 height: 11.h,
               ),
@@ -153,7 +180,7 @@ class ProfileView extends StatelessWidget {
                 height: 7.h,
               ),
               Container(
-                height: 150.h,
+                height: 100.h,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(15),
                   color: const Color(0xfff6f6f6),
@@ -180,19 +207,8 @@ class ProfileView extends StatelessWidget {
                           ),
                         );
                       },
-                      child: GestureDetector(
-                            onTap: () {
-                          Navigator.of(context).push(
-                            MaterialPageRoute(
-                              builder: (context) {
-                                return const Start();
-                              },
-                            ),
-                          );
-                        },
-                        child: ProfileRec(
-                            icon: Icons.logout, icontext: 'Log-Out', endtext: ''),
-                      ),
+                      child: ProfileRec(
+                          icon: Icons.logout, icontext: 'Log-Out', endtext: ''),
                     ),
                   ],
                 ),
