@@ -1,4 +1,4 @@
-// ignore_for_file: unnecessary_import
+// ignore_for_file: unnecessary_import, prefer_const_constructors
 
 import 'package:care_app_two/helper/constant.dart';
 import 'package:care_app_two/helper/styles.dart';
@@ -13,6 +13,7 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:percent_indicator/percent_indicator.dart';
 
 class HomeViewBody extends StatelessWidget {
   const HomeViewBody({
@@ -55,7 +56,7 @@ class HomeViewBody extends StatelessWidget {
                         width: 6.w,
                       ),
                       GestureDetector(
-                            onTap: () {
+                        onTap: () {
                           Navigator.of(context).push(
                             MaterialPageRoute(
                               builder: (context) {
@@ -64,7 +65,6 @@ class HomeViewBody extends StatelessWidget {
                             ),
                           );
                         },
-
                         child: Column(
                           // mainAxisAlignment: MainAxisAlignment.start,
                           children: [
@@ -211,12 +211,24 @@ class HomeViewBody extends StatelessWidget {
                           ),
                         ],
                       ),
-                      SizedBox(
-                        width: 60.w,
-                      ),
+                      /*SizedBox(
+                        width: 40.w,
+                      ),*/
                       Padding(
                         padding: const EdgeInsets.only(bottom: 16).r,
-                        child: Stack(
+                        child: Center(
+                          child: CircularPercentIndicator(
+                            radius: 40,
+                            lineWidth: 10,
+                            percent: 0.7,
+                            progressColor: Colors.white,
+                            circularStrokeCap: CircularStrokeCap.round,
+                            center: Text('70%',
+                                style: Styles.Style16.copyWith(
+                                    color: Colors.white)),
+                            //backgroundColor: ,
+                          ),
+                        ), /*Stack(
                           alignment: Alignment.center,
                           children: [
                             Image.asset('assets/images/EllipseSubtract.png'),
@@ -227,7 +239,7 @@ class HomeViewBody extends StatelessWidget {
                                   Styles.Style16.copyWith(color: Colors.white),
                             ),
                           ],
-                        ),
+                        ),*/
                       )
                     ],
                   ),
@@ -248,48 +260,47 @@ class HomeViewBody extends StatelessWidget {
               SizedBox(
                 height: 8.h,
               ),
-               HomeRectangles(
+              HomeRectangles(
                 icon: Icons.alarm,
                 text: 'Panadol',
                 time: '2:00 AM',
-                    onTap: () {
-                          Navigator.of(context).push(
-                            MaterialPageRoute(
-                              builder: (context) {
-                                return const ShowAllTasks();
-                              },
-                            ),
-                          );
-                        },
+                onTap: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return const ShowAllTasks();
+                      },
+                    ),
+                  );
+                },
               ),
-               HomeRectangles(
+              HomeRectangles(
                 icon: Icons.monitor_heart_outlined,
                 text: 'Heart Doctor',
                 time: '1:00 AM',
-                    onTap: () {
-                          Navigator.of(context).push(
-                            MaterialPageRoute(
-                              builder: (context) {
-                                return const ShowAllTasks();
-                              },
-                            ),
-                          );
-                        },
+                onTap: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return const ShowAllTasks();
+                      },
+                    ),
+                  );
+                },
               ),
-               HomeRectangles(
-                
+              HomeRectangles(
                 icon: Icons.local_fire_department_outlined,
                 text: 'Light exercise',
                 time: '1:00 - 1:45 AM',
-                    onTap: () {
-                          Navigator.of(context).push(
-                            MaterialPageRoute(
-                              builder: (context) {
-                                return const  ShowAllTasks();
-                              },
-                            ),
-                          );
-                        },
+                onTap: () {
+                  Navigator.of(context).push(
+                    MaterialPageRoute(
+                      builder: (context) {
+                        return const ShowAllTasks();
+                      },
+                    ),
+                  );
+                },
               ),
               // SizedBox(
               //   height: 20.h,

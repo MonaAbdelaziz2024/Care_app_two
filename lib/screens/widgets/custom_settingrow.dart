@@ -15,27 +15,27 @@ class SetRow extends StatefulWidget {
 class _SetRowState extends State<SetRow> {
   @override
   Widget build(BuildContext context) {
-    String text = 'Sound';
-    int _sound = 50;
+  // String text = 'Sound';
+   // int sound = 50;
     return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        Text(
-          text,
-          style: Styles.Style16,
-        ),
-        Slider(
+      //mainAxisAlignment: MainAxisAlignment.spaceBetween,
+      //children: [
+        //Text(
+         // text,
+        //  style: Styles.Style16,
+       // ),
+      /*  Slider(
             min: 0,
             max: 100,
-            divisions: 100,
+           // divisions: 100,
             activeColor: Color(0xff0075FE),
-            value: _sound.toDouble(),
+            value: sound.toDouble(),
             onChanged: (value) {
               setState(() {
-                _sound = value.toInt();
+                sound = value.round();
               });
             }),
-      ],
+      ],*/
     );
   }
 
@@ -44,42 +44,6 @@ class _SetRowState extends State<SetRow> {
 
 
 
-/*class SetRow extends StatelessWidget {
-  const SetRow({super.key, this.text});
-
-  final text;
-
-  // final color;
-  @override
-  Widget build(BuildContext context) {
-    int _sound = 50;
-    return Row(
-      mainAxisAlignment: MainAxisAlignment.spaceBetween,
-      children: [
-        Text(
-          text,
-          style: Styles.Style16,
-        ),
-        Slider(
-            min: 0,
-            max: 100,
-            divisions: 100,
-            activeColor: Color(0xff0075FE),
-            value: _sound.toDouble(),
-            onChanged: (value) {
-              setState(() {
-                _sound = value.toInt();
-              });
-            })
-
-      
-      ],
-    );
-  }
-
-  void setState(Null Function() param0) {}
-}
-*/
 
 Row buildNotificationOption(String title, bool value, Function onChangeMethod) {
   return Row(
