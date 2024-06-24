@@ -36,8 +36,8 @@ class _ShowAllTasksState extends State<ShowAllTasks> {
         children:[ 
         const  Timer(),
           Positioned(
-            top: 190.r,
-            left: 80.r,
+            top: 200.r,
+            left: 90.r,
             child: CircleAvatar(backgroundColor: const Color(0xff0075FE),
                     radius: 30.r,
                     child: CircleAvatar(backgroundColor: Colors.white,radius: 28.r,
@@ -100,7 +100,7 @@ class _ShowAllTasksState extends State<ShowAllTasks> {
                     const CircleAvatar(
                       backgroundColor: Color(0xffAEE4E6),
                       radius: 15,
-                      child: Text('3'),
+                      child: Text('1'),
                     ),
                   ],
                 ),
