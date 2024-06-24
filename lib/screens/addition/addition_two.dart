@@ -6,6 +6,7 @@ import 'package:care_app_two/screens/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+import 'package:intl/intl.dart';
 
 class AdditionTwo extends StatefulWidget {
   const AdditionTwo({super.key});
@@ -20,6 +21,8 @@ class _AdditionTwoState extends State<AdditionTwo> {
   DateTime? start;
   DateTime? end;
   late TimeOfDay timeOfDay = TimeOfDay.now();
+  List<String> times = [];
+  late TimeOfDay time;
   @override
   void initState() {
     dateTime = DateTime.now();
@@ -164,9 +167,36 @@ class _AdditionTwoState extends State<AdditionTwo> {
               ),
               Row(
                 children: [
-                  // AddTimeContainer(),
-                  SizedBox(
-                    width: 16.w,
+                  // ListView.builder(
+                  //   physics: ScrollPhysics(),
+                  //   //shrinkWrap: true,
+                  //   //scrollDirection: Axis.horizontal,
+                  //   itemCount: times.length,
+                  //   itemBuilder: (context, index) {
+                  //   return  Row(
+                  //     children: [
+                  //       AddTimeContainer(time: times[index]),
+                  //     ],
+                  //   );
+                  //           }),
+
+                  // SizedBox(
+                  //   width: 16.w,
+                  // ),
+                  Row(
+                    children: [
+                      for (int i = 0; i < times.length; i++)
+                        Padding(
+                          padding: const EdgeInsets.only(right: 8).r,
+                          child: AddTimeContainer(
+                            time: times[i],
+                            onTap: () {
+                              times.removeLast();
+                              setState(() {});
+                            },
+                          ),
+                        )
+                    ],
                   ),
                   Container(
                     width: 110.w,
@@ -190,8 +220,13 @@ class _AdditionTwoState extends State<AdditionTwo> {
                           ),
                         ),
                         IconButton(
-                            onPressed: () {
-                              showTime(context);
+                            onPressed: () async {
+                              await showTime(context);
+
+                              setState(() {});
+                              String formattedTime = formatTimeOfDay(time);
+                              times.add(formattedTime);
+                              print(formattedTime);
                             },
                             icon: const Icon(
                               // ignore: deprecated_member_use
@@ -288,23 +323,32 @@ class _AdditionTwoState extends State<AdditionTwo> {
       initialEntryMode: TimePickerEntryMode.input,
       helpText: 'Enter time',
     );
+
     if (resultTime != null) {
       setState(() {
-        timeOfDay = resultTime;
-        
+        time = resultTime;
       });
     }
-    
   }
+}
+
+String formatTimeOfDay(TimeOfDay tod) {
+  final now = DateTime.now();
+  final dt = DateTime(now.year, now.month, now.day, tod.hour, tod.minute);
+  final format = DateFormat.jm(); // "6:00 AM"
+  return format.format(dt);
 }
 
 // ignore: must_be_immutable
 class AddTimeContainer extends StatelessWidget {
-   AddTimeContainer({
+  AddTimeContainer({
     super.key,
     required this.time,
+    this.onTap,
   });
-  Future<TimeOfDay> time;
+  String time;
+  Function()? onTap;
+  // var resultTime = time.DateFormat('hh:mm a');
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -318,9 +362,9 @@ class AddTimeContainer extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-           Center(
-            child: Text(time.toString(),
-                style:const TextStyle(
+          Center(
+            child: Text(time,
+                style: const TextStyle(
                   fontSize: 12,
                   fontWeight: FontWeight.w500,
                 )),
@@ -328,10 +372,13 @@ class AddTimeContainer extends StatelessWidget {
           CircleAvatar(
             backgroundColor: const Color(0xff0597F2),
             radius: 10.r,
-            child: const Icon(
-              FontAwesomeIcons.xmark,
-              size: 15,
-              color: Colors.white,
+            child: GestureDetector(
+              onTap: onTap,
+              child: const Icon(
+                FontAwesomeIcons.xmark,
+                size: 15,
+                color: Colors.white,
+              ),
             ),
           ),
         ],
