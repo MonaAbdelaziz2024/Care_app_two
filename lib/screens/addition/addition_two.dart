@@ -259,7 +259,7 @@ class _AdditionTwoState extends State<AdditionTwo> {
     );
   }
 
-  Future<TimeOfDay> showTime(BuildContext context) async {
+  Future<void> showTime(BuildContext context) async {
     final resultTime = await showTimePicker(
       builder: (context, child) {
         return Theme(
@@ -291,12 +291,14 @@ class _AdditionTwoState extends State<AdditionTwo> {
     if (resultTime != null) {
       setState(() {
         timeOfDay = resultTime;
+        
       });
     }
-    return resultTime ?? TimeOfDay.now();
+    
   }
 }
 
+// ignore: must_be_immutable
 class AddTimeContainer extends StatelessWidget {
    AddTimeContainer({
     super.key,
@@ -318,7 +320,7 @@ class AddTimeContainer extends StatelessWidget {
         children: [
            Center(
             child: Text(time.toString(),
-                style: TextStyle(
+                style:const TextStyle(
                   fontSize: 12,
                   fontWeight: FontWeight.w500,
                 )),
