@@ -3,6 +3,7 @@
 import 'package:care_app_two/helper/constant.dart';
 import 'package:care_app_two/helper/styles.dart';
 import 'package:care_app_two/screens/calender_page/calendar_two.dart';
+import 'package:care_app_two/screens/notification/notification.dart';
 import 'package:care_app_two/screens/profile/profile_view.dart';
 import 'package:care_app_two/screens/reports/reports_view.dart';
 import 'package:care_app_two/screens/tips/tips_view.dart';
@@ -109,7 +110,14 @@ class HomeViewBody extends StatelessWidget {
                     ],
                   ),
                   // Actions(actions: , child: child)
-                  const Icon(Icons.notifications_none),
+                  GestureDetector(
+                    onTap: (){
+                      Navigator.of(context)
+                                  .push(MaterialPageRoute(builder: (context) {
+                                return const NotificationPage();
+                              }));
+                    },
+                    child: const Icon(Icons.notifications_none)),
                 ],
               ),
               SizedBox(
