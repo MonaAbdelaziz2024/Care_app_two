@@ -107,9 +107,9 @@ class _RectShowTasksState extends State<RectShowTasks> {
                     color: value? Colors.amber[700]: Colors.grey,)),
                 IconButton(
                   onPressed: () {
-                    setState(() {
-                        value = !value;
-                      });
+                    // setState(() {
+                    //     value = !value;
+                    //   });
                   },
                   icon: Image.asset(
                     'assets/images/edit.png',
@@ -117,9 +117,9 @@ class _RectShowTasksState extends State<RectShowTasks> {
                 ),
                 IconButton(
                     onPressed: () {
-                      setState(() {
-                        value = !value;
-                      });
+                      // setState(() {
+                      //   value = !value;
+                      // });
                     },
                     icon: Image.asset('assets/images/delete.png'))
               ],
