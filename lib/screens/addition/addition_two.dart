@@ -2,20 +2,53 @@ import 'dart:async';
 
 import 'package:care_app_two/helper/constant.dart';
 import 'package:care_app_two/helper/functions/custom_chat_bot_appbar.dart';
+import 'package:care_app_two/screens/calender_page/calendar_two.dart';
+import 'package:care_app_two/screens/view_tasks/view_tasks.dart';
 import 'package:care_app_two/screens/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:intl/intl.dart';
+import 'package:syncfusion_flutter_datepicker/datepicker.dart';
 
 class AdditionTwo extends StatefulWidget {
   const AdditionTwo({super.key});
 
   @override
-  State<AdditionTwo> createState() => _AdditionTwoState();
+  AdditionTwoState createState() => AdditionTwoState();
 }
 
-class _AdditionTwoState extends State<AdditionTwo> {
+class AdditionTwoState extends State<AdditionTwo> {
+   String _range = '';
+   void _onSelectionChanged(DateRangePickerSelectionChangedArgs args) {
+    /// The argument value will return the changed date as [DateTime] when the
+    /// widget [SfDateRangeSelectionMode] set as single.
+    ///
+    /// The argument value will return the changed dates as [List<DateTime>]
+    /// when the widget [SfDateRangeSelectionMode] set as multiple.
+    ///
+    /// The argument value will return the changed range as [PickerDateRange]
+    /// when the widget [SfDateRangeSelectionMode] set as range.
+    ///
+    /// The argument value will return the changed ranges as
+    /// [List<PickerDateRange] when the widget [SfDateRangeSelectionMode] set as
+    /// multi range.
+    setState(() {
+      if (args.value is PickerDateRange) {
+        _range = ' ${DateFormat.MMMEd().format(args.value.startDate)} ';
+        // -'
+        // ignore: lines_longer_than_80_chars
+        // ' ${DateFormat.MMMEd().format(args.value.endDate ?? args.value.startDate)}';
+      } else if (args.value is DateTime) {
+        _range = ' ${DateFormat.MMMEd().format(args.value)} ';
+        
+      } else if (args.value is List<DateTime>) {
+      } else {
+      }
+    });
+  }
+
+  
   int num = 0;
   late DateTime dateTime;
   DateTime? start;
@@ -23,6 +56,7 @@ class _AdditionTwoState extends State<AdditionTwo> {
   late TimeOfDay timeOfDay = TimeOfDay.now();
   List<String> times = [];
   late TimeOfDay time;
+  
   @override
   void initState() {
     dateTime = DateTime.now();
@@ -41,11 +75,20 @@ class _AdditionTwoState extends State<AdditionTwo> {
             blurRadius: 4.0,
           )
         ]),
-        child: const BottomAppBar(
+        child:  BottomAppBar(
           elevation: 0,
-          color: Color(0xfffdfdff),
-          shadowColor: Color(0xffECECEC),
+          color:const Color(0xfffdfdff),
+          shadowColor:const Color(0xffECECEC),
           child: CustomButton(
+            onTap: () {
+                Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (context) {
+                            return const ShowAllTasks();
+                          },
+                        ),
+                      );
+            },
             text: 'Confirm',
             nextIcon: false,
           ),
@@ -261,7 +304,9 @@ class _AdditionTwoState extends State<AdditionTwo> {
                         fontWeight: FontWeight.w400,
                       )),
                   IconButton(
-                      onPressed: () {},
+                      onPressed: ()async {
+                        await showDate(context);
+                      },
                       icon: const Icon(Icons.chevron_right_sharp))
                 ],
               ),
@@ -283,7 +328,9 @@ class _AdditionTwoState extends State<AdditionTwo> {
                         fontWeight: FontWeight.w400,
                       )),
                   IconButton(
-                      onPressed: () {},
+                      onPressed: ()async {
+                         await showDate(context);
+                      },
                       icon: const Icon(Icons.chevron_right_sharp))
                 ],
               ),
@@ -292,6 +339,46 @@ class _AdditionTwoState extends State<AdditionTwo> {
         ),
       ),
     );
+  }
+Future<void> showDate(BuildContext context) async {
+    final result = await showDatePicker(
+      builder: (context, child) {
+        return Theme(
+          data: Theme.of(context).copyWith(
+            colorScheme:const ColorScheme.light(
+              
+             
+             primary:Color(0xff0075FE) , // header background color
+              onPrimary: Color(0xff1D1B20), // header text color
+              onSurface: Color(0xff1F1F1F), // body text color
+            surface:Colors.white ,
+            
+            
+            ),
+            textButtonTheme: TextButtonThemeData(
+              style: TextButton.styleFrom(
+                foregroundColor: const Color(0xff0075FE), 
+                textStyle: const TextStyle(color:Color(0xff0075FE) )// button text color
+              ),
+            ),
+            
+          ),
+          
+          child: child!);
+      },
+      context: context,
+      firstDate: DateTime(1950),
+      lastDate: DateTime.now().add(
+        const Duration(days: 365 * 5),
+      ),
+      helpText: 'Select date',
+    );
+    if (result != null) {
+    
+      setState(() {
+        dateTime = result;
+      });
+    }
   }
 
   Future<void> showTime(BuildContext context) async {
@@ -339,6 +426,8 @@ String formatTimeOfDay(TimeOfDay tod) {
   return format.format(dt);
 }
 
+
+ 
 // ignore: must_be_immutable
 class AddTimeContainer extends StatelessWidget {
   AddTimeContainer({
