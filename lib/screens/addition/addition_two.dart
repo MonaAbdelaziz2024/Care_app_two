@@ -1,7 +1,8 @@
+import 'dart:async';
+
 import 'package:care_app_two/helper/constant.dart';
 import 'package:care_app_two/helper/functions/custom_chat_bot_appbar.dart';
 import 'package:care_app_two/screens/widgets/custom_button.dart';
-import 'package:care_app_two/screens/widgets/timer.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
@@ -28,7 +29,6 @@ class _AdditionTwoState extends State<AdditionTwo> {
 
   @override
   Widget build(BuildContext context) {
-    bool hide = true;
     return Scaffold(
       bottomNavigationBar: Container(
         decoration: const BoxDecoration(boxShadow: [
@@ -164,7 +164,7 @@ class _AdditionTwoState extends State<AdditionTwo> {
               ),
               Row(
                 children: [
-                  AddTimeContainer(),
+                  // AddTimeContainer(),
                   SizedBox(
                     width: 16.w,
                   ),
@@ -293,15 +293,16 @@ class _AdditionTwoState extends State<AdditionTwo> {
         timeOfDay = resultTime;
       });
     }
-    return resultTime?? TimeOfDay.now();
+    return resultTime ?? TimeOfDay.now();
   }
 }
 
 class AddTimeContainer extends StatelessWidget {
-  const AddTimeContainer({
+   AddTimeContainer({
     super.key,
+    required this.time,
   });
-
+  Future<TimeOfDay> time;
   @override
   Widget build(BuildContext context) {
     return Container(
@@ -315,8 +316,8 @@ class AddTimeContainer extends StatelessWidget {
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
         children: [
-          const Center(
-            child: Text("9:16 PM",
+           Center(
+            child: Text(time.toString(),
                 style: TextStyle(
                   fontSize: 12,
                   fontWeight: FontWeight.w500,
