@@ -6,6 +6,7 @@ import 'package:care_app_two/screens/calender_page/calendar_two.dart';
 import 'package:care_app_two/screens/view_tasks/view_tasks.dart';
 import 'package:care_app_two/screens/widgets/custom_button.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:intl/intl.dart';
@@ -19,8 +20,8 @@ class AdditionTwo extends StatefulWidget {
 }
 
 class AdditionTwoState extends State<AdditionTwo> {
-   String _range = '';
-   void _onSelectionChanged(DateRangePickerSelectionChangedArgs args) {
+  String _range = '';
+  void _onSelectionChanged(DateRangePickerSelectionChangedArgs args) {
     /// The argument value will return the changed date as [DateTime] when the
     /// widget [SfDateRangeSelectionMode] set as single.
     ///
@@ -41,14 +42,11 @@ class AdditionTwoState extends State<AdditionTwo> {
         // ' ${DateFormat.MMMEd().format(args.value.endDate ?? args.value.startDate)}';
       } else if (args.value is DateTime) {
         _range = ' ${DateFormat.MMMEd().format(args.value)} ';
-        
       } else if (args.value is List<DateTime>) {
-      } else {
-      }
+      } else {}
     });
   }
 
-  
   int num = 0;
   late DateTime dateTime;
   DateTime? start;
@@ -56,7 +54,7 @@ class AdditionTwoState extends State<AdditionTwo> {
   late TimeOfDay timeOfDay = TimeOfDay.now();
   List<String> times = [];
   late TimeOfDay time;
-  
+
   @override
   void initState() {
     dateTime = DateTime.now();
@@ -75,19 +73,19 @@ class AdditionTwoState extends State<AdditionTwo> {
             blurRadius: 4.0,
           )
         ]),
-        child:  BottomAppBar(
+        child: BottomAppBar(
           elevation: 0,
-          color:const Color(0xfffdfdff),
-          shadowColor:const Color(0xffECECEC),
+          color: const Color(0xfffdfdff),
+          shadowColor: const Color(0xffECECEC),
           child: CustomButton(
             onTap: () {
-                Navigator.of(context).push(
-                        MaterialPageRoute(
-                          builder: (context) {
-                            return const ShowAllTasks();
-                          },
-                        ),
-                      );
+              Navigator.of(context).push(
+                MaterialPageRoute(
+                  builder: (context) {
+                    return const ShowAllTasks();
+                  },
+                ),
+              );
             },
             text: 'Confirm',
             nextIcon: false,
@@ -95,7 +93,7 @@ class AdditionTwoState extends State<AdditionTwo> {
         ),
       ),
       appBar: CustomCareAppbar(context, 'New Alarm'),
-      extendBodyBehindAppBar: true,
+      //extendBodyBehindAppBar: true, //Modify
       body: Container(
         decoration: const BoxDecoration(
           image: DecorationImage(
@@ -103,7 +101,7 @@ class AdditionTwoState extends State<AdditionTwo> {
         ),
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16).r,
-          child: ListView(
+          child: Column( //modify from Listview
             children: [
               TextField(
                 decoration: InputDecoration(
@@ -200,92 +198,94 @@ class AdditionTwoState extends State<AdditionTwo> {
                   thickness: 1,
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.only(bottom: 8).r,
-                child: const Text("Times per Day",
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w500,
-                    )),
-              ),
-              Row(
-                children: [
-                  // ListView.builder(
-                  //   physics: ScrollPhysics(),
-                  //   //shrinkWrap: true,
-                  //   //scrollDirection: Axis.horizontal,
-                  //   itemCount: times.length,
-                  //   itemBuilder: (context, index) {
-                  //   return  Row(
-                  //     children: [
-                  //       AddTimeContainer(time: times[index]),
-                  //     ],
-                  //   );
-                  //           }),
-
-                  // SizedBox(
-                  //   width: 16.w,
-                  // ),
+              const Text("Times per Day",
+                  style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w500,
+                  )),
+              Flexible( //Modify
+                child: ListView(scrollDirection: Axis.horizontal, children: [
                   Row(
                     children: [
-                      for (int i = 0; i < times.length; i++)
-                        Padding(
-                          padding: const EdgeInsets.only(right: 8).r,
-                          child: AddTimeContainer(
-                            time: times[i],
-                            onTap: () {
-                              times.removeLast();
-                              setState(() {});
-                            },
-                          ),
-                        )
+                      // ListView.builder(
+                      //   physics: ScrollPhysics(),
+                      //   //shrinkWrap: true,
+                      //   //scrollDirection: Axis.horizontal,
+                      //   itemCount: times.length,
+                      //   itemBuilder: (context, index) {
+                      //   return  Row(
+                      //     children: [
+                      //       AddTimeContainer(time: times[index]),
+                      //     ],
+                      //   );
+                      //           }),
+
+                      // SizedBox(
+                      //   width: 16.w,
+                      // ),
+                      Row(
+                        children: [
+                          for (int i = 0; i < times.length; i++)
+                            Padding(
+                              padding: const EdgeInsets.only(right: 8).r,
+                              child: AddTimeContainer(
+                                time: times[i],
+                                onTap: () {
+                                  times.removeLast();
+                                  setState(() {});
+                                },
+                              ),
+                            )
+                        ],
+                      ),
+                      Container(
+                        width: 110.w,
+                        height: 25.h,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(16).r,
+                            border: Border.all(
+                              color: const Color(0xff0597F2),
+                            )),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            Center(
+                              child: Padding(
+                                padding: const EdgeInsets.only(left: 16).r,
+                                child: const Text("New time",
+                                    style: TextStyle(
+                                      fontSize: 12,
+                                      fontWeight: FontWeight.w500,
+                                    )),
+                              ),
+                            ),
+                            IconButton(
+                                onPressed: () async {
+                                  await showTime(context);
+
+                                  setState(() {});
+                                  String formattedTime = formatTimeOfDay(time);
+                                  times.add(formattedTime);
+                                  print(formattedTime);
+                                },
+                                icon: const Icon(
+                                  // ignore: deprecated_member_use
+                                  FontAwesomeIcons.add,
+                                  size: 15,
+                                  color: Colors.black,
+                                )),
+                          ],
+                        ),
+                      ),
                     ],
                   ),
-                  Container(
-                    width: 110.w,
-                    height: 25.h,
-                    decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(16).r,
-                        border: Border.all(
-                          color: const Color(0xff0597F2),
-                        )),
-                    child: Row(
-                      mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                      children: [
-                        Center(
-                          child: Padding(
-                            padding: const EdgeInsets.only(left: 16).r,
-                            child: const Text("New time",
-                                style: TextStyle(
-                                  fontSize: 12,
-                                  fontWeight: FontWeight.w500,
-                                )),
-                          ),
-                        ),
-                        IconButton(
-                            onPressed: () async {
-                              await showTime(context);
-
-                              setState(() {});
-                              String formattedTime = formatTimeOfDay(time);
-                              times.add(formattedTime);
-                              print(formattedTime);
-                            },
-                            icon: const Icon(
-                              // ignore: deprecated_member_use
-                              FontAwesomeIcons.add,
-                              size: 15,
-                              color: Colors.black,
-                            )),
-                      ],
-                    ),
-                  ),
-                ],
+                ]),
               ),
-              Padding(
+              const Divider(), //Modify
+              /* Padding(
                 padding: const EdgeInsets.only(top: 14).r,
                 child: const Divider(),
-              ),
+              ),*/
               Row(
                 children: [
                   const Text(
@@ -304,7 +304,7 @@ class AdditionTwoState extends State<AdditionTwo> {
                         fontWeight: FontWeight.w400,
                       )),
                   IconButton(
-                      onPressed: ()async {
+                      onPressed: () async {
                         await showDate(context);
                       },
                       icon: const Icon(Icons.chevron_right_sharp))
@@ -328,8 +328,8 @@ class AdditionTwoState extends State<AdditionTwo> {
                         fontWeight: FontWeight.w400,
                       )),
                   IconButton(
-                      onPressed: ()async {
-                         await showDate(context);
+                      onPressed: () async {
+                        await showDate(context);
                       },
                       icon: const Icon(Icons.chevron_right_sharp))
                 ],
@@ -340,31 +340,27 @@ class AdditionTwoState extends State<AdditionTwo> {
       ),
     );
   }
-Future<void> showDate(BuildContext context) async {
+
+  Future<void> showDate(BuildContext context) async {
     final result = await showDatePicker(
       builder: (context, child) {
         return Theme(
-          data: Theme.of(context).copyWith(
-            colorScheme:const ColorScheme.light(
-              
-             
-             primary:Color(0xff0075FE) , // header background color
-              onPrimary: Color(0xff1D1B20), // header text color
-              onSurface: Color(0xff1F1F1F), // body text color
-            surface:Colors.white ,
-            
-            
-            ),
-            textButtonTheme: TextButtonThemeData(
-              style: TextButton.styleFrom(
-                foregroundColor: const Color(0xff0075FE), 
-                textStyle: const TextStyle(color:Color(0xff0075FE) )// button text color
+            data: Theme.of(context).copyWith(
+              colorScheme: const ColorScheme.light(
+                primary: Color(0xff0075FE), // header background color
+                onPrimary: Color(0xff1D1B20), // header text color
+                onSurface: Color(0xff1F1F1F), // body text color
+                surface: Colors.white,
+              ),
+              textButtonTheme: TextButtonThemeData(
+                style: TextButton.styleFrom(
+                    foregroundColor: const Color(0xff0075FE),
+                    textStyle: const TextStyle(
+                        color: Color(0xff0075FE)) // button text color
+                    ),
               ),
             ),
-            
-          ),
-          
-          child: child!);
+            child: child!);
       },
       context: context,
       firstDate: DateTime(1950),
@@ -374,7 +370,6 @@ Future<void> showDate(BuildContext context) async {
       helpText: 'Select date',
     );
     if (result != null) {
-    
       setState(() {
         dateTime = result;
       });
@@ -426,8 +421,6 @@ String formatTimeOfDay(TimeOfDay tod) {
   return format.format(dt);
 }
 
-
- 
 // ignore: must_be_immutable
 class AddTimeContainer extends StatelessWidget {
   AddTimeContainer({
