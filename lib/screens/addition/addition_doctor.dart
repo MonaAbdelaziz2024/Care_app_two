@@ -83,7 +83,7 @@ class _AdditionDoctorState extends State<AdditionDoctor> {
           ),
         ),
         appBar: CustomCareAppbar(context, 'New Alarm'),
-        extendBodyBehindAppBar: true,
+        // extendBodyBehindAppBar: true,
         body: Container(
           decoration: const BoxDecoration(
             image: DecorationImage(
@@ -91,7 +91,7 @@ class _AdditionDoctorState extends State<AdditionDoctor> {
           ),
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16).r,
-            child: ListView(children: [
+            child: Column(children: [   //Modify
               TextField(
                 decoration: InputDecoration(
                     border: OutlineInputBorder(
@@ -131,94 +131,98 @@ class _AdditionDoctorState extends State<AdditionDoctor> {
                       fontWeight: FontWeight.w500,
                     )),
               ),
-              Row(children: [
-                // Container(
-                //   width: 100.w,
-                //   height: 25.h,
-                //   decoration: BoxDecoration(
-                //       borderRadius: BorderRadius.circular(16).r,
-                //       border: Border.all(
-                //         color: const Color(0xff0597F2),
-                //       )),
-                //   child: Row(
-                //     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                //     children: [
-                //       const Center(
-                //         child: Text("9:16 PM",
-                //             style: TextStyle(
-                //               fontSize: 12,
-                //               fontWeight: FontWeight.w500,
-                //             )),
-                //       ),
-                //       CircleAvatar(
-                //         backgroundColor: const Color(0xff0597F2),
-                //         radius: 10.r,
-                //         child: const Icon(
-                //           FontAwesomeIcons.xmark,
-                //           size: 15,
-                //           color: Colors.white,
-                //         ),
-                //       ),
-                //     ],
-                //   ),
-                // ),
-                // SizedBox(
-                //   width: 16.w,
-                // ),
-                Row(children: [
-                  for (int i = 0; i < times.length; i++)
-                    Padding(
-                      padding: const EdgeInsets.only(right: 8).r,
-                      child: AddTimeContainer(
-                        time: times[i],
-                        onTap: () {
-                          times.removeLast();
-                          setState(() {});
-                        },
+              Flexible(   //Modify
+                child: ListView(scrollDirection: Axis.horizontal, children: [
+                  Row(children: [
+                    // Container(
+                    //   width: 100.w,
+                    //   height: 25.h,
+                    //   decoration: BoxDecoration(
+                    //       borderRadius: BorderRadius.circular(16).r,
+                    //       border: Border.all(
+                    //         color: const Color(0xff0597F2),
+                    //       )),
+                    //   child: Row(
+                    //     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                    //     children: [
+                    //       const Center(
+                    //         child: Text("9:16 PM",
+                    //             style: TextStyle(
+                    //               fontSize: 12,
+                    //               fontWeight: FontWeight.w500,
+                    //             )),
+                    //       ),
+                    //       CircleAvatar(
+                    //         backgroundColor: const Color(0xff0597F2),
+                    //         radius: 10.r,
+                    //         child: const Icon(
+                    //           FontAwesomeIcons.xmark,
+                    //           size: 15,
+                    //           color: Colors.white,
+                    //         ),
+                    //       ),
+                    //     ],
+                    //   ),
+                    // ),
+                    // SizedBox(
+                    //   width: 16.w,
+                    // ),
+                    Row(children: [
+                      for (int i = 0; i < times.length; i++)
+                        Padding(
+                          padding: const EdgeInsets.only(right: 8).r,
+                          child: AddTimeContainer(
+                            time: times[i],
+                            onTap: () {
+                              times.removeLast();
+                              setState(() {});
+                            },
+                          ),
+                        ),
+                    ]),
+                    Container(
+                      width: 110.w,
+                      height: 25.h,
+                      decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(16).r,
+                          border: Border.all(
+                            color: const Color(0xff0597F2),
+                          )),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                        children: [
+                          Center(
+                            child: Padding(
+                              padding: const EdgeInsets.only(left: 16).r,
+                              child: const Text("New time",
+                                  style: TextStyle(
+                                    fontSize: 12,
+                                    fontWeight: FontWeight.w500,
+                                  )),
+                            ),
+                          ),
+                          IconButton(
+                            onPressed: () async {
+                              await showTime(context);
+                
+                              setState(() {});
+                              String formattedTime = formatTimeOfDay(time);
+                              times.add(formattedTime);
+                              print(formattedTime);
+                            },
+                            icon: const Icon(
+                              // ignore: deprecated_member_use
+                              FontAwesomeIcons.add,
+                              size: 15,
+                              color: Colors.black,
+                            ),
+                          ),
+                        ],
                       ),
                     ),
+                  ]),
                 ]),
-                Container(
-                  width: 110.w,
-                  height: 25.h,
-                  decoration: BoxDecoration(
-                      borderRadius: BorderRadius.circular(16).r,
-                      border: Border.all(
-                        color: const Color(0xff0597F2),
-                      )),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    children: [
-                      Center(
-                        child: Padding(
-                          padding: const EdgeInsets.only(left: 16).r,
-                          child: const Text("New time",
-                              style: TextStyle(
-                                fontSize: 12,
-                                fontWeight: FontWeight.w500,
-                              )),
-                        ),
-                      ),
-                      IconButton(
-                        onPressed: () async {
-                          await showTime(context);
-
-                          setState(() {});
-                          String formattedTime = formatTimeOfDay(time);
-                          times.add(formattedTime);
-                          print(formattedTime);
-                        },
-                        icon: const Icon(
-                          // ignore: deprecated_member_use
-                          FontAwesomeIcons.add,
-                          size: 15,
-                          color: Colors.black,
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ]),
+              ),
               // Row(
               //   children: [
               //     const Text(
@@ -279,41 +283,41 @@ class _AdditionDoctorState extends State<AdditionDoctor> {
           ),
         ));
   }
-Future<void> showDate(BuildContext context) async {
-  final result = await showDatePicker(
-    builder: (context, child) {
-      return Theme(
-          data: Theme.of(context).copyWith(
-            colorScheme: const ColorScheme.light(
-              primary: Color(0xff0075FE), // header background color
-              onPrimary: Color(0xff1D1B20), // header text color
-              onSurface: Color(0xff1F1F1F), // body text color
-              surface: Colors.white,
+
+  Future<void> showDate(BuildContext context) async {
+    final result = await showDatePicker(
+      builder: (context, child) {
+        return Theme(
+            data: Theme.of(context).copyWith(
+              colorScheme: const ColorScheme.light(
+                primary: Color(0xff0075FE), // header background color
+                onPrimary: Color(0xff1D1B20), // header text color
+                onSurface: Color(0xff1F1F1F), // body text color
+                surface: Colors.white,
+              ),
+              textButtonTheme: TextButtonThemeData(
+                style: TextButton.styleFrom(
+                    foregroundColor: const Color(0xff0075FE),
+                    textStyle: const TextStyle(
+                        color: Color(0xff0075FE)) // button text color
+                    ),
+              ),
             ),
-            textButtonTheme: TextButtonThemeData(
-              style: TextButton.styleFrom(
-                  foregroundColor: const Color(0xff0075FE),
-                  textStyle: const TextStyle(
-                      color: Color(0xff0075FE)) // button text color
-                  ),
-            ),
-          ),
-          child: child!);
-    },
-    context: context,
-    firstDate: DateTime(1950),
-    lastDate: DateTime.now().add(
-      const Duration(days: 365 * 5),
-    ),
-    helpText: 'Select date',
-  );
-  if (result != null) {
-   
-    setState(() {
-     dateTime = result;
-    });
+            child: child!);
+      },
+      context: context,
+      firstDate: DateTime(1950),
+      lastDate: DateTime.now().add(
+        const Duration(days: 365 * 5),
+      ),
+      helpText: 'Select date',
+    );
+    if (result != null) {
+      setState(() {
+        dateTime = result;
+      });
+    }
   }
-}
 
   Future<void> showTime(BuildContext context) async {
     final resultTime = await showTimePicker(
@@ -407,4 +411,3 @@ class AddTimeContainer extends StatelessWidget {
     );
   }
 }
-

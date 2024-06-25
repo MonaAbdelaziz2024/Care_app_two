@@ -7,6 +7,7 @@ import 'package:care_app_two/bar%20graph/bar_graph.dart';
 import 'package:care_app_two/helper/constant.dart';
 import 'package:care_app_two/helper/functions/custom_chat_bot_appbar.dart';
 import 'package:care_app_two/helper/styles.dart';
+import 'package:care_app_two/screens/reports/monthly_report.dart';
 import 'package:care_app_two/screens/reports/weekly_reports.dart';
 import 'package:care_app_two/screens/widgets/custom_divider.dart';
 import 'package:flutter/cupertino.dart';
@@ -297,7 +298,15 @@ fontWeight: FontWeight.w900,
                                         width: 2.w,
                                       ),
                                       GestureDetector(
-                                        onTap: () {},
+                                        onTap: () {
+                                           Navigator.of(context).push(
+                                            MaterialPageRoute(
+                                              builder: (context) {
+                                                return const MonthlyReport();
+                                              },
+                                            ),
+                                          );
+                                        },
                                         child: Icon(
                                           Icons.arrow_right_alt,
                                           color: Colors.black,

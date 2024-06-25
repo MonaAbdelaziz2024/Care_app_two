@@ -101,7 +101,8 @@ class AdditionTwoState extends State<AdditionTwo> {
         ),
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16).r,
-          child: Column( //modify from Listview
+          child: Column(
+            //modify from Listview
             children: [
               TextField(
                 decoration: InputDecoration(
@@ -203,7 +204,8 @@ class AdditionTwoState extends State<AdditionTwo> {
                     fontSize: 16,
                     fontWeight: FontWeight.w500,
                   )),
-              Flexible( //Modify
+              Flexible(
+                //Modify
                 child: ListView(scrollDirection: Axis.horizontal, children: [
                   Row(
                     children: [
