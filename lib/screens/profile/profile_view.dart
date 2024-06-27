@@ -40,7 +40,9 @@ class ProfileView extends StatelessWidget {
                       size: 20,
                     ),
                   ),
-                   SizedBox(width: 74.w,),
+                  SizedBox(
+                    width: 74.w,
+                  ),
                   Center(
                     child: Text(
                       'My Profile',
@@ -179,7 +181,7 @@ class ProfileView extends StatelessWidget {
                 height: 7.h,
               ),
               Container(
-                height: 100.h,
+                height: 140.h,
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(15),
                   color: const Color(0xfff6f6f6),
