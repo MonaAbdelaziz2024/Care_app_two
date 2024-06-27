@@ -5,6 +5,7 @@ import 'package:care_app_two/helper/functions/custom_chat_bot_appbar.dart';
 import 'package:care_app_two/screens/calender_page/calendar_two.dart';
 import 'package:care_app_two/screens/view_tasks/view_tasks.dart';
 import 'package:care_app_two/screens/widgets/custom_button.dart';
+import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -194,20 +195,26 @@ class AdditionTwoState extends State<AdditionTwo> {
                 ],
               ),
               Padding(
-                padding: const EdgeInsets.only(top: 16, bottom: 18).r,
+                padding: const EdgeInsets.only(top: 10, bottom: 10).r,
                 child: const Divider(
                   thickness: 1,
                 ),
               ),
-              const Text("Times per Day",
-                  style: TextStyle(
-                    fontSize: 16,
-                    fontWeight: FontWeight.w500,
-                  )),
-              Flexible(
-                //Modify
-                child: ListView(scrollDirection: Axis.horizontal, children: [
-                  Row(
+              Align(
+                alignment: Alignment.centerLeft,
+                child: const Text(
+                  "Times per Day",
+                    style: TextStyle(
+                      fontSize: 16,
+                      fontWeight: FontWeight.w500,
+                    ),
+                    ),
+              ),
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Padding(
+                  padding: const EdgeInsets.only(top: 8, bottom: 8).r,
+                  child: Row(
                     children: [
                       // ListView.builder(
                       //   physics: ScrollPhysics(),
@@ -221,25 +228,21 @@ class AdditionTwoState extends State<AdditionTwo> {
                       //     ],
                       //   );
                       //           }),
-          
+
                       // SizedBox(
                       //   width: 16.w,
                       // ),
-                      Row(
-                        children: [
-                          for (int i = 0; i < times.length; i++)
-                            Padding(
-                              padding: const EdgeInsets.only(right: 8).r,
-                              child: AddTimeContainer(
-                                time: times[i],
-                                onTap: () {
-                                  times.removeLast();
-                                  setState(() {});
-                                },
-                              ),
-                            )
-                        ],
-                      ),
+                      for (int i = 0; i < times.length; i++)
+                        Padding(
+                          padding: const EdgeInsets.only(right: 8).r,
+                          child: AddTimeContainer(
+                            time: times[i],
+                            onTap: () {
+                              times.removeLast();
+                              setState(() {});
+                            },
+                          ),
+                        ),
                       Container(
                         width: 110.w,
                         height: 25.h,
@@ -264,10 +267,9 @@ class AdditionTwoState extends State<AdditionTwo> {
                             IconButton(
                                 onPressed: () async {
                                   await showTime(context);
-          
+
                                   setState(() {});
-                                  String formattedTime =
-                                      formatTimeOfDay(time);
+                                  String formattedTime = formatTimeOfDay(time);
                                   times.add(formattedTime);
                                   print(formattedTime);
                                 },
@@ -282,7 +284,7 @@ class AdditionTwoState extends State<AdditionTwo> {
                       ),
                     ],
                   ),
-                ]),
+                ),
               ),
               const Divider(), //Modify
               /* Padding(
