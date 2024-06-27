@@ -91,7 +91,8 @@ class _AdditionDoctorState extends State<AdditionDoctor> {
           ),
           child: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 16).r,
-            child: Column(children: [   //Modify
+            child: Column(
+              children: [   //Modify
               TextField(
                 decoration: InputDecoration(
                     border: OutlineInputBorder(
@@ -123,51 +124,39 @@ class _AdditionDoctorState extends State<AdditionDoctor> {
                   thickness: 1,
                 ),
               ),
-              Padding(
-                padding: const EdgeInsets.only(bottom: 8).r,
-                child: const Text("Times per Day",
+             Align(
+                alignment: Alignment.centerLeft,
+                child: const Text(
+                  "Times per Day",
                     style: TextStyle(
                       fontSize: 16,
                       fontWeight: FontWeight.w500,
-                    )),
+                    ),
+                    ),
               ),
-              Flexible(   //Modify
-                child: ListView(scrollDirection: Axis.horizontal, children: [
-                  Row(children: [
-                    // Container(
-                    //   width: 100.w,
-                    //   height: 25.h,
-                    //   decoration: BoxDecoration(
-                    //       borderRadius: BorderRadius.circular(16).r,
-                    //       border: Border.all(
-                    //         color: const Color(0xff0597F2),
-                    //       )),
-                    //   child: Row(
-                    //     mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                    //     children: [
-                    //       const Center(
-                    //         child: Text("9:16 PM",
-                    //             style: TextStyle(
-                    //               fontSize: 12,
-                    //               fontWeight: FontWeight.w500,
-                    //             )),
-                    //       ),
-                    //       CircleAvatar(
-                    //         backgroundColor: const Color(0xff0597F2),
-                    //         radius: 10.r,
-                    //         child: const Icon(
-                    //           FontAwesomeIcons.xmark,
-                    //           size: 15,
-                    //           color: Colors.white,
-                    //         ),
-                    //       ),
-                    //     ],
-                    //   ),
-                    // ),
-                    // SizedBox(
-                    //   width: 16.w,
-                    // ),
-                    Row(children: [
+              SingleChildScrollView(
+                scrollDirection: Axis.horizontal,
+                child: Padding(
+                  padding: const EdgeInsets.only(top: 8, bottom: 8).r,
+                  child: Row(
+                    
+                    children: [
+                      // ListView.builder(
+                      //   physics: ScrollPhysics(),
+                      //   //shrinkWrap: true,
+                      //   //scrollDirection: Axis.horizontal,
+                      //   itemCount: times.length,
+                      //   itemBuilder: (context, index) {
+                      //   return  Row(
+                      //     children: [
+                      //       AddTimeContainer(time: times[index]),
+                      //     ],
+                      //   );
+                      //           }),
+
+                      // SizedBox(
+                      //   width: 16.w,
+                      // ),
                       for (int i = 0; i < times.length; i++)
                         Padding(
                           padding: const EdgeInsets.only(right: 8).r,
@@ -179,20 +168,18 @@ class _AdditionDoctorState extends State<AdditionDoctor> {
                             },
                           ),
                         ),
-                    ]),
-                    Container(
-                      width: 110.w,
-                      height: 25.h,
-                      decoration: BoxDecoration(
-                          borderRadius: BorderRadius.circular(16).r,
-                          border: Border.all(
-                            color: const Color(0xff0597F2),
-                          )),
-                      child: Row(
-                        mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-                        children: [
-                          Center(
-                            child: Padding(
+                      Container(
+                        width: 110.w,
+                        height: 25.h,
+                        decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(16).r,
+                            border: Border.all(
+                              color: const Color(0xff0597F2),
+                            )),
+                        child: Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                          children: [
+                            Padding(
                               padding: const EdgeInsets.only(left: 16).r,
                               child: const Text("New time",
                                   style: TextStyle(
@@ -200,59 +187,34 @@ class _AdditionDoctorState extends State<AdditionDoctor> {
                                     fontWeight: FontWeight.w500,
                                   )),
                             ),
-                          ),
-                          IconButton(
-                            onPressed: () async {
-                              await showTime(context);
-                
-                              setState(() {});
-                              String formattedTime = formatTimeOfDay(time);
-                              times.add(formattedTime);
-                              print(formattedTime);
-                            },
-                            icon: const Icon(
-                              // ignore: deprecated_member_use
-                              FontAwesomeIcons.add,
-                              size: 15,
-                              color: Colors.black,
-                            ),
-                          ),
-                        ],
-                      ),
-                    ),
-                  ]),
-                ]),
-              ),
-              // Row(
-              //   children: [
-              //     const Text(
-              //       "Medical consultation",
-              //       style: TextStyle(
-              //         fontSize: 16,
-              //         fontWeight: FontWeight.w500,
-              //       ),
-              //     ),
-              //     SizedBox(
-              //       width: 93.w,
-              //     ),
-              //     Text("Add Days",
-              //         style: TextStyle(
-              //           fontSize: 13.sp,
-              //           fontWeight: FontWeight.w400,
-              //         )),
-              //     IconButton(
-              //         onPressed: () {},
-              //         icon: const Icon(
-              //           Icons.chevron_right_sharp,
-              //         ))
-              //   ],
-              // ),
+                            IconButton(
+                                onPressed: () async {
+                                  await showTime(context);
 
-              Padding(
+                                  setState(() {});
+                                  String formattedTime = formatTimeOfDay(time);
+                                  times.add(formattedTime);
+                                  print(formattedTime);
+                                },
+                                icon: const Icon(
+                                  // ignore: deprecated_member_use
+                                  FontAwesomeIcons.add,
+                                  size: 15,
+                                  color: Colors.black,
+                                )),
+                          ],
+                        ),
+                      ),
+                    ],
+                  ),
+                ),
+              ),
+              const Divider(), //Modify
+              /* Padding(
                 padding: const EdgeInsets.only(top: 14).r,
                 child: const Divider(),
-              ),
-              Row(
+              ),*/
+             Row(
                 children: [
                   const Text(
                     "Medical consultation",
@@ -279,9 +241,14 @@ class _AdditionDoctorState extends State<AdditionDoctor> {
                   )
                 ],
               )
-            ]),
+            
+              ]),
+            ),
+            
+          
           ),
-        ));
+        )
+        ;
   }
 
   Future<void> showDate(BuildContext context) async {

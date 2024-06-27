@@ -204,17 +204,20 @@ class AdditionTwoState extends State<AdditionTwo> {
                 alignment: Alignment.centerLeft,
                 child: const Text(
                   "Times per Day",
-                    style: TextStyle(
-                      fontSize: 16,
-                      fontWeight: FontWeight.w500,
-                    ),
-                    ),
+                  style: TextStyle(
+                    fontSize: 16,
+                    fontWeight: FontWeight.w500,
+                  ),
+                ),
               ),
               SingleChildScrollView(
+                
                 scrollDirection: Axis.horizontal,
                 child: Padding(
                   padding: const EdgeInsets.only(top: 8, bottom: 8).r,
                   child: Row(
+                    mainAxisAlignment: MainAxisAlignment.start,
+                    crossAxisAlignment: CrossAxisAlignment.center,
                     children: [
                       // ListView.builder(
                       //   physics: ScrollPhysics(),
