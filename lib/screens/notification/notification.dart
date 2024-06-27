@@ -48,7 +48,7 @@ class NotificationPage extends StatelessWidget {
                   )
                 ],
               )
-           ,ReminderCard(),
+          //  ,ReminderCard(),
             ],
           ),
         ));
