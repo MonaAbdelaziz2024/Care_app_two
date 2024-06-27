@@ -2,6 +2,7 @@
 
 import 'package:care_app_two/helper/constant.dart';
 import 'package:care_app_two/helper/styles.dart';
+import 'package:care_app_two/screens/notification/reminder.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
@@ -47,6 +48,7 @@ class NotificationPage extends StatelessWidget {
                   )
                 ],
               )
+           ,ReminderCard(),
             ],
           ),
         ));

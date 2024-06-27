@@ -32,11 +32,12 @@ dependencies:
   circular_countdown_timer: ^0.2.3
   cr_calendar: ^1.2.1
   cupertino_icons: ^1.0.2
-  fl_chart: ^0.67.0
   curved_navigation_bar: ^1.0.3
   datepicker_dropdown: ^0.1.0
+  fl_chart: ^0.67.0
   flutter:
     sdk: flutter
+  flutter_local_notifications: ^17.1.2
   flutter_modal_date_picker: ^0.1.1
   flutter_screenutil: ^5.9.0
   font_awesome_flutter: ^10.7.0
@@ -46,7 +47,6 @@ dependencies:
   scrollable_clean_calendar: ^1.5.0
   syncfusion_flutter_datepicker: ^25.1.37
   table_calendar: 3.0.9
-  
 
 dev_dependencies:
   flutter_lints: ^3.0.2
