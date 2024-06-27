@@ -2,10 +2,12 @@
 
 import 'package:care_app_two/helper/constant.dart';
 import 'package:care_app_two/helper/styles.dart';
+import 'package:care_app_two/screens/profile/edit_profile.dart';
 import 'package:care_app_two/screens/start_screen/start.dart';
 import 'package:care_app_two/screens/widgets/custom_divider.dart';
 import 'package:care_app_two/screens/widgets/custom_profile_rec.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/widgets.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class ProfileView extends StatelessWidget {
@@ -18,8 +20,8 @@ class ProfileView extends StatelessWidget {
       extendBodyBehindAppBar: true,
       body: Container(
         decoration: const BoxDecoration(
-          image:
-              DecorationImage(image: AssetImage(kBackground), fit: BoxFit.fill),
+          image: DecorationImage(
+              image: AssetImage(kBackgroundStart), fit: BoxFit.fill),
         ),
         child: Padding(
           padding: const EdgeInsets.symmetric(horizontal: 18).r,
@@ -57,10 +59,14 @@ class ProfileView extends StatelessWidget {
               SizedBox(
                 height: 11.h,
               ),
-              Image.asset(
-                'assets/images/person.png',
-                width: 89.w,
-                height: 89.h,
+              CircleAvatar(
+                radius: 50.r,
+                backgroundColor: Colors.transparent,
+                child: Image.asset(
+                  'assets/images/person.png',
+                  width: 89.w,
+                  height: 89.h,
+                ),
               ),
               SizedBox(
                 height: 9.h,
@@ -112,20 +118,31 @@ class ProfileView extends StatelessWidget {
                       color: Color(0xff1F1F1F),
                     ),
                   ),
-                  Row(
-                    children: [
-                      Icon(
-                        Icons.mode_edit_outline_outlined,
-                        color: Color(0xffFF9500),
-                        size: 20,
-                      ),
-                      Text(
-                        'Edit',
-                        style: Styles.Style16.copyWith(
-                          color: Color(0xffFF9500),
+                  GestureDetector(
+                    onTap: () {
+                      Navigator.of(context).push(
+                        MaterialPageRoute(
+                          builder: (context) {
+                            return const EditProfile();
+                          },
                         ),
-                      ),
-                    ],
+                      );
+                    },
+                    child: Row(
+                      children: [
+                        Icon(
+                          Icons.mode_edit_outline_outlined,
+                          color: Color(0xffFF9500),
+                          size: 20,
+                        ),
+                        Text(
+                          'Edit',
+                          style: Styles.Style16.copyWith(
+                            color: Color(0xffFF9500),
+                          ),
+                        ),
+                      ],
+                    ),
                   )
                 ],
               ),
