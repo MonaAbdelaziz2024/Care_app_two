@@ -83,7 +83,7 @@ class HomeViewBody extends StatelessWidget {
                     ],
                   ),
                   SizedBox(
-                    width: 15.w,
+                    width: 10.w,
                   ),
                   //logo and netification bill
                   Row(
@@ -105,19 +105,19 @@ class HomeViewBody extends StatelessWidget {
                         ),
                       ),
                       SizedBox(
-                        width: 95.w,
+                        width: 90.w,
                       ),
                     ],
                   ),
                   // Actions(actions: , child: child)
                   GestureDetector(
-                    onTap: (){
-                      Navigator.of(context)
-                                  .push(MaterialPageRoute(builder: (context) {
-                                return const NotificationPage();
-                              }));
-                    },
-                    child: const Icon(Icons.notifications_none)),
+                      onTap: () {
+                        Navigator.of(context)
+                            .push(MaterialPageRoute(builder: (context) {
+                          return const NotificationPage();
+                        }));
+                      },
+                      child: const Icon(Icons.notifications_none)),
                 ],
               ),
               SizedBox(
